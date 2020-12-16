@@ -1,0 +1,31 @@
+
+<view class="searchWrap">
+  <view class="searchBox">
+    <input class="search" bindinput="inputCity" value="{{cityName}}" placeholder="请输入地址" placeholder-style="color: #999999;font-size:30rpx;line-height:42rpx"></input>
+    <text class="text" wx:if="{{!show}}">搜索</text>
+    <text class="text" wx:if="{{show}}" catchtap="closeText">取消</text>
+    <image src="https://static2.jd-gz.com/search_icon@2x.png" class="searchIcon" ></image>
+    <view class="closebtn" bindtap="closeText"><image src="https://static2.jd-gz.com/close_icon%402x.png" class="closeIcon"></image></view>
+  </view>
+  <view class="searchList" wx:if="{{show}}">
+      <view catchtap="bindSearch" data-keywords="{{i}}" class="text_box" wx:for="{{tips}}" wx:for-item="i" wx:key="*this">
+      {{i.name}}
+      </view>
+      <view class="jiantou" style="top:{{100*length+160+'rpx'}}">
+        <image src="https://static2.jd-gz.com/ansq_icon%402x.png" catchtap="closeList"></image>
+      </view>
+  </view>
+
+</view>
+
+<map
+ longitude="{{longitude}}" 
+ latitude="{{latitude}}" 
+ markers="{{markers}}"
+ polygons="{{polygon}}"
+ bindtap="changeLocation"
+ class="mapBox"
+ style="height:{{tips.length>0 ? phoneHeight*2-100*length+'rpx' : '100%'}}"
+ scale="12"
+ ></map>
+ <view class="location" wx:if="{{locationInfo.length !== 0}}">{{locationInfo}}</view>

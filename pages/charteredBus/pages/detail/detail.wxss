@@ -1,0 +1,417 @@
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #FAFAFA;
+  display: flex;
+  flex-direction: column;
+}
+/* 头部 */
+.detailHeader{
+  width: 100%;
+  height: 480rpx;
+  background-color: #000;
+}
+.detailHeader .headerImg{
+  width: 100%;
+  height: 100%;
+}
+
+/* 主体 */
+.detailMain{
+  width: 100%;
+  flex: 1;
+}
+.detailMain .mainTop{
+  width: 100%;
+  height: 344rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 30rpx 32rpx 15rpx 30rpx;
+}
+.detailMain .mainTop .topBox{
+  display: flex;
+}
+.detailMain .mainTop .topBox .topTitle{
+  width: 622rpx;
+  height: 88rpx;
+  font-size: 32rpx;
+  color: #333;
+  line-height: 44rpx;
+}
+.detailMain .mainTop .topBox .topImg{
+  width: 44rpx;
+  height: 44rpx;
+  box-sizing: border-box;
+  padding: 6rpx 1rpx 5rpx 3rpx;
+  margin-left: 24rpx;
+  background-color: #09AFFF;
+}
+.detailMain .mainTop .topBox .topImg image{
+  width: 100%;
+  height: 100%;
+}
+.detailMain .mainTop .topBox .topText{
+  font-size: 20rpx;
+  color: #333;
+  line-height: 30rpx;
+  float: right;
+  margin-top: 9rpx;
+}
+.detailMain .mainTop .detailPrice{
+  margin-top: 16rpx;
+}
+.detailMain .mainTop .detailPrice .priceIcon{
+  color: #FE4B3C;
+  font-size: 28rpx;
+}
+.detailMain .mainTop .detailPrice .price{
+  font-size: 42rpx;
+  color: #FE4B3C
+}
+.detailMain .mainTop .detailPrice .priceText{
+  font-size: 24rpx;
+  color: #999;
+}
+.detailMain .mainTop .topTab{
+  margin-top: 30rpx;
+  display: flex;
+}
+.detailMain .mainTop .topTab .tabBox{
+  height: 34rpx;
+  border: 1rpx solid #FF8B32;
+  border-radius: 4rpx;
+  box-sizing: border-box;
+  padding: 0 8rpx;
+  color: #FF8B32;
+  font-size: 22rpx;
+  line-height: 34rpx;
+  margin-right: 16rpx;
+}
+.detailMain .mainTop .topfooter{
+  width: 100%;
+  height: 67rpx;
+  border-top: 1rpx solid #EDEDED;
+  margin-top: 24rpx;
+  display: flex;
+  box-sizing: border-box;
+  padding: 16rpx 0rpx 15rpx 0rpx;
+}
+.detailMain .mainTop .topfooter .topfootetBox{
+  display: flex;
+  height: 36rpx;
+  margin-right: 24rpx;
+  align-items: center
+}
+.detailMain .mainTop .topfooter .topfootetBox .topfootetBoxImg{
+  width: 26rpx;
+  height: 26rpx;
+  background-color: #09AFFF;
+  /* margin-top: 5rpx */
+}
+.detailMain .mainTop .topfooter .topfootetBox .topfootetBoxText{
+  font-size: 24rpx;
+  color: #666;
+  height: 36rpx;
+  line-height: 36rpx;
+  margin-left: 5rpx;
+}
+.detailMain .mainCenter{
+  width: 100%;
+  height: 321rpx;
+  padding: 30rpx 0rpx 33rpx 0rpx;
+  box-sizing: border-box;
+  margin-top: 24rpx;
+  background-color: #fff;
+}
+.detailMain .mainCenter .centerTop{
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  box-sizing: border-box;
+  padding-left: 30rpx;
+  align-content: space-between
+}
+.detailMain .mainCenter .centerTop .centerTopTab{
+  width:  283rpx;
+  height: 120rpx;
+  margin-right: 24rpx;
+  margin-top: 15rpx;
+}
+.detailMain .mainCenter .centerTop .centerTopTab .topTabbox{
+  width: 283rpx;
+  height: 102rpx;
+  border: 1px solid #D3D3D3;
+  border-radius: 8rpx;
+  position: relative;
+  background-color: #FAFAFA;
+}
+.detailMain .mainCenter .centerTop .centerTopTab .topTabbox .smallTab{
+  width: 70rpx;
+  height: 30rpx;
+  border: 1rpx solid #D3D3D3;
+  border-top-left-radius: 16rpx;
+  border-bottom-right-radius: 16rpx;
+  position: absolute;
+  top: -15rpx;
+  left: 107rpx;
+  background-color: #fff;
+  color: #333333;
+  font-size: 20rpx;
+  line-height: 30rpx;
+  text-align: center;
+}
+.detailMain .mainCenter .centerTop .centerTopTab .topTabbox .tabText{
+  height: 38rpx;
+  line-height: 38rpx;
+  margin-top: 23rpx;
+   text-align: center;
+  font-size: 26rpx;
+  color: #333;
+}
+.detailMain .mainCenter .centerTop .centerTopTab .topTabbox .tabPrice{
+  height: 33rpx;
+  line-height: 33rpx;
+  text-align: center;
+  color: #FE4B3C;
+  font-size: 24rpx;
+
+}
+.detailMain .mainCenter .wrapBox{
+  position: relative;
+  height: 116rpx;
+  width: 100%;
+}
+.detailMain .mainCenter .wrapBox .centerTime{
+  height: 116rpx;
+  width: 100%;
+  display: flex;
+  margin-top: 28rpx;
+  box-sizing: border-box;
+  padding-left: 30rpx;
+}
+.detailMain .mainCenter .wrapBox .centerTime .timeBox{
+ width: 166rpx;
+  height: 98rpx;
+  border: 1rpx solid #D3D3D3;
+  border-radius: 8rpx;
+  position: relative;
+  margin-top: 14rpx;
+  margin-right: 24rpx;
+}
+.detailMain .mainCenter .wrapBox .centerTime .timeBox .smallBoxtime{
+  width: 70rpx;
+  height: 30rpx;
+  border: 1rpx solid #D3D3D3;
+  border-top-left-radius: 16rpx;
+  border-bottom-right-radius: 16rpx;
+  color: #FE4B3C;
+  line-height: 30rpx;
+  font-size: 20rpx;
+  text-align: center;
+  position: absolute;
+  top: -15rpx;
+  left: 48rpx;
+}
+.detailMain .mainCenter .wrapBox .centerTime .timeBox .weekBox{
+  width: 166rpx;
+  text-align: center;
+  height: 33rpx;
+  line-height: 33rpx;
+  color: #666666;
+  font-size: 24rpx;
+  margin-top: 16rpx;
+}
+.detailMain .mainCenter .wrapBox .centerTime .timeBox .priceBox{
+  width: 166rpx;
+  height: 33rpx;
+  line-height: 33rpx;
+  text-align: center;
+  color: #FE4B3C;
+  font-size: 24rpx;
+}
+.detailMain .mainCenter .wrapBox .changeDate{
+  width: 134rpx;
+  height: 104rpx;
+  background-color: #fff;
+  position: absolute;
+  top: 15rpx;
+  right: 0;
+}
+.detailMain .mainCenter .wrapBox .changeDate .Dateimg{
+  width: 23.2rpx;
+  height: 23.2rpx;
+  background-color: #09AFFF;
+  margin: 18rpx 58rpx 10rpx 50rpx;
+}
+.detailMain .mainCenter .wrapBox .changeDate .DateText{
+  width: 100%;
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 20rpx;
+  color: #666;
+  text-align: center;
+}
+.detailMain .mainEstimate{
+  width: 100%;
+  height: 419rpx;
+  box-sizing: border-box;
+  padding: 30rpx 30rpx 31rpx 30rpx;
+  margin-top: 24rpx;
+  margin-bottom: 198rpx;
+  background-color: #fff;
+}
+.detailMain .mainEstimate .estimateTop{
+  width: 100%;
+}
+.detailMain .mainEstimate .estimateTop .estimateTitle{
+  height: 52rpx;
+  display: flex;
+  align-items: center;
+}
+.detailMain .mainEstimate .estimateTop .estimateTitle .estimateTitle_line{
+  width: 8rpx;
+  height: 40rpx;
+  border-radius: 4rpx;
+  background-color: #09AFFF;
+}
+.detailMain .mainEstimate .estimateTop .estimateTitle .estimateTitle_text{
+  height: 52rpx;
+  line-break: 52rpx;
+  font-size: 40rpx;
+  color: #333;
+  margin-left: 16rpx;
+}
+.detailMain .mainEstimate .estimateTop .estimateTabBox{
+  width: 100%;
+  display: flex;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  position: relative;
+}
+.detailMain .mainEstimate .estimateTop .estimateTabBox .extimateGrade{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 114rpx;
+  height: 108rpx;
+}
+.detailMain .mainEstimate .estimateTop .estimateTabBox .extimateGrade .gradeNum{
+  height: 72rpx;
+  font-size: 56rpx;
+  color: #333;
+  font-weight: bold;
+  line-height: 72rpx;
+}
+.detailMain .mainEstimate .estimateTop .estimateTabBox .extimateGrade .grandeText{
+  height: 36rpx;
+  line-height: 36rpx;
+  color: #999;
+  font-size: 24rpx;
+}
+.detailMain .mainEstimate .estimateTop .estimateTabBox .extimateTab{
+  display: flex;
+  flex-direction: column;
+  height: 108rpx;
+  margin-left: 30rpx;
+}
+.detailMain .mainEstimate .estimateTop .estimateTabBox .extimateTab .tabTetxt{
+  font-size: 24rpx;
+  color: #333;
+  line-height: 33rpx;
+}
+.detailMain .mainEstimate .estimateTop .estimateTabBox .tabBox{
+  height: 52rpx;
+  margin-top: 16rpx;
+  display: flex;
+
+}
+.detailMain .mainEstimate .estimateTop .estimateTabBox .tabBox .tab{
+  height: 36rpx;
+  line-height: 36rpx;
+  background-color: #E2F5FF;
+  border: 8rpx;
+  padding: 8rpx 24rpx;
+  margin-right: 24rpx;
+  color: #09AFFF;
+  font-size: 24rpx;
+  text-align: center;
+}
+.detailMain .mainEstimate .estimateTop .estimateTabBox .tabBoxIcon{
+  width: 28rpx;
+  height: 28rpx;
+  background-color: #000;
+  position: absolute;
+  top: 33rpx;
+  right: 0rpx;
+}
+.detailMain .mainEstimate .userEstimate{
+  width: 100%;
+  height: 108rpx;
+  display: flex;
+  border-top: 1rpx solid #EDEDED;
+  padding: 30rpx 30rpx 31rpx 30rpx;
+  /* margin-left: 8rpx; */
+}
+.detailMain .mainEstimate .userEstimate .userImg{
+  width: 66rpx;
+  height: 66rpx;
+  background-color: #FE4B3C;
+}
+.detailMain .mainEstimate .userEstimate .userText{
+  flex: 1;
+  height: 100%;
+  margin-left: 8rpx;
+  box-sizing: border-box;
+  padding-right: 30rpx;
+}
+.detailMain .mainEstimate .userEstimate .userText .userPull{
+  height: 33rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.detailMain .mainEstimate .userEstimate .userText .userPull .userName{
+  font-size: 24rpx;
+  color: #999;
+  line-height: 33rpx;
+}
+.detailMain .mainEstimate .userEstimate .userText .userPull .userTalkTime{
+  font-size: 24rpx;
+  color: #999;
+  line-height: 33rpx;
+}
+.detailMain .mainEstimate .userEstimate .userText .userTalk{
+  flex: 1;
+  width: 100%;
+  font-size: 24rpx;
+  color: #333;
+  line-height: 33rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-top: 8rpx;
+}
+/* 尾部 */
+.detailFooter{
+  width: 100%;
+  height: 168rpx;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+}
+.detailFooter .footerBtn{
+  width: 224rpx;
+  height: 88rpx;
+  background-color: #09AFFF;
+  border-radius: 50rpx;
+  text-align: center;
+  line-height: 88rpx;
+  color: #fff;
+  font-size: 32rpx;
+  position: absolute;
+  top: 14rpx;
+  right: 30rpx;
+}

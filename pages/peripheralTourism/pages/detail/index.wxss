@@ -1,0 +1,393 @@
+/* pages/peripheralTourism//pages/detail/index.wxss */
+page{
+  width: 750rpx;
+  background-color: #F2F3F7;
+}
+.wrap{
+  width: 750rpx;
+  height: 800rpx;
+}
+.head{
+  width: 750rpx;
+  background-color: #FFF;
+  padding: 16rpx 20rpx 24rpx 20rpx;
+  box-sizing: border-box;
+}
+.swiperBox{
+  width: 100%;
+  height: 240rpx;
+  border-radius: 30rpx;
+  position: relative;
+}
+.swiperImg{
+  width: 100%;
+  height: 240rpx;
+  vertical-align: top;
+  border-radius: 30rpx;
+}
+.swiperIndex{
+  position: absolute;
+  bottom: 18rpx;
+  right: 46rpx;
+  padding: 4rpx 16rpx;
+  box-sizing: border-box;
+  background-color: #333;
+  border-radius: 22rpx;
+  color: #FFF;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+.textMain{
+  margin-top: 24rpx;
+}
+.mainTitle{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  font-weight: bold;
+  color: #333;
+}
+.mainText{
+  color:#666;
+  font-size: 26rpx;
+  line-height: 38rpx;
+}
+.tabBox{
+  display: flex;
+  padding-bottom: 24rpx;
+  border-bottom: 1rpx solid #EDEDED;
+}
+.tabItem{
+  padding: 0 8rpx;
+  box-sizing: border-box;
+  border-radius: 17rpx;
+  border: 1rpx solid #FF8B32;
+  color: #FF8B32;
+  font-size: 22rpx;
+  line-height: 34rpx;
+}
+.locBox{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16rpx;
+}
+.loc{
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #333;
+}
+.personNum{
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #666;
+}
+.mainImg{
+  width: 100%;
+  height: 100rpx;
+  background-color: #FFF8F2;
+  border-radius: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 30rpx 66rpx 30rpx 30rpx;
+  box-sizing: border-box;
+  margin-top: 24rpx;
+}
+.mainImg image{
+  width: 100rpx;
+  height: 89rpx;
+  vertical-align: top;
+}
+.mainImgText{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #C09B6F;
+}
+.timeBox{
+  width: 750rpx;
+  padding: 24rpx 20rpx;
+  box-sizing: border-box;
+  background-color: #FFF;
+  margin-top: 24rpx;
+}
+.titleBox{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.titleTab{
+  width: 138rpx;
+  height: 42rpx;
+}
+.titleTab image{
+  width: 138rpx;
+  height: 42rpx;
+  vertical-align: top;
+}
+.timeTabBox{
+  height: 135rpx;
+  width: 100%;
+  margin-top: 30rpx;
+  overflow:hidden;
+  white-space:nowrap;
+}
+.timeList{
+  width: 710rpx;
+  height: 135rpx;
+}
+.timeTab{
+  width: 235rpx;
+  height: 130rpx;
+  border: 2rpx solid #F2F3F7;
+  display:inline-block;
+  /* flex-direction: column;
+  justify-content: center; */
+  padding: 10rpx 42rpx;
+  box-sizing: border-box;
+  border-radius: 8rpx;
+  margin-left: 24rpx;
+}
+.timeTab:nth-child(1){
+  margin-left: 0;
+}
+.active_timeTab{
+  background-color: #09AFFF;
+}
+.active_timeTab .active_text{
+  color: #FFF;
+}
+.tabtime{
+  font-size: 26rpx;
+  color: #333;
+  line-height: 38rpx;
+}
+.tabText{
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #999;
+}
+.tabPrice{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #FF4B3B;
+  text-align: center;
+}
+.itineraryoverview{
+  width: 750rpx;
+  padding: 24rpx 20rpx 30rpx 20rpx;
+  box-sizing: border-box;
+  background-color: #FFF;
+  margin-top: 24rpx;
+}
+.tripMainBox{
+  display: flex;
+  margin-top: 16rpx;
+  align-items: center;
+}
+.tripIcon{
+  width: 24rpx;
+  height: 24rpx;
+}
+.tripIcon image{
+  width: 24rpx;
+  height: 24rpx;
+  vertical-align: top;
+}
+.tripTitle{
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #999;
+  margin-left: 14rpx;
+}
+.tripMain{
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #333333;
+}
+.tripMainBottom{
+  padding: 20rpx 24rpx;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #E2F5FF;
+  border: 1rpx solid #09AFFF;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24rpx;
+}
+.tripMainBottomText{
+  font-size: 24rpx;
+  line-height: 33rpx;
+  color: #09AFFF;
+}
+.tripMainBottomIcon{
+  width: 24rpx;
+  height: 24rpx;
+}
+.tripMainBottomIcon image{
+  width: 24rpx;
+  height: 24rpx;
+  vertical-align: top;
+}
+.tabMainBox{
+  background-color: #F2F3F7;
+  padding-bottom: 192rpx;
+}
+.tabMainTitle{
+  display: flex;
+  align-items: center;
+  padding: 24rpx 0;
+  box-sizing: border-box;
+  justify-content: space-around;
+  background-color: #FFF;
+}
+.tabMainTitleFixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+}
+.tabMainTitleItem{
+  display: flex;
+  align-items: center;
+}
+.tabItemIcon{
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 9rpx;
+}
+.tabItemIcon image{
+  width: 24rpx;
+  height: 24rpx;
+  vertical-align: top;
+}
+.tabItemText{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #333;
+}
+.tabMainTitleItem .active_tabItemText{
+  color: #09AFFF;
+  font-weight: 700;
+}
+.highlightsBox{
+  background-color: #FFF;
+  padding: 30rpx 20rpx;
+  box-sizing: border-box;
+}
+.tabTitleBox{
+  display: flex;
+  align-items: center;
+}
+.titleBoxline{
+  width: 8rpx;
+  height: 26rpx;
+  border-radius: 4rpx;
+  background-color: #09AFFF;
+}
+.titleBoxtext{
+  margin-left: 16rpx;
+  font-size: 32rpx;
+  line-height: 44rpx;
+  color: #333;
+  font-weight: bold;
+}
+.highlightsMain{
+  margin-top: 30rpx;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #FF8B32;
+}
+.specificItineraryBox{
+  background-color: #FFF;
+  padding: 30rpx 20rpx;
+  box-sizing: border-box;
+  margin-top: 24rpx;
+}
+.costNotice{
+  background-color: #FFF;
+  padding: 30rpx 20rpx;
+  box-sizing: border-box;
+  margin-top: 24rpx;
+}
+.costNoticeMain{
+  display: flex;
+  margin-top: 30rpx;
+}
+.costNoticeMainTitle{
+  padding: 0 16rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 88rpx;
+  background-color: #E9F8F6;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  font-weight: bold;
+  color: #37C776;
+}
+.costNoticeMainText{
+  flex: 1;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #333;
+  border: 2rpx solid #EDEDED;
+  padding: 48rpx 30rpx;
+  box-sizing: border-box;
+}
+.activeNotice{
+  background-color: #FFF;
+  padding: 30rpx 20rpx;
+  box-sizing: border-box;
+  margin-top: 24rpx;
+}
+.activeNoticeMain{
+  margin-top: 30rpx;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #333;
+}
+.signUpNow{
+  width: 750rpx;
+  height: 168rpx;
+  background-color: #FFF;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 14rpx 30rpx 0 30rpx;
+  box-sizing: border-box;
+}
+.imgTextBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.imgTextBoxIcon{
+  width: 40rpx;
+  height: 40rpx;
+}
+.imgTextBoxIcon image{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: top;
+}
+.imgTextBoxText{
+  font-size: 20rpx;
+  line-height: 30rpx;
+  margin-top: 18rpx;
+  color: #333;
+}
+.btnBox{
+  height: 88rpx;
+  border-radius: 50rpx;
+  padding: 22rpx 163rpx;
+  background-color: #09AFFF;
+  box-sizing: border-box;
+  color: #FFF;
+  font-size: 32rpx;
+  line-height: 44rpx;
+  font-weight: bold;
+}

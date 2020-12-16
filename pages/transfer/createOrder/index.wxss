@@ -1,0 +1,338 @@
+/* pages/cjjs/order/index.wxss */
+.bg {
+  width: 100%;
+  /* height: 1614rpx; */
+  height: 1759rpx;
+  height: 1783rpx;
+  background-color: #fafafa;
+  position: relative;
+}
+
+.bg .bg_img {
+  width: 100%;
+  height: 256rpx;
+  margin-top: 130rpx;
+}
+
+.bg .ticket_info {
+  position: absolute;
+  top: 38rpx;
+  width: 660rpx;
+  height: 302rpx;
+  margin-left: 30rpx;
+  border-radius: 16rpx;
+  background-color: #fff;
+  padding-left: 30rpx;
+  box-shadow: 0 0 10rpx rgb(238, 238, 238);
+}
+.line_detail{
+  display: flex;
+  flex-direction: row;
+  font-size: 26rpx;
+  line-height: 38rpx;
+  color: #333333;
+  margin-top: 16rpx;
+}
+.line_detail .left{
+  width: 130rpx;
+}
+.line_detail .right{
+  width: 500rpx;
+}
+.notice_box{
+  display: flex;
+  margin-top: 16rpx;
+}
+.notice_box image{
+  width: 25rpx;
+  height: 21rpx;
+  display: block;
+}
+.notice_box text{
+  font-size: 20rpx;
+  color: #999999;
+  padding-left: 10rpx;
+  line-height: 20rpx;
+}
+.bg .ticket_info .start_time {
+  font-size: 34rpx;
+  color: #333;
+  margin-top: 30rpx;
+  margin-bottom: 10rpx;
+}
+.bg .user_info {
+  position: absolute;
+  top: 350rpx;
+  width: 690rpx;
+  /* height: 354rpx; */
+  height: 499rpx;
+  margin-top: 24rpx;
+  margin-left: 30rpx;
+  border-radius: 16rpx;
+  background-color: #fff;
+  /* padding-left: 30rpx; */
+  padding-top: 24rpx;
+  box-shadow: 0 0 10rpx rgb(238, 238, 238);
+}
+
+.bg .user_info .tit, .bg .travelers_num .tit, .bg .prompt .tit {
+  display: inline-block;
+  padding-left: 30rpx;
+  margin-bottom: 30rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+
+/* 出行人数 */
+
+.bg .travelers_num {
+  position: absolute;
+  /* top: 742rpx; */
+  /* top: 887rpx; */
+  top: 911rpx;
+  width: 690rpx;
+  height: 264rpx;
+  margin-top: 24rpx;
+  margin-left: 30rpx;
+  border-radius: 16rpx;
+  background-color: #fff;
+  /* padding-left: 30rpx; */
+  padding-top: 24rpx;
+  box-shadow: 0 0 10rpx rgb(238, 238, 238);
+}
+
+.bg .travelers_num .item {
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.bg .travelers_num .item van-stepper {
+  display: inline-block;
+}
+
+/* 出行提示 */
+
+.bg .prompt {
+  position: absolute;
+  /* top: 1058rpx; */
+  top: 1240rpx;
+  width: 690rpx;
+  height: 254rpx;
+  margin-top: 24rpx;
+  margin-left: 30rpx;
+  border-radius: 16rpx;
+  background-color: #fff;
+  /* padding-left: 30rpx; */
+  padding-top: 24rpx;
+  box-shadow: 0 0 10rpx rgb(238, 238, 238);
+}
+
+.bg .prompt .content {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  height: 120rpx;
+  line-height: 55rpx;
+}
+
+.bg .prompt .content view {
+  color: #666;
+  font-size: 28rpx;
+}
+
+.bg .prompt .content view text {
+  color: #09afff;
+  font-size: 28rpx;
+}
+
+/* 阅读协议 */
+
+.bg .protocol {
+  position: absolute;
+  /* top: 1354rpx; */
+  top: 1530rpx;
+  height: 90rpx;
+  margin-left: 30rpx;
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+}
+
+.bg .protocol .protocol_content {
+  color: #333;
+}
+
+.bg .protocol .read {
+  color: #999;
+}
+
+/* 底部去付款 */
+
+.toPay {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 168rpx;
+  /* padding-left: 30rpx; *//* padding-right: 30rpx; */
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 9999;
+}
+
+.toPay .price {
+  display: flex;
+  height: 168rpx;
+  width: 300rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toPay .totalPrice {
+  float: left;
+  font-size: 46rpx;
+  color: #fe4b3c;
+}
+
+.toPay .price_detail {
+  float: left;
+  width: 230rpx;
+}
+
+.mask {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: none;
+}
+
+.toPay .price_detail text {
+  color: #999;
+  font-size: 28rpx;
+}
+
+.price_detail .help_item .title {
+  font-size: 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: flex;
+  width: 170rpx;
+}
+
+.price_detail .help_item .title .title_1 {
+  width: 200rpx;
+  height: 60rpx;
+  padding-left: 20rpx;
+}
+
+.price_detail .help_item .title .title_2 {
+  /* width: 50rpx; */
+  height: 60rpx;
+  text-align: center;
+}
+
+.price_detail .help_item .title .title_2 image {
+  width: 18rpx;
+  height: 16rpx;
+  margin: 25rpx 0;
+}
+
+.price_detail .help_item .detail {
+  position: absolute;
+  z-index: 9999;
+  bottom: 168rpx;
+  left: 0;
+  width: 750rpx;
+  background-color: #fafafa;
+  height: 280rpx;
+  padding: 30rpx;
+}
+
+.main_info {
+  background-color: #fafafa;
+  height: 220rpx;
+  position: absolute;
+  bottom: 0;
+  padding: 30rpx;
+  width: 100%;
+  z-index: 9999;
+  border-bottom: 2rpx solid rgb(229, 238, 236);
+}
+
+.main_info .tit {
+  color: #333;
+  font-size: 36rpx;
+  padding-bottom: 30rpx;
+  margin-bottom: 30rpx;
+  border-bottom: 2rpx solid rgb(229, 238, 236);
+}
+
+.main_info .kind_info {
+  width: 690rpx;
+  color: #333;
+  font-size: 32rpx;
+  height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10rpx;
+}
+
+.main_info .kind_info .kind {
+  height: 50rpx;
+}
+
+.toPay .goPay {
+  width: 200rpx;
+  height: 88rpx;
+}
+
+.toPay .goPay button {
+  color: #fff;
+  border-radius: 50rpx;
+  background-color: #09afff;
+}
+
+/* 弹出层样式 */
+
+.popup_class {
+  padding-left: 30rpx;
+  padding-right: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.popup_class .tit {
+  display: inline-block;
+  font-size: 30rpx;
+  color: #333;
+  width: 180rpx;
+  padding-top: 48rpx;
+}
+
+.popup_class .popup_txt {
+  font-size: 30rpx;
+  color: #666;
+}
+
+.popup_class .two {
+  width: 700rpx;
+  height: 210rpx;
+}
+
+.popup_class .two_tit {
+  float: left;
+  width: 180rpx;
+}
+
+.popup_class .two_txt {
+  float: left;
+  margin-top: 50rpx;
+  width: 520rpx;
+}

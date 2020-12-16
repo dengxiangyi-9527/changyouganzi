@@ -1,0 +1,99 @@
+<!--pages/CustomTour//pages/orderDetail/index.wxml-->
+<view class="wrap">
+  <view class="head">
+    <view class="headStatus">
+      <view class="status_txt" wx:if="{{orderDetail.status === 7}}">订单已退款</view>
+      <view class="status_txt" wx:if="{{orderDetail.status === 8}}">订单退款中</view>
+      <view class="status_txt" wx:if="{{orderDetail.status === 5}}">订单已完成</view>
+      <view class="status_txt" wx:if="{{orderDetail.status === 3}}">订单已取消</view>
+      <view class="status_txt" wx:if="{{orderDetail.status === 1}}">订单未支付</view>
+      <view class="status_txt" wx:if="{{orderDetail.status === 2}}">订单已支付</view>
+      <view class="status_txt" wx:if="{{orderDetail.status === 6}}">订单已评价</view>
+      <view class="status_tost">感谢您使用畅游甘孜，希望您玩得愉快哦～</view>
+    </view>
+    <view class="priceBox">
+      <view class="price">
+        <view class="priceTitle">订单金额</view>
+        <view class="priceNum"><text style="font-size:24rpx;line-height:36rpx">￥</text>{{orderDetail.price/100}}</view>
+      </view>
+      <view class="priceDetail">查看明细</view>
+    </view>
+    <view class="toPay" wx:if="{{orderDetail.status == 1}}">
+      <view class="btnBox">
+        <view class="paybtn" catchtap="toPay">继续支付</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="carInfoBox">
+    <view class="carInfo">
+      <image src="{{orderDetail.car_model.image}}"></image>
+      <view class="carText">
+        <view class="cityName">{{orderDetail.car_model.name}}</view>
+        <view class="cityText">{{orderDetail.car_model.intro}}</view>
+      </view>
+    </view>
+    <view class="time">
+      <view class="timeTitle">包期</view>
+      <view class="timeBox">
+        <view class="timeText">{{orderDetail.stime}}</view>
+        <view class="startTime">
+          <view class="timeLine"></view>
+          <view class="dayNum">{{dayNum}}天</view>
+          <view class="timeLine"></view>
+        </view>
+        <view class="timeText">{{orderDetail.etime}}</view>
+      </view>
+    </view>
+    <view class="loc">
+      <view class="locTitle">地址</view>
+      <view class="locText">上车地点：{{orderDetail.location}}</view>
+    </view>
+    <view class="packageBox">
+      <view class="packTitle">套餐包含：</view>
+      <view class="packText">成都出发·{{dayNum}}日游·{{8*dayNum}}小时{{300*dayNum}}公里</view>
+    </view>
+    <view class="packageBox">
+      <view class="packTitle">客服热线：</view>
+      <view class="telText" catchtap="goTel">19150185859</view>
+    </view>
+  </view>
+
+  <view class="cancelBox">
+    <view class="cancelTitle">退款规则</view>
+    <view class="cancelText">支付成功后，半小时内全额退款。半小时后至发车日期前扣除一天费用的50%，超过发车日期零点后概不退还</view>
+    <view class="cancelBtn" wx:if="{{orderDetail.status == 1}}" catchtap="cancelOrder">取消订单</view>
+    <view class="cancelBtn" wx:if="{{orderDetail.status == 2 && isCancel}}" catchtap="refundOrder" >订单退款</view>
+  </view>
+
+  <view class="noticeBox">
+    <view class="noticeTitle">预定须知</view>
+    <view class="Subtitle">用车流程</view>
+    <view class="noticeText">1、支付后订单详情页填写发票信息 </view>
+    <view class="noticeText">2、服务商90分钟内确认行程细节 </view>
+    <view class="noticeText">3、司机车辆信息短信通知 </view>
+    <view class="noticeText">4、司机在上车点等候 </view>
+    <view class="Subtitle">退改说明</view>
+    <view class="noticeText">在北京时间2020-07-01 08:50以前可免费取消;超过最晚取消时间，将收取您274元违约金。 </view>
+    <view class="Subtitle">费用说明</view>
+    <view class="noticeText">详细费用规则说明查看，请点击<text style="color:#FF8B32">费用说明</text></view>
+  </view>
+
+  <view class="userBox">
+    <view class="noticeTitle">乘客信息</view>
+    <view class="userName">{{orderDetail.name}}</view>
+    <view class="userInfo">
+      <view class="infoTitle">身份证：</view>
+      <view class="infoText">{{orderDetail.id_card_number}}</view>
+    </view>
+    <view class="userInfo">
+      <view class="infoTitle">手机号码：</view>
+      <view class="infoText">{{orderDetail.phone}}</view>
+    </view>
+  </view>
+
+  <view class="telBox" catchtap="goTel">
+    <image src="https://static2.jd-gz.com/kefuHead.png"></image>
+    <view class="telBoxText">咨询客服</view>
+  </view>
+</view>

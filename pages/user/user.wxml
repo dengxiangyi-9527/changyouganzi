@@ -1,0 +1,113 @@
+<!-- VM4270:1 Failed to load font http://img.yzcdn.cn/vant/vant-icon-d3825a.woff2 net::ERR_CACHE_MISS  报错解决方案 -->
+<view class="icon van-icon van-icon van-icon-upgrade van-icon-upgrade" style="font-size: 32rpx;"></view>
+
+<view class="bg">
+	<image src='https://static2.jd-gz.com/user-bg.png' class="bg"></image>
+</view>
+
+<view class="main">
+	<!-- 用户信息 -->
+	<view class="user_info">
+		<image src="{{isLogined ? avatarUrl: 'https://static2.jd-gz.com/avatar.png' }}" wx:if="{{avatarUrl || 'https://static2.jd-gz.com/avatar.png'}}"></image>
+		<view class="wrap">
+			<view class="login" wx:if="{{isLogined}}" bindtap="editUserInfo">
+				<view class="nickName">{{nickName}}</view>
+				<view class="edit_pic">
+					<image src="https://static2.jd-gz.com/edit.png" class="pic_Icon"></image>
+				</view>
+			</view>
+			<text class="nickName" bindtap="goLogin" wx:else>登录/注册</text>
+			<!-- 如果防疫人员认证成功就出现这个标志 -->
+			<view class="ky_hero" wx:if="{{status == 2}}">
+				<image src="https://static2.jd-gz.com/fyrz.png"></image>
+			</view>
+			<text class="intro" wx:if="{{intro}}">{{intro}}</text>
+			<text class="intro" wx:else>写个简介开始旅行吧</text>
+		</view>
+	</view>
+	<!-- 以下的内容 -->
+	<view>
+		<view class="wrap_order">
+			<view class="wrap_item" bindtap="toOrder">
+				<image src="https://static2.jd-gz.com/myorder.png"></image>
+				<view>我的评价</view>
+			</view>
+			<view class="wrap_item">
+				<image src="https://static2.jd-gz.com/mysc.png"></image>
+				<view>我的收藏</view>
+			</view>
+			<view class="wrap_item" catchtap="toCoupon">
+				<image src="https://static2.jd-gz.com/djq.png"></image>
+				<view>代金券</view>
+			</view>
+			<view>
+				<view class="wrap_item" wx:if="{{status == 0}}" bindtap="goMedicalCheckResult">
+					<image src="https://static2.jd-gz.com/kyrz.png"></image>
+					<!-- 0是审核中 -->
+					<view>抗疫认证</view>
+				</view>
+				<view class="wrap_item" wx:if="{{status == 1}}" bindtap="goMedicalCheckResult">
+					<image src="https://static2.jd-gz.com/kyrz.png"></image>
+					<!-- 1是审核失败 -->
+					<view>抗疫认证</view>
+				</view>
+				<view class="wrap_item" wx:if="{{status == 2}}" bindtap="goMedicalCheckResult">
+					<image src="https://static2.jd-gz.com/kyrz.png"></image>
+					<view>抗疫认证</view>
+				</view>
+				<view class="wrap_item" bindtap="goMedicalCheck" wx:if="{{status == 4}}">
+					<image src="https://static2.jd-gz.com/kyrz.png"></image>
+					<view>抗疫认证</view>
+				</view>
+			</view>
+		</view>
+		<!-- 推荐有礼 -->
+		<view class="wrap_recommend">
+			<image src="https://static2.jd-gz.com/编组 42@3x.png" bindtap="bindRecommend"></image>
+		</view>
+
+		<!-- 实名认证下面的菜单栏 -->
+		<view class="wrap_verified">
+			<view class="title_class">工具与服务</view>
+			<view class="icon_class">
+				<view class="icon_item">
+					<view class="verified" bindtap="goVerified" wx:if="{{newIsVerified == false}}">
+						<image src="https://static2.jd-gz.com/编组 20@3x.png"></image>
+						<view class="text">实名认证</view>
+						<image src="{{newIsVerified?'':'https://static2.jd-gz.com/unver.png'}}" class="unVerified"></image>
+					</view>
+					
+					<!-- 已认证 -->
+					<view class="verified" wx:else bindtap="verified">
+						<image src="https://static2.jd-gz.com/编组 20@3x.png"></image>
+						<view class="text">实名认证</view>
+					</view>
+				</view>
+					<view class="icon_item wrap_zuan" bindtap="bindRecommend">
+					<image src="https://static2.jd-gz.com/编组 32@3x.png"></image>
+					<image src="https://static2.jd-gz.com/编组 35@3x.png" class="zuan"></image>
+					<view class="text">邀请有礼</view>
+				</view>
+
+					<view class="icon_item wrap_zuan" bindtap="bindCommonAddress">
+					<image src="https://static2.jd-gz.com/cydz.png"></image>
+					<view class="text">常用地址</view>
+				</view>
+				<view class="icon_item">
+					<image src="https://static2.jd-gz.com/编组 28@3x.png"></image>
+					<view class="text">我的评价</view>
+				</view>
+				<view class="icon_item" bindtap="bindInvioceCenter">
+					<image src="https://static2.jd-gz.com/编组 25@3x.png"></image>
+					<view class="text">发票中心</view>
+				</view>
+			
+			</view>
+	
+
+		</view>
+	</view>
+</view>
+<view>
+</view>
+<tabbar activeIndex='3'></tabbar>

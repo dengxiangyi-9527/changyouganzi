@@ -1,0 +1,48 @@
+<!--pages/cjjs/throughTrainDetail/index.wxml-->
+<view class="wrap">
+  <view class="top">
+    <cjjs-component my-property='{{nav}}' class="nav"/>
+    <image src=""></image>
+  </view>
+  <view class="main">
+    <view class="mainTop">
+      <view class="topBoxTItle">海螺沟门票+观光车套票</view>
+      <view class="topBoxTab">
+        <view class="tabBox tabColorG">4A</view>
+        <view class="tabBox tabColorB">最美景区打卡地</view>
+        <view class="tabBox tabColorB">最美景区打卡地</view>
+      </view>
+      <view class="topText">建有湖泊、溪流、竹林、草坪、共饲养100多只大熊猫。</view>
+    </view>
+    <view class="mainDetail">
+      <view class='detailTitle'>门票</view>
+      <view class="detailBox">
+        <view class="detailItem">
+          <view class="imgBox">
+            <image src=""></image>
+          </view>
+          <view class="detailText">
+            <view class="textTitle">海螺沟门票+观光车套票</view>
+            <view class="textPrice"><text style="font-size:24rpx;line-height:36rpx">￥</text>314</view>
+            <view class="lookDetail">
+                查看详情
+                <image src="https://static2.jd-gz.com/right_icon%402x.png"></image>
+            </view>
+          </view>
+          <view class="numBox">
+            <view class="mathIcon" catchtap="upNum">
+              <image src="https://static2.jd-gz.com/upNum.png"></image>
+            </view>
+            <view class="num">{{num}}</view>
+            <view class="mathIcon" catchtap="addNum">
+              <image src="https://static2.jd-gz.com/addNum.png"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+ <view class="toPay">
+    <view class="btn">确认</view>
+</view> 

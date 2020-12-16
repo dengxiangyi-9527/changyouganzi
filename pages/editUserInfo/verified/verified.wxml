@@ -1,0 +1,8 @@
+<!--pages/editUserInfo/verified/verified.wxml-->
+<view>
+<!-- <web-view src="https://realnameverify-test.fadada.com/fddAuthenticationService/v1/api/synsAuthentication.action?transaction_no=8BB8B4C77E5431514ED89840D11CA975D1033FD89DE14CF2ABB88F90FD01DC0B19875A8F28C1ABB0&sign=NzlDQjk4OTQwRjAxNzI2NjA1OTcyNzdENjIxNUM5QjUzNEVGM0JBNw==&app_id=403144&timestamp=1587006031267"></web-view> -->
+
+<!-- <view wx:show="{{url}}">123</view> -->
+<web-view src="{{url}}"></web-view>
+
+</view>

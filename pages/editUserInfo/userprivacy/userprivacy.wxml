@@ -1,0 +1,2 @@
+<!--pages/editUserInfo/userprivacy/userprivacy.wxml-->
+<web-view src="https://static2.jd-gz.com/userprivacy2.html"></web-view>

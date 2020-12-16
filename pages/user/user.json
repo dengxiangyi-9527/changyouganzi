@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+   "tabbar":"/component/tabbar/tabbar"
+  },
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "backgroundColor":"#18AFFF"
+}

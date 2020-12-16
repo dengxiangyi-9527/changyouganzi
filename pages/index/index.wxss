@@ -1,0 +1,284 @@
+page{
+  background: #EDF0F5;
+  width: 750rpx;
+}
+.indexPage{
+  position: relative;
+}
+.bg_banner {
+  height: 494rpx;
+  width: 750rpx;
+}
+
+.bg_banner image {
+  height: 494rpx;
+  width: 100%;
+    border: none;
+}
+.content_box{
+  position: absolute;
+  left: 0rpx;
+  top: 0rpx;
+  width: 750rpx;
+  min-height: 100%;
+  overflow: hidden;
+}
+.info_box{
+  /* width: 750rpx; */
+  border: 1px solid rgba(0,0,0,0);
+  position: relative;
+}
+.city_box{
+  width: 710rpx;
+  background: #ffffff;
+  position: absolute;
+  /* top: 424rpx; */
+  left: 20rpx;
+  top: -40rpx;
+  border-radius: 20rpx;
+  box-sizing: border-box;
+}
+.city_box_inner{
+  width: 630rpx;
+  margin: auto;
+  box-sizing: border-box;
+}
+.station_box{
+  width: 630rpx;
+  height: 142rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.single_station{
+  width: calc((100% - 120rpx) / 2);
+  font-size: 42rpx;
+  color: #333333;
+  font-weight: bold;
+  line-height: 142rpx;
+  border-bottom: 1rpx solid #EDEDED;
+}
+.single_city{
+  max-width: 250rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.station_sight_null{
+  color: #D3D3D3;
+}
+.station_sight_null:nth-child(1){
+  text-align: left;
+}
+.icon_box{
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 31rpx;
+}
+.icon_box image{
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+.station_sight{
+  text-align: right;
+  border-bottom: 1rpx solid #EDEDED;
+}
+.date_box{
+  width: 100%;
+}
+.search_btn{
+  width:630rpx;
+  height:94rpx;
+  background:rgba(9,175,255,1);
+  border-radius:51rpx;
+  margin: 48rpx auto;
+  font-size: 42rpx;
+  color: #ffffff;
+  text-align: center;
+  line-height: 94rpx;
+}
+.single_radius{
+  background: #EDF0F5;
+  width: 20rpx;
+  height: 20rpx;
+  position: absolute;
+  border-radius: 10rpx;
+  left: -10rpx;
+  top: 132rpx;
+}
+.right_radius{
+  background: #EDF0F5;
+  width: 20rpx;
+  height: 20rpx;
+  position: absolute;
+  border-radius: 10rpx;
+  right: -10rpx;
+  top: 132rpx;
+}
+.tab_box{
+  box-sizing: border-box;
+  margin-top: 457rpx;
+  width: 750rpx;
+  height: 156rpx;
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.tab_box .cjjs{
+  position: relative;
+}
+.tab_box2{
+  box-sizing: border-box;
+  width: 100%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 44rpx;
+}
+/* 城市灵感 */
+.city_inspiration{
+  margin-top: 24rpx;
+  box-sizing: border-box;
+  padding: 30rpx 30rpx 0rpx 30rpx;
+  background: #ffffff;
+}
+.city_inspiration .title{
+  color: #333;
+  font-size: 46rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+}
+.city_inspiration .img{
+  display: flex;
+  justify-content: space-between;
+}
+.city_inspiration image{
+  width: 220rpx;
+  height: 292rpx;
+}
+.tab_single{
+  margin-left: 46rpx;
+  position: relative;
+}
+.tab_single:nth-child(1){
+  margin-left: 0rpx;
+}
+.spriteImg{
+  width: 56rpx;
+  height: 56rpx;
+  display: block;
+  margin: 28rpx auto 12rpx auto;
+}
+.tab_text{
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #999999;
+}
+.coupon_icon{
+  width: 138rpx;
+  height: 30rpx;
+  display: block;
+  position: absolute;
+  top: 6rpx;
+  left: 54rpx;
+}
+/* 防疫认证 */
+.maskBox {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .3);
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.maskBox .boxImg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.maskBox .boxImg .imgIcon {
+  width: 604rpx;
+  height: 683rpx;
+}
+
+
+.maskBox .boxImg .imgDel {
+  width: 56rpx;
+  height: 56rpx;
+  margin-top: 48rpx;
+}
+.customerservice{
+  width: 233rpx;
+  height: 132rpx;
+  position: fixed;
+  right: 0;
+  top: 66%;
+  z-index: 9999;
+}
+.customerservice image{
+  width: 100%;
+  height: 100%;
+}
+.index_cur_tab{
+  width: 42rpx;
+  height: 18rpx;
+  display: block;
+  margin: 10rpx auto;
+}
+.hot_icon{
+  position: absolute;
+  width: 50rpx;
+  height: 30rpx;
+  display: block;
+  right:-50rpx;
+  top: -5rpx;
+}
+/* 当地必体验 */
+.local_experience{
+  padding: 0 30rpx;
+  padding-bottom: 150rpx;
+  background-color: #Fff;
+  box-sizing: border-box;
+}
+.local_experience .title{
+  color: #333;
+  font-size: 46rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+}
+
+.local_experience .wrap_pic .item image{
+  height: 222rpx;
+  width: 690rpx;
+  margin-bottom: 28rpx;
+  /* display: none; */
+}
+.wrap_pic{
+  width: 750rpx;
+  background-color: #fff;
+  /* padding: 0 20rpx; */
+  box-sizing: border-box;
+}
+.how_play image{
+  width: 100%;
+}
+.single_name{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  color: #333;
+  font-weight: bold;
+}
+.single_name_active{
+  font-size: 42rpx;
+  color: #333;
+  font-weight: bold;
+}
+

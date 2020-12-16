@@ -1,0 +1,19 @@
+	<view class="logo">
+		<image src="https://static2.jd-gz.com/loginicon.png"></image>
+		<view class="logo_tit">畅游甘孜</view>
+		<!-- <view class="logo_num" wx:if='{{isLogin}}'>申请获取你的微信绑定的手机号</view> -->
+	</view>
+	<!-- 如果点击了登录之后出现这两个按钮 -->
+	<view wx:if='{{isLogin}}'>
+		<button class="getPhoneNum" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号</button>
+		<!-- <button class="phone" bindtap="toPhone">手机号登录 / 注册</button> -->
+	</view>
+
+	<button class="wx" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" lang="zh_CN" wx:else>
+		<image src="https://static2.jd-gz.com/wx.png"></image>
+		<text>使用微信授权登录</text>
+	</button>
+
+	<view class="footer" bindtap="goUserPrivacy">
+		登录代表您已同意畅游甘孜 <text class="userPre">用户协议、</text><text class="IvPre">隐私协议</text>
+	</view>

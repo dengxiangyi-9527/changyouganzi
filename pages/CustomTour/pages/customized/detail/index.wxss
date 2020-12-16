@@ -1,0 +1,94 @@
+/* pages/CustomTour//pages/customized/detail/index.wxss */
+page{
+  width: 750rpx;
+  min-height: 100%;
+}
+.wait_wrap{
+  width: 750rpx;
+  min-height: 100%;
+  background-color: #FAFAFA;
+}
+.head{
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFF;
+  padding-bottom: 30rpx;
+  box-sizing: border-box;
+}
+.head_erro{
+  margin-top: 35rpx;
+  font-size: 26rpx;
+  line-height: 37rpx;
+  color: #FE8B32;
+  text-align: center;
+}
+.head_img{
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 30rpx;
+}
+.head_img image{
+  width: 100%;
+  height: 100%;
+}
+.head_text{
+  font-size: 26rpx;
+  line-height: 39rpx;
+  color: #999999;
+  margin-top: 40rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  text-align: center;
+}
+.infoBox{
+  margin-top: 30rpx;
+  width: 750rpx;
+  padding: 0rpx 30rpx;
+  box-sizing: border-box;
+  background-color: #FFF;
+  position: relative;
+}
+.infoTab{
+  padding: 0 16rpx;
+  box-sizing: border-box;
+  font-size: 20rpx;
+  line-height: 30rpx;
+  color: #FFF;
+  border-bottom-right-radius: 100rpx;
+  background-color: #FE8B32;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.infoItem{
+  padding: 30rpx 0;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #EDEDED;
+  display: flex;
+  align-items: flex-start;
+}
+.itemTitle{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #333;
+  white-space: nowrap;
+}
+.itemMain{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #333;
+  margin-left: 96rpx;
+  font-weight: bold;
+}
+.dayNum{
+  padding: 3rpx 16rpx;
+  font-size: 22rpx;
+  line-height: 34rpx;
+  color: #333333;
+  border: 2rpx solid #D3D3D3;
+  border-radius: 20rpx;
+  margin-left: 7rpx;
+}
+

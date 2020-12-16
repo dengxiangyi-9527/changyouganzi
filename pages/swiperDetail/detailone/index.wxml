@@ -1,0 +1,81 @@
+<!--pages/swiperDetail/detailone/index.wxml-->
+<!-- <view class="title">
+  畅游甘孜 | 伴你出行 让旅途更美好
+</view> -->
+<view class="box">
+  <!-- <text class="boxTitle" decode="{{true}}">畅&ensp;游&ensp;甘&ensp;孜</text> -->
+  <view class="boxTitle">
+    <view style="font-size:100rpx">畅</view>
+    <view>游</view>
+    <view>甘</view>
+    <view>孜</view>
+  </view>
+  <text class="boxTitleTwo" decode="{{true}}">伴&ensp;你&ensp;出&ensp;行&ensp;&ensp;&ensp;让&ensp;旅&ensp;途&ensp;更&ensp;美&ensp;好</text>
+  <view class="imgBox">
+    <image src="https://static2.jd-gz.com/three1.gif"></image>
+  </view>
+  <view class="titleMain">
+    <view class="item"><view class="items">公</view></view>
+    <view class="item"><view class="items">司</view></view>
+    <view class="item"><view class="items">简</view></view>
+    <view class="item"><view class="items">介</view></view>
+  </view>
+  <view class="text">
+    <text style="color:#18AFFF">甘孜州极地运业</text>
+    以组建甘孜州旅游车辆运行管理平台为使命，按照规范运行要求，建立以驾驶员、车辆、游客为核心的运行管理和服务系统，
+  </view>
+  <view class="imageBox">  
+    <image src="https://static2.jd-gz.com/98ad9530f0e9c13dfd7cb52bc4095b7a-sz_586544.jpg"></image>
+  </view>
+  <view class="boxCenter">
+    <view class="titleMain" style="margin:40rpx 0;">
+      <view class="item"><view class="items">畅</view></view>
+      <view class="item"><view class="items">游</view></view>
+      <view class="item"><view class="items">宗</view></view>
+      <view class="item"><view class="items">旨</view></view>
+    </view>
+    <view style="font-weight:600;font-size:30rpx;text-align:center;margin-bottom:40rpx;margin-top:20rpx">基于交通出行的全域旅游综合服务提供商</view>
+    <view class="textitem"> 安全</view>
+    <view class="textitem"> 品质</view>
+    <view class="textitem"> 便捷</view>
+    <view class="textitem"> 合规</view>
+  </view>
+  <view class="boxCenter">
+    <view class="titleMain" style="margin:40rpx 0;">
+      <view class="item"><view class="items">乘</view></view>
+      <view class="item"><view class="items">车</view></view>
+      <view class="item"><view class="items">需</view></view>
+      <view class="item"><view class="items">知</view></view>
+    </view>
+    <view class="image">
+      <image src="https://static2.jd-gz.com/62d5ba55254a4694297013dbbcff95b3-sz_25316.jpg"></image>
+    </view>
+      <text class="textList" decode="{{true}}">①&ensp;需持有本人有效身份证件。</text>
+      <text class="textList" decode="{{true}}">②&ensp;乘车时请一定全程佩戴口罩。</text>
+      <text class="textList" decode="{{true}}">③&ensp;主动配合工作人员进行体温检测。</text>
+      <text class="textList" decode="{{true}}">④&ensp;途中如有身体不适，请主动、及时告知司机。</text>
+  </view>
+  <view class="boxCenter">
+    <view class="titleMain" style="margin:40rpx 0;">
+      <view class="item"><view class="items">关</view></view>
+      <view class="item"><view class="items">于</view></view>
+      <view class="item"><view class="items">我</view></view>
+      <view class="item"><view class="items">们</view></view>
+    </view>
+    <view class="textLine">
+      <view class="line">城际接送</view>
+      <view class="line">定制包车</view>
+      <view class="line">接送机</view>
+      <view class="line">自驾租车</view>
+    </view>
+    <view class="centerBottom">
+      <view class="bottomImage">
+        <image src="https://static2.jd-gz.com/code.jpg"></image>
+      </view>
+      <view class="bottomText">
+        <view style="font-weight:600; border-bottom:2rpx solid rgb(33, 33, 34);">畅游甘孜</view>
+        <view>期待与您相遇</view>
+      </view>
+    </view>
+  </view>
+</view>

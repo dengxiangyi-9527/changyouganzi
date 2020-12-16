@@ -1,0 +1,7 @@
+<view class="radier_box">
+    <view class="header">
+		<cjjs-index-component my-property='{{nav}}' class="nav" />
+    </view>
+    <!-- <image mode="widthFix" src="https://static2.jd-gz.com/coupon_raiders.png" class="coupon_raiders"></image> -->
+    <image mode="widthFix" src="https://static2.jd-gz.com/coupon_raiders_back.png" class="coupon_raiders"></image>
+</view>

@@ -1,0 +1,144 @@
+/* pages/cjjs/mapselect/index.wxss */
+page{
+  width: 750rpx;
+  height: 100%;
+}
+.wrap{
+  width: 750rpx;
+  height: 100%;
+}
+.wrap map{
+  width: 100%;
+}
+.wrap .bottomBox{
+  position: fixed;
+  bottom: 0;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  background-color: #fff;
+  z-index: 999999;
+}
+.wrap .selectBox{
+  width: 100%;
+  padding: 48rpx;
+  box-sizing: border-box;
+
+}
+.wrap .selectBox .locBox{
+  display: flex;
+  align-items: center;
+}
+.wrap .selectBox .locBox .locIcon{
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+}
+.wrap .selectBox .locBox .toLocIcon{
+  border: 8rpx solid #24BFB0;
+}
+.wrap .selectBox .locBox .fromLocIcon{
+  border: 8rpx solid #09AFFF;
+}
+.wrap .selectBox .locBox .locInfo{
+  margin-left: 30rpx;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  font-weight: 700;
+  color: #333;
+  max-width: 500rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.wrap .selectBox .locBox .locNullInfo{
+  color: #999999;
+}
+.wrap .selectBox .line{
+  width: 1rpx;
+  height: 36rpx;
+  background-color: #EDEDED;
+  margin-left: 15rpx;
+}
+.wrap  .btnBox{
+  width: 750rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  padding-bottom: 116rpx;
+}
+.wrap .btnBox .btn{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 19rpx 273rpx;
+  background-color: #18AFFF;
+  color:#FFF;
+  border-radius: 12rpx;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 36rpx;
+}
+.wrap .markBox{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 15%;
+  left: 15%;
+}
+.wrap .markBox .markText{
+  background-color: #fff;
+  padding: 16rpx 30rpx;
+  box-sizing: border-box;
+  border-radius: 36rpx !important;
+  color: #333;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  font-weight: 700;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.wrap .markBox .markIcon{
+  width: 50rpx;
+  height: 67rpx;
+  margin-top: 24rpx;
+}
+.dingweiBtn{
+  position: fixed;
+  right: 28rpx;
+  vertical-align: top;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+.dingweiBtn .dingweiText{
+  padding: 8rpx 12rpx;
+  background-color: #FFf;
+  box-sizing: border-box;
+  color: #333;
+  font-size: 22rpx;
+  border-radius: 10rpx;
+  margin-right: 10rpx;
+}
+.dingweiBtn .dingweiIcon{
+  width: 64rpx;
+  height: 64rpx;
+}
+.Maptitle{
+  width: 70%;
+  padding: 15rpx 0;
+  color: #333;
+  border: 28rpx;
+  background-color: #fff;
+  position: fixed;
+  top: 5%;
+  left: 15%;
+  border-radius: 20rpx;
+  text-align: center;
+  font-size: 28rpx;
+}

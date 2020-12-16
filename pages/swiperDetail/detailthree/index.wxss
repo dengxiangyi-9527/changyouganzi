@@ -1,0 +1,109 @@
+.content {
+  padding: 30rpx;
+}
+
+.content .title {
+  font-size: 40rpx;
+}
+
+.content .box .gifpic {
+  width: 690rpx;
+  height: 384rpx;
+}
+
+.content .box .introduction {
+  font-size: 30rpx;
+  line-height: 75rpx;
+  color: #3e3e3e;
+  font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Noto Sans", "Noto Sans CJK SC", "Microsoft YaHei", "Apple Color Emoji", "Segoe UI Symbol", Arial, sans-serif;
+}
+
+.content .box .three2 {
+  width: 690rpx;
+  height: 400rpx;
+  border-bottom: 2rpx solid rgb(198, 171, 136);
+  border-top: 2rpx solid rgb(198, 171, 136);
+  margin-top: 10rpx;
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.content .box .three2 .right-border {
+  width: 2rpx;
+  height: 80rpx;
+  background-color: rgb(198, 171, 136);
+  position: absolute;
+  top: -20rpx;
+  right: 10rpx;
+}
+
+.content .box .three2 .left-border {
+  width: 2rpx;
+  height: 80rpx;
+  background-color: rgb(198, 171, 136);
+  position: absolute;
+  bottom: -20rpx;
+  left: 10rpx;
+}
+
+.content .box .three2 image {
+  width: 600rpx;
+  height: 360rpx;
+}
+
+.content .box .content_item {
+  padding-top: 30rpx;
+}
+
+.content .box .content_item .title_num {
+  width: 690rpx;
+  text-align: center;
+}
+
+.content .box .content_item .title_num text {
+  font-weight: bold;
+  color: rgb(45, 113, 214);
+  font-size: 38rpx;
+  font-style: italic;
+}
+
+.content .box .content_item .title_text {
+  width: 690rpx;
+  text-align: center;
+  font-size: 30rpx;
+  margin-top: 13rpx;
+}
+
+.content .box .content_item .content_main {
+  font-size: 30rpx;
+  line-height: 75rpx;
+  color: #3e3e3e;
+  font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Noto Sans", "Noto Sans CJK SC", "Microsoft YaHei", "Apple Color Emoji", "Segoe UI Symbol", Arial, sans-serif;
+}
+
+.content .box .class_time {
+  padding-top: 50rpx;
+  width: 690rpx;
+  text-align: center;
+}
+
+.content .box .class_time .time_title {
+  color: rgb(62, 62, 62);
+  font-weight: bold;
+  font-size: 38rpx;
+  padding-bottom: 50rpx;
+}
+
+.content .box .class_time image {
+  width: 690rpx;
+  height: 288rpx;
+}
+
+.content .box .notice{
+  text-align: left;
+  padding-left: 32rpx;
+  font-size: 30rpx;
+}

@@ -1,0 +1,172 @@
+<!--pages/cjjs/neworder/index.wxml-->
+<view class="wrap">
+	<view class="bc_img">
+		<image src="https://static2.jd-gz.com/background-image.png"></image>
+	</view>
+	<view class="carInfo">
+		<view class="titleBox">{{timer}}出发</view>
+		<view class="lineInfo">
+			<view class="lineBox">
+				<view class="circle"></view>
+				<view class="line"></view>
+				<view class="circle"></view>
+			</view>
+			<view class="locInfo">
+				<view class="locBox">
+					<view class="cityBox">
+						<view class="cityName">{{cityFrom}}</view>
+						<view class="locDetail">{{fromLocationInfo}}</view>
+					</view>
+					<view class="locText" catchtap="startLoc">修改</view>
+				</view>
+				<view class="locBox">
+					<view class="cityBox">
+						<view class="cityName">海螺沟（景区）</view>
+						<view class="locDetail">四川省甘孜藏族自治州泸定县磨西镇冰川路86号</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="carTab">
+			<view class="tabBox" bindtap="showPopup" data-item="0">退款说明</view>
+			<view class="tabBox" bindtap="showPopup" data-item="1">乘车须知</view>
+		</view>
+	</view>
+	<view class="main">
+		<view class="userInfo">
+			<view class="userTitle">乘客信息</view>
+			<view class="userInfoBox">
+				<view class="userInfoList">
+					<view class="userInfoItem" wx:for="{{userList}}" wx:key="*this">
+						<view class="itemInfo">
+							<view class="itemUser">
+								<image src="https://static2.jd-gz.com/codeBusUser.png" wx:if="{{!item.delcheck}}" ></image>
+								<image src="https://static2.jd-gz.com/codeBusUser_active.png" wx:if="{{item.delcheck}}"></image>
+								<view class="itemUserInfo">
+									<view class="itemUserName">{{item.name}}</view>
+									<view class="itemUserid">{{item.id_card_number}}</view>
+								</view>
+							</view>
+						</view>
+						<view class="closeBox">
+							<scroll-view scroll-x="{{true}}" scroll-anchoring	="{{true}}" class="scrolview" bindscrolltolower="scrollend" bindscrolltoupper = "scrollstart" data-item="{{item}}">
+								<view class="scrollBox">
+									<view class="itemclose" catchtap="delUser" data-item="{{item}}">删除</view>
+								</view>
+							</scroll-view>
+						</view>
+					</view>
+				</view> 
+				<view class="infoBox" catchtap="addUser">
+					<view class="addUserInfo">
+						<image src="https://static2.jd-gz.com/addNum.png"></image>
+						<view class="addUserText">添加乘客（成人、学生、儿童）</view>
+					</view>
+				</view>
+				<!-- <view class="infoBox">
+					<view class="infoTitle">
+						<image src="https://static2.jd-gz.com/userName.png"></image>
+						<view class="titleText">姓名</view>
+					</view>
+					<view class="inputBox">
+						<input value="{{userName}}"  bindinput="getUserName" placeholder="请输入你的姓名" placeholder-class="palce" disabled="{{isRead}}" class="inputText"></input>
+					</view>
+				</view> -->
+				<view class="infoBox">
+					<view class="infoTitle">
+						<image src="https://static2.jd-gz.com/teiPhone.png"></image>
+						<view class="titleText">手机号码</view>
+					</view>
+					<view class="inputBox">
+						<input value="{{tel}}" bindinput="getUserTel" bindblur="inspectTel" placeholder="用于接收购票短信" placeholder-class="palce" disabled="{{isRead}}" class="inputText"></input>
+					</view>
+				</view>
+				<view class="infoBox">
+					<view class="infoTitle">
+						<image src="https://static2.jd-gz.com/remarks.png"></image>
+						<view class="titleText">备注</view>
+					</view>
+					<view class="inputBox">
+						<textarea auto-height="{{true}}" value="{{remarks}}" bindinput="getRemarks" placeholder="如有其他需求，请留言在这里" placeholder-class="palce" disabled="{{isRead}}" class="inputText"></textarea>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="prompt">
+			<text class="tit">出行提示</text>
+			<view class="content">
+				<view>1.因儿童座椅有限，如需儿童座椅需提前联系客服；</view>
+				<view>2.如有其他紧急需求，请联系<text style="color:#09AFFF" catchtap="callPhone" data-item="19150185859">在线客服19150185859</text> </view>
+			</view>
+		</view>
+		<view class="protocol">
+			<van-checkbox value="{{ checked }}" bind:change="onChecked" checked-color="#18AFFF" icon-size="30rpx">
+				<text class="read">已阅读并同意</text>
+				<text class="protocol_content" catchtap="toProtocol" data-protocolType="carhire">《畅游甘孜约车协议》</text>
+			</van-checkbox>
+		</view>
+	</view>
+</view>
+<view class="toPay">
+	<view class="BottompriceBox">
+		<view class="allPrice">￥{{allPrice}}</view>
+		<view class='title' data-index='{{index + 1}}' catchtap='showPriceDetail'>
+			<view class='title_1'>费用明细</view>
+			<view class='title_2'>
+				<image src="https://static2.jd-gz.com/{{IconTrue ? 'up_icon@3x':'rightd_icon%402x'}}.png"></image>
+			</view>
+		</view>
+	</view>
+	<view class="btnBox" catchtap="toPay">去付款</view>
+</view>
+
+<view class="popup" wx:if="{{show}}" catchtap="onClose">
+	<view class="popopBox">
+		<view class="modeltitle">
+			<view class="title" style=" border-bottom:{{!iscode ? '4rpx solid #09AFFF' : ''}}" catchtap="exached">乘车须知</view>
+			<view class="title" style=" border-bottom:{{iscode ? '4rpx solid #09AFFF' : ''}}" catchtap="exached">退改说明</view>
+		</view>
+		<view class="main" wx:if="{{!iscode}}">
+			<view class="text" style="font-weight:550">感谢您选乘畅行甘孜城际专车，为了方便您的出行，请您在购票前仔细阅读乘客须知。也可联系我们的客服热线19150185859查询和了解</view>
+			<view class="text text1">1.请您在提交订单后30分钟完成支付；逾期未支付，订单回自动取消</view>
+			<view class="text text1">2.系统将在行程开始前规划依次接送各位乘客，请您提前做好出行准备，配合司机师傅乘车</view>
+			<view class="text text1">3.我们非常重视您的出行安全，特别为您赠送60万的座位险</view>
+			<view class="text text1">4.80以上的老人，12及以下的儿童，以及身体不便，行动不便的乘客，需有监护人的陪同</view>
+			<view class="text text1">5.若您想更改出行计划，请参考退改协议</view>
+		</view>
+		<view class="main" wx:if="{{iscode}}">
+			<view class="formtop">
+				<view class="formtext">1.取消订单：</view>
+				<view class="mainBox">
+					<view class="formMain">支付订单前可任意取消，订单确认后若需取消需提前1天联系客服19150185859进行取消。</view>
+					<!-- <view class="formMain">2.班车发车前2小时到8小时取消订单</view>
+					<view class="formMain">3.班车发车2小时以内，不可取消订单</view> -->
+				</view>
+			</view>
+			<!-- <view class="formtop">
+				<view class="formtext">2.改签：</view>
+				<view class="mainBox tit">
+					<view class="formMain">1.每个订单仅可改签一次</view>
+					<view class="formMain">2.开车前1小时内停止改签</view>
+					<view class="formMain">3.改签仅可改签所购订单路线的班次,且只可改签当天及之前时间的班次</view>
+				</view>
+			</view> -->
+			<view class="formtt">2.因不可抗力造成的停运，平台将主动与您联系通知您退票</view>
+			<view class="formtt">3.取消订单的退款票款将原路返回，预计48小时以内退款到您的账户</view>
+		</view>
+	</view>
+</view>
+
+<view class="mask" wx:if="{{changeDisplay}}" catchtap="closeMask" catchtouchmove="true">
+	<view class="maskBox">
+		<view class="boxTitle">订单价格说明</view>
+		<view class="boxNum">
+			<view class="Numtext">包车价格:</view>
+			<view class="Numtext">￥{{carInfo.price}}</view>
+		</view>
+		<view class="boxNum" wx:if="{{carInfo.num>0}}">
+			<view class="Numtext">门票价格:</view>
+			<view class="Numtext">￥{{carInfo.totalPrice}}*{{carInfo.num}}</view>
+		</view>
+	</view>
+</view>

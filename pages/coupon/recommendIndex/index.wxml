@@ -1,0 +1,98 @@
+<view class="{{showShare || showPost?'recommendIndex_fixed':'recommendIndex'}}">
+	<view class="header">
+		<cjjs-index-component my-property='{{nav}}' class="nav" />
+	</view>
+	<!-- <image src="https://static2.jd-gz.com/coupon_gongnue.png" class="coupon_gongnue" bindtap="bindRadiers"></image> -->
+	<image src="https://static2.jd-gz.com/coupon_gongnue_back.png" class="coupon_gongnue" bindtap="bindRadiers"></image>
+	<image src="https://static2.jd-gz.com/title_img.png" class="title_img" data-type="share" bindtap="bindShare"></image>
+	<view class="title_box">
+		<image src="https://static2.jd-gz.com/title_icon.png" class="title_icon"></image>
+		<view class="title_text">代金券在路上</view>
+		<image src="https://static2.jd-gz.com/title_icon.png" class="title_icon"></image>
+	</view>
+	<view class="number_box" wx:if="{{listData.length > 0}}">
+		<view class="number_box_inner" wx:for="{{listData}}" wx-for-item="item" wx:key="index">
+			<view class="single_box">
+				<view class="single_left">
+					<view class="photo_box">
+						<image class="photo_img" src="{{item.image}}"></image>
+					</view>
+					<view class="name">{{item.nickname}}</view>
+				</view>
+				<view class="single_right">{{item.text}}</view>
+			</view>
+		</view>
+		<view class="tips"  wx:if="{{orderSuccess >=1 && registerSuccess >=2}}">
+			<text>推荐成功人数{{orderSuccess}}人 已得</text>
+			<text class="coupon_text" bindtap="bindCouponList">优惠券</text>
+			<text>{{orderSuccess * 30}}元</text>
+		</view>
+		<view class="tips" wx:else >
+			<text>推荐成功人数{{orderSuccess}}人 已得</text>
+			<text class="coupon_text" bindtap="bindCouponList">优惠券</text>
+			<text>0元</text>
+		</view>
+	</view>
+	<view class="nodata_box" wx:else>
+		暂无未下单好友，快去推荐好友吧
+	</view>
+	<view class="title_box">
+		<image src="https://static2.jd-gz.com/title_icon.png" class="title_icon"></image>
+		<view class="title_text">参与步骤</view>
+		<image src="https://static2.jd-gz.com/title_icon.png" class="title_icon"></image>
+	</view>
+	<view class="step_box">
+		<view class="step_top">
+			<view class="step_number">1</view>
+			<view class="step_line"></view>
+			<view class="step_number">2</view>
+			<view class="step_line"></view>
+			<view class="step_number">3</view>
+		</view>
+		<view class="step_bottm">
+			<view class="step_single">
+				<view>邀请微信好友</view>
+				<view>或者保存二维码</view>
+			</view>
+			<view class="step_single">
+				<view>好友点击邀请页进</view>
+				<view>入小程序登录注册</view>
+			</view>
+			<view class="step_single">
+				<view>好友注册完成首</view>
+				<view>单你获得代金券</view>
+			</view>
+		</view>
+	</view>
+	<view class="share_box" wx:if="{{showShare}}" bindtap="closeShare">
+		<view class="btn_box" style="height:{{isIpx?'260rpx':'207rpx'}}">
+			<view class="btn_single">
+				<button open-type="share" class="share_button" hover-class="none">
+					<image src="https://static2.jd-gz.com/share_wx.png" class="share_icon"></image>
+					<view class="share_text">微信好友</view>
+				</button>
+			</view>
+			<view class="btn_single single_right_share" data-type="post" catchtap="bindShare">
+				<image src="https://static2.jd-gz.com/share_post.png" class="share_icon"></image>
+				<view class="share_text">生成海报</view>
+			</view>
+		</view>
+	</view>
+	<!-- <view class="share_box" style="display: {{showPost ?'block':'none'}}"> -->
+	<!-- <view class="share_box" hidden="{{!showPost}}"> -->
+	<view class="share_box" wx:if="{{showPost}}">
+		<view class="btn_box" style="height:{{isIpx?'240rpx':'187rpx'}}" wx:if="{{canvasImgUrl && showPost}}">
+			<view class="save_btn" bindtap="saveImage">保存图片</view>
+		</view>
+		<view class="post_box" style="bottom:{{isIpx?'270rpx':'217rpx'}};">
+			<image src="https://static2.jd-gz.com/cross@2x.png" class="close_icon" data-type="close" bindtap="bindShare" style="bottom:{{isIpx?'1217rpx':'1164rpx'}};"  wx:if="{{canvasImgUrl && showPost}}"></image>
+			<image class="canvas_img" src="{{canvasImgUrl}}" mode="widthFix"></image>
+			<!-- <image src="{{qrcode}}" class="qrcode"></image> -->
+		</view>
+		<view class="canvas_box">
+			<!-- <canvas canvas-id="postCanvas" style="width: 654rpx;height: 932rpx;background:#ffffff"> -->
+			<canvas canvas-id="postCanvas" style="width: {{canvasWidth}}px;height: {{canvasHeight}}px;background:#ffffff">
+			</canvas>
+		</view>
+	</view>
+</view>

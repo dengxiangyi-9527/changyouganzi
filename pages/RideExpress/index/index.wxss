@@ -1,0 +1,943 @@
+/* pages/RideExpress/index.wxss */
+image {
+  vertical-align: top;
+  border: none;
+}
+
+.wrap {
+  width: 750rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+map {
+  width: 750rpx;
+
+}
+.dingwei{
+  width: 64rpx;
+  height: 64rpx;
+  position: absolute;
+  top: -80rpx;
+  right: 30rpx;
+}
+.dingwei image{
+  width: 100%;
+  height: 100%;
+}
+
+.bottomTap {
+  width: 750rpx;
+  box-sizing: border-box;
+  padding-bottom: 98rpx;
+  position: fixed;
+  bottom: 0;
+  box-sizing: border-box;
+  z-index: 9999;
+}
+
+.bottomTap .tapTop {
+  width: 100%;
+  height: 93rpx;
+  background-color: #0FB67B;
+  border-top-right-radius: 30rpx;
+  border-top-left-radius: 30rpx;
+  display: flex;
+  padding-left: 39rpx;
+  padding-right: 33rpx;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.bottomTap .tapTop .topText {
+  color: #fff;
+  font-size: 26rpx;
+  line-height: 38rpx;
+  display: flex;
+  align-items: center;
+}
+
+.bottomTap .tapTop .topText .topLeft {
+  width: 26rpx;
+  height: 32rpx;
+  margin-right: 25rpx;
+}
+
+.bottomTap .tapTop .topRight {
+  width: 10rpx;
+  height: 18rpx;
+}
+.bottomTap .tapTop .topText .topLeft{
+  width: 44rpx;
+  height: 44rpx;
+  margin-right: 25rpx;
+}
+.bottomTap .tapTop .topRight{
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.bottomTap .tapBottom {
+  width: 750rpx;
+  background-color: #fff;
+}
+
+.bottomTap .tapBottom .bottomTaps {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 48rpx 68rpx 30rpx 68rpx;
+  box-sizing: border-box;
+}
+
+.bottomTap .tapBottom .bottomTaps .taptext {
+  background-color: #FFFFFF;
+  padding: 12rpx 28rpx 12rpx 24rpx;
+  border: 1rpx solid #D3D3D3;
+  border-radius: 30rpx;
+  color: #666666;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.bottomTap .tapBottom .bottomTaps .taptext .taptextImag{
+  width: 16rpx;
+  height: 16rpx;
+  margin-left: 4rpx;
+}
+
+.bottomTap .tapBottom .location {
+  width: 750rpx;
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.bottomTap .tapBottom .location .locBox {
+  width: 100%;
+  padding: 48rpx 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #EDEDED;
+  box-sizing: border-box;
+}
+
+.bottomTap .tapBottom .location .locBox .startCle {
+  width: 14rpx;
+  height: 14rpx;
+  border-radius: 50%;
+  background-color: #18AFFF;
+}
+
+.bottomTap .tapBottom .location .locBox .endCle {
+  width: 14rpx;
+  height: 14rpx;
+  border-radius: 50%;
+  background-color: #24BFB0;
+}
+
+.bottomTap .tapBottom .location .locBox .locText {
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;
+  margin-left: 30rpx;
+}
+
+.btnBox {
+  width: 100%;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 48rpx;
+}
+
+.btnBox .trueBtn {
+  width: 690rpx;
+  height: 88rpx;
+  background-color: #18AFFF;
+  color: #fff;
+  font-size: 36rpx;
+  border-radius: 12rpx;
+  line-height: 88rpx;
+  text-align: center;
+}
+
+/* 选择人数 */
+.personWrap {
+  width: 750rpx;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  bottom: 0;
+  z-index: 99999;
+}
+
+.personWrap .personBox {
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  box-sizing: border-box;
+  padding: 48rpx 30rpx 0 30rpx;
+  border-top-right-radius: 30rpx;
+  border-top-left-radius: 30rpx;
+  padding-bottom: 75rpx;
+  box-sizing: border-box;
+  z-index: 999999;
+}
+
+.personWrap .personBox .personTitle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.personWrap .personBox .personTitle image {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.personWrap .personBox .personTitle .titleText {
+  font-size: 36rpx;
+  color: #333;
+  font-weight: bold;
+  line-height: 50rpx;
+}
+
+.personWrap .personBox .personerro {
+  line-height: 36rpx;
+  color: #999;
+  font-size: 24rpx;
+  margin-top: 16rpx;
+}
+
+.personWrap .personBox .personTabBox {
+  display: flex;
+  width: 100%rpx;
+  margin-top: 48rpx;
+  justify-content: space-between;
+}
+
+.personWrap .personBox .personTab {
+  width: 153rpx;
+  height: 160rpx;
+  border: 1rpx solid #D3D3D3;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 46rpx;
+  font-weight: bold;
+  line-height: 58rpx
+}
+
+/* 填写相关信息 */
+.relevant_information {
+  width: 750rpx;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+}
+
+.relevant_information .relevant_information_wrap {
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  box-sizing: border-box;
+  padding: 48rpx 30rpx 0 30rpx;
+  border-top-right-radius: 30rpx;
+  border-top-left-radius: 30rpx;
+  padding-bottom: 60rpx;
+}
+
+.relevant_information .relevant_information_wrap .title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.relevant_information .relevant_information_wrap .title text {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #333;
+}
+
+.relevant_information .relevant_information_wrap .title image {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.relevant_information .relevant_information_wrap .input_name {
+  margin-top: 48rpx;
+  height: 104rpx;
+  border-bottom: 2rpx solid #EDEDED;
+}
+
+.relevant_information .relevant_information_wrap .input_name input {
+  padding-top: 30rpx;
+  color: #333;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.relevant_information .relevant_information_wrap button {
+  margin-top: 80rpx;
+  background-color: #18AFFF;
+  color: #fff;
+  font-size: 36rpx;
+}
+
+.relevant_information .relevant_information_wrap button::after {
+  border-width: 0
+}
+
+
+/* 费用明细 */
+.charge_details {
+  width: 750rpx;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  bottom: 0;
+  z-index: 999999;
+}
+
+.charge_details .charge_details_wrap {
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  box-sizing: border-box;
+  padding: 48rpx 30rpx 0 30rpx;
+  border-top-right-radius: 30rpx;
+  border-top-left-radius: 30rpx;
+  padding-bottom: 60rpx;
+}
+
+.charge_details .charge_details_wrap .charge_title {
+  text-align: center;
+}
+
+.charge_details .charge_details_wrap .charge_title text {
+  font-size: 36rpx;
+  color: #333;
+}
+
+.charge_details .charge_details_wrap .charge_title image {
+  width: 44rpx;
+  height: 44rpx;
+  /* float: right; */
+  position: absolute;
+  right: 30rpx;
+}
+
+.charge_details .charge_details_wrap .charge_money {
+  font-size: 56rpx;
+  color: #FE4B3C;
+  text-align: center;
+  padding-top: 16rpx;
+  padding-right: 26rpx;
+}
+
+.charge_details .charge_details_wrap .service_fee {
+  padding-top: 76rpx;
+  font-size: 28rpx;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 27rpx;
+}
+
+.charge_details .charge_details_wrap .border_view {
+  width: 750rpx;
+  height: 2rpx;
+  background-color: #EDEDED;
+  position: absolute;
+  left: 0;
+}
+
+.charge_details .charge_details_wrap .one_price {
+  padding-top: 30rpx;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.charge_details .charge_details_wrap .one_price .one_price_title {
+  text-align: center;
+  color: #666;
+  font-size: 30rpx;
+  padding-bottom: 24rpx;
+}
+
+.charge_details .charge_details_wrap .one_price .one_price_content {
+  line-height: 40rpx;
+}
+
+.charge_details .charge_details_wrap .price_description {
+  padding-top: 30rpx;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.charge_details .charge_details_wrap .price_description .price_description_title {
+  text-align: center;
+  color: #666;
+  font-size: 30rpx;
+  padding-bottom: 24rpx;
+}
+
+.charge_details .charge_details_wrap .price_description .price_description_content {
+  padding-bottom: 24rpx;
+  line-height: 40rpx;
+}
+
+/* 修改手机号 */
+.modify_phone_number {
+  width: 750rpx;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+}
+
+.modify_phone_number .modify_phone_number_wrap {
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  box-sizing: border-box;
+  padding: 48rpx 30rpx 0 30rpx;
+  border-top-right-radius: 30rpx;
+  border-top-left-radius: 30rpx;
+  padding-bottom: 60rpx;
+}
+
+.modify_phone_number .modify_phone_number_wrap .title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modify_phone_number .modify_phone_number_wrap .title text {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #333;
+}
+
+.modify_phone_number .modify_phone_number_wrap .title image {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.modify_phone_number .modify_phone_number_wrap .current {
+  padding-top: 16rpx;
+  font-size: 24rpx;
+  color: #3E4A6E;
+}
+
+.modify_phone_number .modify_phone_number_wrap .input_number {
+  margin-top: 48rpx;
+  height: 104rpx;
+  border-bottom: 2rpx solid #EDEDED;
+}
+
+.modify_phone_number .modify_phone_number_wrap .input_number input {
+  padding-top: 30rpx;
+  color: #333;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.modify_phone_number .modify_phone_number_wrap button {
+  margin-top: 80rpx;
+  background-color: #18AFFF;
+  color: #fff;
+  font-size: 36rpx;
+}
+
+.modify_phone_number .modify_phone_number_wrap button::after {
+  border-width: 0;
+  font-size:46rpx;
+  font-weight:bold;
+  line-height:58rpx
+}
+.personWrap .timeChange{
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  box-sizing: border-box;
+  padding: 48rpx 30rpx 0 30rpx;
+  border-top-right-radius: 30rpx;
+  border-top-left-radius: 30rpx;
+  padding-bottom: 75rpx;
+  box-sizing: border-box;
+  z-index: 999999;
+}
+.personWrap .timeChange .timeTop{
+  width: 100%;
+  height: auto;
+  margin-bottom: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.personWrap .timeChange .timeTop .topText{
+  color: #333;
+  font-size: 36rpx;
+  line-height: 50rpx;
+  font-weight: bold;
+}
+.personWrap .timeChange .timeTop .topImage{
+  width: 44rpx;
+  height: 44rpx;
+}
+.personWrap .timeChange .chnageBox{
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+/* ::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+  } */
+.personWrap .timeChange .chnageBox .changeYear .listItem{
+  font-size: 30rpx;
+  color: #999;
+  line-height: 42rpx;
+  margin-bottom: 12rpx;
+  text-align: center;
+}
+.van-picker-column__item--selected{
+  font-size: 36rpx;
+  color: #333 !important;
+  /* border-top: 1rpx solid #EDEDED;
+  border-bottom: 1rpx solid #EDEDED; */
+  box-sizing: border-box;
+  align-items: center;
+  width: auto;
+  font-weight: bold !important;
+  height: 76rpx !important;
+}
+.van-picker__column{
+  display: flex;
+  width: auto !important;
+}
+.selectPersonNum{
+  border: 1rpx solid #18AFFF !important;
+  color: #18AFFF !important;
+}
+.personWrap .timeChange .timeTop .topLeft{
+  display: flex;
+  align-items: center;
+}
+.personWrap .timeChange .timeTop .topLeft .topSearch{
+  box-sizing: border-box;
+  padding:6rpx 30rpx;
+  background-color: #F6F7F9;
+  border-radius: 25rpx;
+  margin-left: 39rpx;
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  color: #333333;
+  line-height: 38rpx;
+}
+.personWrap .timeChange .timeTop .topLeft .topSearch image{
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 8rpx;
+}
+.personWrap .timeChange .driveBox{
+  margin-top: 48rpx;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  max-height: 760rpx;
+  height: 760rpx;
+}
+.personWrap .timeChange .searchNull{
+  height: 760rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.personWrap .timeChange .searchNull image{
+  width: 240rpx;
+  height: 188rpx;
+}
+.personWrap .timeChange .searchNull .nullErro{
+  color: #999999;
+  font-size: 24rpx;
+  line-height: 33rpx;
+  margin-top: 24rpx;
+}
+.personWrap .timeChange .driveBox .dirveItem{
+  box-sizing: border-box;
+  padding:16rpx 0rpx;
+  width: 153rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1rpx solid #D3D3D3;
+  border-radius: 8rpx;
+  margin: 15rpx 10rpx;
+  height: 160rpx;
+}
+.personWrap .timeChange .driveBox .dirveItem .driveImage{
+  width: 70rpx;
+  height: 70rpx;
+}
+.personWrap .timeChange .driveBox .dirveItem .driveName{
+  color: #666;
+  font-size: 26rpx;
+  line-height: 38rpx;
+  font-weight: bold;
+  margin-top: 20rpx;
+  max-width: 130rpx;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+}
+.van-search,.van-search__content{
+  border-radius: 25rpx !important;
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+}
+.van-field__input{
+  font-size: 26rpx;
+  color: #333;
+  line-height: 38rpx;
+  font-weight: bold;
+}
+.chnagedriveBox{
+  border: 1rpx solid #18AFFF !important;
+  background-color: #E2F5FF;
+}
+/* 司机信息 */
+.driveInfoBox{
+  width: 100%;
+}
+.driveInfoBox .driveHead{
+  display: flex;
+  align-items: center;
+  padding-bottom: 30rpx;
+  border-bottom: 1rpx solid #EDEDED;
+  box-sizing: border-box;
+}
+.driveInfoBox .driveHead image{
+  width: 88rpx;
+  height: 88rpx;
+}
+.driveInfoBox .driveHead .driveInfo{
+display: flex;
+flex-direction: column;
+margin-left: 20rpx;
+}
+.driveInfoBox .driveHead .driveInfo .carName{
+  font-size: 26rpx;
+  color: #333;
+  line-height: 36rpx;
+  font-weight: bold;
+}
+.driveInfoBox .driveHead .driveInfo .driveName{
+  font-size: 26rpx;
+  line-height: 38rpx;
+  color: #333;
+  margin-top: 8rpx;
+}
+.driveInfoBox .rideBox{
+  width: 100%;
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.driveInfoBox .codeBox{
+  margin-top: 48rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.driveInfoBox .codeBox .codeTitle{
+  color: #333;
+  font-size: 36rpx;
+  font-weight: 800;
+  line-height: 50rpx;
+  display: flex;
+  align-items: center;
+}
+.driveInfoBox .codeBox .codeTitle .titleText{
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #18AFFF;
+  font-weight: 500;
+  margin-left: 9rpx;
+}
+.driveInfoBox .codeBox .erweiBox{
+  margin-top: 30rpx;
+  width: 300rpx;
+  height: 300rpx;
+  background-color: #F6F7F9;
+  border-radius: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.driveInfoBox .rideBox .rideInfo .rideinfoBox{
+  display: flex;
+  align-items: center;
+}
+.driveInfoBox .rideBox .rideInfo .rideinfoBox .circular{
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.driveInfoBox .rideBox .rideInfo .rideinfoBox .infotext{
+  font-size: 24rpx;
+  color: #333;
+  font-weight: 600;
+  line-height: 36rpx;
+  max-width: 600rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.driveInfoBox .rideBox .ridePrice{
+  font-size: 60rpx;
+  color: #333;
+  line-height: 58rpx;
+  font-weight: 500;
+  display: flex;
+  align-items: flex-end;
+}
+.driveInfoBox .rideBox .ridePrice .pricetext{
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #333;
+  margin-left: 6rpx;
+  display: flex;
+  align-items: center;
+}
+.driveInfoBox .rideBox .ridePrice .pricetext image{
+  width: 16rpx;
+  height: 16rpx;
+  margin-left: 13rpx;
+}
+.driveInfoBox .actionList{
+  width: 100%;
+  display: flex;
+  margin-top: 30rpx;
+}
+.driveInfoBox .actionList .actionBox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60rpx;
+  border-right: 1rpx solid #BAC2D4;
+  box-sizing: border-box;
+}
+.driveInfoBox .actionList .actionBox .actionText{
+  font-size: 24rpx;
+  color: #3E4B6E;
+  line-height: 36rpx;
+  margin-right: 9rpx;
+}
+.driveInfoBox .actionList .actionBox .actionImg{
+  width: 16rpx;
+  height: 16rpx;
+}
+
+/* 订单取消 */
+.cancel_order {
+  width: 750rpx;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+}
+
+.cancel_order .cancel_order_wrap {
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  box-sizing: border-box;
+  padding: 48rpx 30rpx 0 30rpx;
+  border-top-right-radius: 30rpx;
+  border-top-left-radius: 30rpx;
+  padding-bottom: 60rpx;
+}
+.cancel_order .cancel_order_wrap .title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancel_order .cancel_order_wrap .title text {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #333;
+}
+
+.cancel_order .cancel_order_wrap .title image {
+  width: 44rpx;
+  height: 44rpx;
+}
+.cancel_order .cancel_order_wrap .topText{
+  color: #999999;
+  font-size: 24rpx;
+  padding-top: 16rpx;
+}
+
+.cancel_order .cancel_order_wrap .rideBox{
+  width: 100%;
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.cancel_order .cancel_order_wrap .rideBox .rideInfo .rideinfoBox, .timeChange .rideinfoBox{
+  display: flex;
+  align-items: center;
+}
+.cancel_order .cancel_order_wrap .rideBox .rideInfo .rideinfoBox .circular,.timeChange .rideinfoBox .circular{
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.cancel_order .cancel_order_wrap .rideBox .rideInfo .rideinfoBox .infotext,.timeChange .rideinfoBox .infotext{
+  font-size: 24rpx;
+  color: #333;
+  font-weight: 600;
+  line-height: 36rpx;
+  max-width: 600rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cancel_order .cancel_order_wrap .rideBox .ridePrice{
+  font-size: 60rpx;
+  color: #333;
+  line-height: 58rpx;
+  font-weight: 500;
+  display: flex;
+  align-items: flex-end;
+}
+.cancel_order .cancel_order_wrap .rideBox .ridePrice .pricetext{
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #333;
+  margin-left: 6rpx;
+  display: flex;
+  align-items: center;
+}
+.cancel_order .cancel_order_wrap .rideBox .ridePrice .pricetext image{
+  width: 16rpx;
+  height: 16rpx;
+  margin-left: 13rpx;
+}
+.text{
+  max-width: 120rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.personWrap .timeChange .AccessBox{
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  margin-top: 48rpx;
+}
+.personWrap .timeChange .AccessBox .boxTop{
+  display: flex;
+  justify-content: space-between;
+}
+.personWrap .timeChange .AccessBox .boxTop .TopbtnBox{
+  display: flex;
+  flex: 1;
+  box-sizing: border-box;
+  padding: 11rpx 0;
+  align-items: center;
+  background-color: #F7F7F7;
+  border-radius: 12rpx;
+  justify-content: center;
+  margin-left: 30rpx;
+}
+.personWrap .timeChange .AccessBox .erroText{
+  font-size: 24rpx;
+  color: #FE8B32;
+  line-height: 36rpx;
+  margin: 26rpx 0;
+  text-align: center;
+}
+.personWrap .timeChange .AccessBox .itemBox{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 40rpx;
+  justify-content: space-between;
+}
+.personWrap .timeChange .AccessBox .itemBox .itemBtn{
+  width: 260rpx;
+  border: 1rpx solid #D3D3D3;
+  padding: 12rpx 0;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color:#999;
+  text-align: center;
+  margin: 12rpx 0;
+  border-radius: 4rpx;
+}
+.personWrap .timeChange .AccessBox .itemBox .itemBtnClick{
+  width: 260rpx;
+  border: 1rpx solid #18AFFF;
+  padding: 12rpx 0;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color:#18AFFF;
+  text-align: center;
+  margin: 12rpx 0;
+  border-radius: 4rpx;
+  background-color: #E2F5FF;
+}
+.personWrap .timeChange .AccessBox .boxTop .TopbtnBox:nth-child(1){
+  margin-left: 0;
+}
+.personWrap .timeChange .AccessBox .boxTop .TopbtnBox image{
+  width: 90rpx;
+  height: 60rpx;
+  margin-right: 16rpx;
+}
+.wrap .markBox{
+  position: fixed;
+  top: 22%;
+  left: 47%;
+}
+.wrap .markBox .markIcon{
+  width: 50rpx;
+  height: 67rpx;
+}
+canvas{
+  top: -5000rpx;
+  position: fixed;
+  left: 0;
+}
+.driveheadImg{
+  border-radius: 50%;
+  vertical-align: top;
+}
+ 

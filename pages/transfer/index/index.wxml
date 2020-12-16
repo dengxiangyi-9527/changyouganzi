@@ -1,0 +1,56 @@
+<!--pages/cjjs/index/index.wxml-->
+<view class="main" style="height:100%">
+	<view class="header">
+		<image src="https://static2.jd-gz.com/transfer_index_back.png"></image>
+		<view class="title">甘孜接送机</view>
+		<view class="text_box">轻松自在，专车接送</view>
+		<cjjs-index-component my-property='{{nav}}' class="nav" />
+	</view>
+	<view class="content">
+		<view class="content_header">
+			<view class="header_single" wx:for="{{typeData}}" wx:key="index">
+				<view class="{{item.active?'active_single':'normal_single'}}" bindtap="bindTypeChoose" data-type="{{item.type}}">
+					<image src="{{item.type===1?'https://static2.jd-gz.com/left_back.png':'https://static2.jd-gz.com/right_back.png'}}" class="choose_back" wx:if="{{item.active}}"></image>
+					<view class="{{item.active?'active_wrap':'normal_wrap'}}">
+						<view>{{item.name}}</view>
+						<image src="https://static2.jd-gz.com/choose_icon.png" class="choose_icon" wx:if="{{item.active}}"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="content_box">
+			<view class="list_cell">
+				<view class="cell_left">
+					<view class="field_name"> 出发机场</view>
+					<van-field value="{{ value }}" readonly="true" placeholder="请选择出发地" border="{{ false }}" bind:change="onChange" placeholder-style="font-size:32rpx;color#E3E5E8;" />
+				</view>
+				<view class="cell_right">
+					<image src="https://static2.jd-gz.com/arrow_right.png" class="arrow_right"></image>
+				</view>
+			</view>
+			<view class="list_cell">
+				<view class="cell_left">
+					<view class="field_name"> 送达地</view>
+					<van-field value="{{ value }}" readonly="true" placeholder="请选择送达地" border="{{ false }}" bind:change="onChange" placeholder-style="font-size:32rpx;color#E3E5E8;" />
+				</view>
+				<view class="cell_right">
+					<image src="https://static2.jd-gz.com/arrow_right.png" class="arrow_right"></image>
+				</view>
+			</view>
+			<view class="list_cell">
+				<view class="cell_left">
+					<view class="field_name"> 用车时间</view>
+          <van-field value="{{ value }}" readonly="true" placeholder="请选择用车时间" border="{{ false }}" bind:change="onChange" placeholder-style="font-size:32rpx;color#E3E5E8;" />
+					<van-popup  show="{{ show }}" bind:close="onClose" position="bottom">
+						<van-datetime-picker type="date" value="{{ currentTime }}" bind:input="onInput" min-date="{{ minDate }}" max-date="{{maxDate}}" formatter="{{ formatter }}" bind:confirm='confirm' bind:cancel='onCancel' />
+					</van-popup>
+				</view>
+				<view class="cell_right">
+					<image src="https://static2.jd-gz.com/arrow_right.png" class="arrow_right"></image>
+				</view>
+			</view>
+			<van-button round type="info" class="serach" bind:click="toSerach">去坐车</van-button>
+		</view>
+	</view>
+
+</view>

@@ -1,0 +1,71 @@
+/* pages/commonUser/pages/addUser/index.wxss */
+page{
+  width: 750rpx;
+  min-height: 100%;
+  background-color: #F2F3F7;
+}
+.wrap{
+  width: 750rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.infoBox{
+  margin-top: 30rpx;
+  background-color: #FFF;
+  border-radius: 24rpx;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+}
+.inputBox{
+  width: 100%;
+  display: flex;
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+.text{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  color: #333;
+}
+.inputText{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  color: #333;
+  font-weight: bold;
+  margin-left: 40rpx;
+}
+.textErro{
+  display: flex;
+  margin-top: 24rpx;
+}
+.textErro image{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: top;
+}
+.erro{
+  flex:1;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #FF8B32;
+  margin-left: 10rpx;
+}
+.btnBox{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40rpx;
+  box-sizing: border-box
+}
+.btn{
+  padding:30rpx 0;
+  width: 100%;
+  background-color: #09AFFF;
+  font-size: 32rpx;
+  line-height: 44rpx;
+  color: #FFF;
+  text-align: center;
+  border-radius: 50rpx;
+  margin-top: 48rpx;
+}

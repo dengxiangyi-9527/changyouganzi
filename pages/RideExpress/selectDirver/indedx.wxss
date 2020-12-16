@@ -1,0 +1,119 @@
+/* pages/RideExpress/selectDirver/indedx.wxss */
+page {
+  width: 750rpx;
+  background-color: #fafafa;
+  position: relative;
+}
+image{
+  vertical-align: top;
+  border: none;
+}
+.select_dirver{
+  width: 750rpx;
+  margin-bottom: 60rpx;
+}
+.select_dirver .van-search__content {
+  padding-left: 30rpx;
+}
+
+.select_dirver .cancel {
+  font-size: 30rpx;
+  color: #666666;
+}
+
+.select_dirver .main {
+  background-color: #fafafa;
+  width: 100%;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.driveheadImg{
+  border-radius: 50%;
+  vertical-align: top;
+}
+
+.select_dirver .main .banner image {
+  width: 690rpx;
+  height: 164rpx;
+}
+
+.select_dirver .main .dirver_item {
+  width: 630rpx;
+  padding: 30rpx;
+  background-color: #fff;
+  margin-top: 24rpx;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 16rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, .04);
+}
+
+.select_dirver .main .dirver_item .left .top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.select_dirver .main .dirver_item .left .top image {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 10rpx;
+}
+
+.select_dirver .main .dirver_item .left .top .info {
+  font-size: 26rpx;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.select_dirver .main .dirver_item .left .top .info .car_kind {
+  font-weight: bold;
+}
+
+.select_dirver .main .dirver_item .left .common_routes {
+  margin-top: 18rpx;
+  /* height: 40rpx; */
+  display: flex;
+}
+
+.select_dirver .main .dirver_item .left .common_routes .routes_line {
+  max-width: 300rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 2rpx 8rpx;
+  font-size: 24rpx;
+  color: #999999;
+  border: 2rpx solid #999999;
+  border-radius: 8rpx;
+  margin-left: 8rpx;
+  line-height: 36rpx;
+}
+
+.select_dirver .main .dirver_item .right {
+  border-radius: 27.5rpx;
+  border: 2rpx solid #A9E1FF;
+  height: 40rpx;
+  color: #18AFFF;
+  font-size: 28rpx;
+  padding: 8rpx 24rpx;
+  line-height: 40rpx;
+}
+
+.select_dirver .no_dirver {
+  position: absolute;
+  left: 35%;
+  top: 30%;
+  text-align: center;
+}
+
+.select_dirver .no_dirver image {
+  width: 240rpx;
+  height: 188rpx;
+  margin-bottom: 24rpx;
+}
+.van-field__input{
+  box-sizing: border-box !important;
+  padding-left: 24rpx !important;
+}

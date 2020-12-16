@@ -1,0 +1,61 @@
+<!--pages/swiperDetail/detailfour/index.wxml-->
+<view class="content">
+	<view class="title">投诉建议|倾听游客的声音</view>
+
+	<view class="box">
+		<view class="write_border_one">
+		</view>
+
+		<view class="write_border_two">
+		</view>
+
+		<view class="sanjiao">
+			<image src="https://static2.jd-gz.com/sanjiao.svg"></image>
+		</view>
+
+		<view class="jd_logo">
+			<image src="https://static2.jd-gz.com/logo.png"></image>
+			<text>畅游甘孜</text>
+		</view>
+
+		<view class="big_title">投诉建议</view>
+		<view class="listen">倾听游客的声音</view>
+		<view class="listen_border">
+		</view>
+		<view class="left_view">
+		</view>
+
+		<view class="right_view">
+		</view>
+
+		<view class="customer_service">
+			<text class="chinese">人工客服</text>
+			<text class="english">Customer</text>
+			<text class="english">Service</text>
+		</view>
+
+		<view class="call">
+			<view class="call_pic">
+				<image src="https://static2.jd-gz.com/20200514120032.png"></image>
+			</view>
+
+			<view class="call_text">
+				<view class="douhao1">
+					<image src="https://static2.jd-gz.com/shangdouhao.svg"></image>
+				</view>
+				<view class="douhao2">
+					<image src="https://static2.jd-gz.com/xiadouhao.svg"></image>
+				</view>
+
+        <view class="call_text_main">
+         <text decode="{{true}}"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果您在乘车过程中有任何不满意的地方，请直接拨打客服热线反馈19150185859，我们将不断优化改进，为您提供更优质的出行服务</text>
+        </view>
+			</view>
+
+
+		</view>
+
+
+
+	</view>
+</view>

@@ -1,0 +1,18 @@
+<!--pages/getPhoneCode/index.wxml-->
+<view class="main">
+
+	<view class="tit">
+		<view class="tit_big"> 绑定手机号码</view>
+		<view class="tit_some">登录注册表示同意<text class="tit_yh">用户协议</text>、<text class="tit_ys">隐私条款</text></view>
+	</view>
+
+	<view class="inp">
+		<!-- <input placeholder="输入手机号" type="number" maxlength='11'></input> -->
+		<van-cell-group>
+			<van-field value="{{ inputPhone }}" placeholder="请输入手机号"  border="{{ true }}" clearable maxlength='11' bind:blur='finish' type="number"/>
+		</van-cell-group>
+	</view>
+
+	<button class="getCode" bindtap="getCode">获取验证码</button>
+
+</view>

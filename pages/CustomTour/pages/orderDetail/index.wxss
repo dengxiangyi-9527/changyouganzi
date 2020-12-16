@@ -1,0 +1,290 @@
+/* pages/CustomTour//pages/orderDetail/index.wxss */
+page{
+  width: 750rpx;
+  min-height: 100%;
+  background-color: #F2F3F7;
+}
+.headStatus{
+  width: 100%;
+  background-color: #09AFFF;
+  padding: 40rpx 30rpx;
+  box-sizing: border-box;
+}
+.status_txt{
+  font-size: 42rpx;
+  line-height: 54rpx;
+  font-weight: bold;
+  color: #FFF;
+}
+.status_tost{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #FFF;
+  margin-top: 15rpx;
+}
+.priceBox{
+  width: 750rpx;
+  padding: 30rpx;
+  box-sizing: border-box;
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.price{
+  display: flex;
+  align-items: center;
+}
+.priceNum{
+  color: #FF4B3B;
+  font-size: 46rpx;
+  line-height: 58rpx;
+  margin-left: 24rpx;
+}
+.priceDetail{
+  font-size: 30rpx;
+  line-height: 42rpx;
+  color: #37C776;
+}
+.carInfoBox{
+  margin-top: 20rpx;
+  background-color: #FFF;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.carInfo{
+  display: flex;
+  align-items: center;
+  padding-bottom: 20rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx dashed #979797;
+}
+.carInfo image{
+  width: 240rpx;
+  height: 140rpx;
+  vertical-align: top;
+}
+.carText{
+  margin-left: 16rpx;
+}
+.cityName{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  color: #333;
+  font-weight: bold;
+}
+.cityText{
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #333;
+  margin-top: 4rpx;
+}
+.time{
+  display: flex;
+  margin-top: 24rpx;
+}
+.timeTitle{
+  padding: 7rpx 10rpx;
+  box-sizing: border-box;
+  background-color: #E9F8F6;
+  color: #37C776;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  white-space: nowrap;
+}
+.timeBox{
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20rpx;
+}
+.timeText{
+  font-size: 30rpx;
+  line-height: 42rpx;
+  color: #333;
+  font-weight: bold;
+}
+.startTime{
+  display: flex;
+  align-items: center;
+}
+.timeLine{
+  width: 20rpx;
+  height: 3rpx;
+  background-color: #AEAEAE;
+}
+.dayNum{
+  padding: 5rpx 19rpx;
+  box-sizing: border-box;
+  border: 2rpx solid #D4D4D4;
+  background-color: #F7F7F7;
+  border-radius: 19rpx;
+  font-size: 20rpx;
+  line-height: 30rpx;
+}
+.loc{
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+  padding-bottom: 29rpx;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #EDEDED;
+}
+.locTitle{
+  padding: 7rpx 10rpx;
+  background-color: #E9F8F6;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #37C776  ;
+  white-space: nowrap;
+}
+.locText{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #333;
+  margin-left: 20rpx;
+}
+.packageBox{
+  margin-top: 24rpx;
+  display: flex;
+  align-items: center;
+}
+.packTitle{
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #999;
+}
+.packText{
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #333;
+}
+.telText{
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #18AFFF;
+}
+.cancelBox{
+  margin-top: 20rpx;
+  padding: 30rpx;
+  box-sizing: border-box;
+  background-color: #FFF;
+}
+.cancelTitle{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  color: #333;
+  font-weight: bold;
+}
+.cancelText{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #999999;
+  margin-top: 30rpx;
+}
+.cancelBtn{
+  margin-top: 30rpx;
+  width: 100%;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+  text-align: center;
+  border: 1rpx solid #18AFFF;
+  border-radius: 12rpx;
+  color: #18AFFF;
+  font-size: 36rpx;
+  line-height: 50rpx;
+}
+.noticeBox{
+  margin-top: 24rpx;
+  background-color: #FFF;
+  padding: 30rpx;
+}
+.noticeTitle{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  color: #333;
+  font-weight: bold;
+}
+.Subtitle{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #333;
+  margin-top: 20rpx;
+}
+.noticeText{
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #999;
+  margin-top: 4rpx;
+}
+.userBox{
+  margin-top: 20rpx;
+  padding: 30rpx;
+  background-color: #FFF;
+}
+.userName{
+  font-size: 30rpx;
+  line-height: 42rpx;
+  color: #333333;
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+}
+.userInfo{
+  display: flex;
+  align-items: center;
+}
+.infoTitle{
+  font-size: 26rpx;
+  line-height: 38rpx;
+  color: #999;
+}
+.infoText{
+  font-size: 26rpx;
+  line-height: 38rpx;
+  color: #333;
+}
+.telBox{
+  margin-top: 24rpx;
+  width: 100%;
+  padding: 30rpx 0rpx;
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.telBox image{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: top;
+}
+.telBoxText{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #333;
+  margin-left: 13rpx;
+}
+.toPay{
+  width: 750rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  background-color: #FFF;
+  padding-bottom: 40rpx;
+}
+.btnBox{
+  width: 100%;
+  padding-top: 30rpx;
+  box-sizing: border-box;
+  border-top: 2rpx solid #EDEDED;
+}
+.paybtn{
+  width: 100%;
+  padding:19rpx 0rpx;
+  box-sizing: border-box;
+  background-color: #18AFFF;
+  border-radius: 12rpx;
+  font-size: 36rpx;
+  line-height: 50rpx;
+  color: #FFF;
+  font-weight: bold;
+  text-align: center;
+}

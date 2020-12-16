@@ -1,0 +1,31 @@
+<!--pages/CustomTour//pages/customized/detail/index.wxml-->
+<view class="wait_wrap" >
+    <view class="head">
+      <view class="head_erro">已通知向导，请您耐心等待</view>
+      <view class="head_img">
+        <image src="https://static2.jd-gz.com/kefurel.png"></image>
+      </view>
+      <view class="head_text">向导正在努力接单中，最多三名为您提供服务。您也可以暂时离开，若有人接单，我们会第一时间通知您。</view>
+    </view>
+    <view class="infoBox">
+      <view class="infoTab">待接单</view>
+      <view class="infoItem">
+        <view class="itemTitle">出发地</view>
+        <view class="itemMain">{{detail.slocation}}</view>
+      </view>
+      <view class="infoItem">
+        <view class="itemTitle">目的地</view>
+        <view class="itemMain">{{detail.elocation}}</view>
+      </view>
+      <view class="infoItem">
+        <view class="itemTitle">出行日期</view>
+        <view class="itemMain" style="margin-left:68rpx">{{detail.stime}}-{{detail.etime}}</view>
+        <view class="dayNum">{{detail.days}}天</view>
+      </view>
+      <view class="infoItem">
+        <view class="itemTitle">出行人数</view>
+        <view class="itemMain" style="margin-left:68rpx">{{detail.member+detail.child+detail.old}}人</view>
+      </view>
+    </view>
+</view>
+

@@ -1,0 +1,18 @@
+<view class="bg">
+  <view class="content">
+    <view class="description" wx:if="{{type==1}}">发车前8小时可免费取消，2到8小时以内将收取订单金额5%作为违约金，2小时内将不可取消</view>
+
+    <view class="reason">
+      <van-radio-group value="{{ radio }}" bind:change="onChange">
+        <van-cell-group>
+          <van-cell title="{{item.text}}" clickable data-name="{{item.id}}" bind:click="onClick" wx:for="{{resoneData}}" wx:key="index">
+            <van-radio slot="right-icon" name="{{item.id}}" />
+          </van-cell>
+        </van-cell-group>
+      </van-radio-group>
+    </view>
+  </view>
+</view>
+<view class="btn" bindtap="goCancaling">
+  <button class="{{selected? 'select_button': 'un_select_button'}}">取消订单</button>
+</view>

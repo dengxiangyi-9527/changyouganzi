@@ -1,0 +1,32 @@
+<!--pages/commonAddress/index/index.wxml-->
+<view class="common_address_index  {{isIpx ? 'ipx_ticket' : ''}}">
+	<view class="title">
+		常用地址
+	</view>
+
+	<!-- 地址里面有内容 -->
+	<view class="have_common_address" wx:if="{{list.length>0}}">
+		<van-swipe-cell right-width="{{ 70 }}" id="swipe-cell" wx:for="{{list}}" wx:key="*this">
+			<view class="item">
+				<view>
+					<view class="address_title">{{item.city_name}}</view>
+					<view class="address_detail">{{item.address}}{{item.name}}</view>
+				</view>
+				<view class="edit">
+					<image src="https://static2.jd-gz.com/locEdit.png" bindtap="add_edit_address" data-type="edit" data-item="{{item}}"></image>
+				</view>
+			</view>
+			<view slot="right" class="van-swipe-cell__right" bindtap="onClose" data-id="{{item.id}}">删除</view>
+		</van-swipe-cell>
+
+	</view>
+
+	<!-- 暂无常用地址 -->
+	<view class="no_common_address" wx:else>
+		<image src="https://static2.jd-gz.com/noneorder_pic@2x.png"></image>
+		<view>暂无地址哦</view>
+	</view>
+
+	<button type="primary" class="add_address" bindtap="add_edit_address" data-type="add">新增地址</button>
+
+</view>

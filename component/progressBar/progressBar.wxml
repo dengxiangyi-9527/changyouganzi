@@ -1,0 +1,38 @@
+<!--component/progressBar/progressBar.wxml-->
+<view class="progressBox" catchtap="onClick">
+  <view class="boxTitle">{{title}}</view>
+  <view class="boxInfo">
+    <text class="boxInfoLeft">{{refund}}</text>
+    <text class="boxInfoPrice">￥{{price}}</text>
+    <text class="boxInfoRight">{{explain}}账</text>
+  </view>
+  <view class="progressimg">
+    <view class="progressimgTop">
+      <view class="first size">
+        <image src="/static/user_sjjs_slices/check_s@3x.png" class="topImg" wx:if="{{change == 0||change==1||change==2 }}"></image>
+      </view>
+      <view class="boxLine" style="background-color:{{change >=1 ? '#25BF24' : '#333333'}}"></view>
+      <view class="first size">
+        <image src="/static/user_sjjs_slices/check_s@3x.png" class="topImg" wx:if="{{change == 1||change == 2}}"></image>
+      </view>
+      <view class="boxLine" style="background-color:{{change == 2 ? '#25BF24' : '#333333'}}"></view>
+      <view class="first size">
+        <image src="/static/user_sjjs_slices/check_s@3x.png" class="topImg" wx:if="{{change === 2}}"></image>
+      </view>
+    </view>
+    <view class="progressimgText">
+      <view class="textLeft">
+        <view class="{{change <=2 ? 'textchangeColor' : 'textColor'}}">{{firstText}}</view>
+        <view class="{{change <=2 ? 'textchangeColor' : 'textColor'}}" >{{firstTime}}</view>
+      </view>
+      <view class="textCenter">
+        <view class="{{change >=1 ? 'textchangeColor' : 'textColor'}}" >{{centerText}}</view>
+        <view class="{{change >=1 ? 'textchangeColor' : 'textColor'}}" >{{centerTime}}</view>
+      </view>
+      <view class="textRight">
+        <view class="{{change >1 ? 'textchangeColor' : 'textColor'}}" >{{lastText}}</view>
+        <view class="{{change >1 ? 'textchangeColor' : 'textColor'}}" >{{lastTime}}</view>
+      </view>
+    </view>
+  </view>
+</view>

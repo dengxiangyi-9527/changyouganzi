@@ -1,0 +1,15 @@
+<!--pages/RideExpress/selectionLoc/index.wxml-->
+<view class="top">
+  <view class="selectBox">
+    <view class="searchBox">
+      <view class="text">输入城市名称</view>
+      <view class="line"></view>
+      <input class="searchInput" placeholder ="{{text}}" value="{{cityName}}"></input>
+    </view>
+    <view class="closetext">取消</view>
+  </view>
+  <view class="nowcity">当前城市：{{nowCity}}</view>
+</view>
+<view class="listBox">
+  <view class="listItem" wx:for="{{cityList}}" wx:key="*this" data-item="{{item}}" catchtap="chooseCity">{{item.name}}</view>
+</view>

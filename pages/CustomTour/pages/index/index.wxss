@@ -1,0 +1,347 @@
+/* pages/CustomTour//pages/index/index.wxss */
+page{
+  width: 750rpx;
+  background-color: #F2F3F7;
+  min-height: 100%;
+  position: relative;
+}
+.headBcimng{
+  width: 750rpx;
+  height: 540rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.headBcimng image{
+  width: 750rpx;
+  height: 540rpx;
+  vertical-align: top;
+}
+.mainBox{
+  width: 750rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  position: absolute;
+  top: 340rpx;
+}
+.projectBox{
+  width: 100%;
+  border-radius: 30rpx;
+  box-shadow: 0 4rpx 20rpx 0 rgba(0, 0, 0, 0.04);
+}
+.headTab{
+  width: 100%;
+  background-color: #303641;
+  padding: 0rpx 0 60rpx 0;
+  box-sizing: border-box;
+  border-radius: 36rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.tabText{
+  padding-top: 30rpx;
+  box-sizing: border-box;
+  color: #FFF;
+  font-size: 32rpx;
+  line-height: 44rpx;
+  font-weight: bold;
+}
+.tabText:nth-child(1){
+  padding-left: 62rpx;
+}
+.tabText:nth-child(3){
+  padding-right: 62rpx;
+}
+.tab1{
+  width: 272rpx;
+  height: 104rpx;
+}
+.tab1 image{
+  width: 272rpx;
+  height: 104rpx;
+  vertical-align: top;
+}
+.tab2 {
+  width: 240rpx;
+  height: 104rpx;
+}
+.tab2 image{
+  width: 240rpx;
+  height: 104rpx;
+  vertical-align: top;
+}
+.tab3 {
+  width: 272rpx;
+  height: 104rpx;
+}
+.tab3 image{
+  width: 272rpx;
+  height: 104rpx;
+  vertical-align: top;
+}
+.tabMain{
+  width: 750rpx;
+  position: absolute;
+  left: 0;
+  top: 100rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.tabMainBox{
+  width: 100%;
+  background-color: #FFF;
+  border-top-right-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
+}
+.tabMainBoxCenter{
+  width: 100%;
+  background-color: #FFF;
+  border-radius: 30rpx;
+}
+.mainTitle{
+  width: 100%;
+  color: #D3D3D3;
+  border-bottom: 1rpx solid #EDEDED;
+  padding-bottom: 25rpx;
+  box-sizing: border-box;
+  font-size: 40rpx;
+}
+.fromNull{
+  padding: 48rpx 48rpx 0rpx 48rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.fromloc{
+  border-bottom: 1rpx solid #EDEDED;
+  flex: 1;
+  color: #333;
+  font-weight: bold;
+  font-size: 40rpx;
+  line-height: 52rpx;
+  padding-bottom: 25rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cityName{
+  color: #333;
+  font-weight: bold;
+  font-size: 40rpx;
+  line-height: 52rpx;
+  border-bottom: 1rpx solid #EDEDED;
+  padding-bottom: 25rpx;
+  box-sizing: border-box;
+  padding-right: 48rpx;
+}
+.centerBox{
+  padding: 0 48rpx;
+  box-sizing: border-box;
+}
+.timeBox{
+  padding: 25rpx 0rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #EDEDED;
+}
+.dateBox{
+  font-size: 36rpx;
+  line-height: 50rpx;
+  color: #D3D3D3;
+  min-width: 70rpx;
+}
+.dayBox{
+  width: 180rpx;
+  height: 100%;
+  font-size: 36rpx;
+  line-height: 50rpx;
+  color: #333;
+  font-weight: bold;
+}
+.dayNum{
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #333;
+}
+.btnBox{
+  padding: 0 48rpx;
+  box-sizing: border-box;
+}
+.btn{
+  padding: 48rpx 0;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #EDEDED;
+}
+.btnText{
+  padding: 20rpx 0;
+  width: 100%;
+  background-image: linear-gradient(to right, #00ACFF, #00FFE5);
+  text-align: center;
+  border-radius: 44rpx;
+  color: #FFF;
+  font-size: 36rpx;
+  line-height: 50rpx;
+  font-weight: bold;
+}
+.mineBox{
+  padding: 48rpx 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mineBox .leftBox image{
+  width: 36rpx;
+  height: 40rpx;
+  vertical-align: top;
+}
+.leftBox{
+  display: flex;
+}
+.mineTitle{
+  font-size: 30rpx;
+  line-height: 42rpx;
+  color: #333;
+  margin-left: 25rpx;
+}
+.mineBox image{
+  width: 32rpx;
+  height: 32rpx;
+  vertical-align: top;
+}
+.kefuBox{
+  width: 100%;
+  margin-top: 440rpx;
+}
+.telBox{
+  border-radius: 24rpx;
+  width: 100%;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+}
+.telBox image{
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  vertical-align: top;
+}
+.telText{
+  margin-left: 20rpx;
+}
+.telTexttop{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  color: #333;
+}
+.telTextbtm{
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #333333;
+  margin-top: 8rpx;
+}
+.telBtn{
+  padding: 8rpx 30rpx;
+  background-color: #09AFFF;
+  margin-left: 75rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.04);
+  color: #FFF;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  border-radius: 24rpx;
+}
+.locLine{
+  width: 100%;
+  display: flex;
+  padding: 0 48rpx;
+  box-sizing: border-box;
+  align-items: center;
+}
+.locCityBox{
+  width: 100%;
+  padding: 48rpx 0 25rpx 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #EDEDED;
+}
+.locCityIcon{
+  width: 43rpx;
+  height: 10rpx;
+}
+.locCityIcon image{
+  width: 43rpx;
+  height: 10rpx;
+  vertical-align: top;
+}
+.locCityName_null{
+  font-size: 40rpx;
+  line-height: 52rpx;
+  color: #D3D3D3;
+  font-weight: 500;
+}
+.locCityName{
+  font-size: 40rpx;
+  line-height: 52rpx;
+  font-weight: bold;
+  color: #333;
+}
+.locCityNum{
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #D3D3D3;
+}
+.locCityPerson{
+  width: 100%;
+  border-bottom: 2rpx solid #EDEDED;
+  padding: 32rpx 0 16rpx 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.person_null{
+  font-size: 34rpx;
+  line-height: 44rpx;
+  color: #333;
+  font-weight: bold;
+  margin-left: 12rpx;
+}
+.person_null:nth-child(1){
+  margin-left: 0;
+}
+.inputClass{
+  text-align: end;
+}
+.personInfo{
+  font-size: 40rpx;
+  line-height: 52rpx;
+  color: #333;
+  font-weight: 700;
+}
+.indexWrap{
+  width: 750rpx;
+  min-height: 100%;
+}
+.tab3textColor{
+  color: #DCDCDD;
+}
+.tab3textnullColor{
+  color: #7E7E84;
+}
+.tab3titleColor{
+  color: #F3B999;
+}
+.tab3border{
+  border-bottom: 2rpx solid #353845;
+}
+.tab3btn{
+  background-image: linear-gradient(to right, #F1B797, #FADCC0);
+  color: #732F06;
+}

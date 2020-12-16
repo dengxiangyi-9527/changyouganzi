@@ -1,0 +1,25 @@
+/* pages/editUserInfo/editJj/index.wxss */
+page{
+  background-color: #fafafa;
+}
+.main{
+  width: 690rpx;
+  height: 400rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+  font-size: 28rpx;
+}
+.txt{
+  position: absolute;
+  top: 340rpx;
+  right: 26rpx;
+  color: #333;
+  
+}
+.van-field__body--textarea, .van-field__body--ios{
+  margin-top: 0rpx !important;
+}
+

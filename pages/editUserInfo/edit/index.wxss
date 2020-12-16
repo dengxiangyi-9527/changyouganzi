@@ -1,0 +1,111 @@
+/* pages/editUserInfo/edit/index.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa;
+}
+
+.avatar_bg {
+  width: 100%;
+  height: 314rpx;
+  background-color: #fff;
+  margin-bottom: 24rpx;
+}
+
+.avatar_bg .avatar {
+  width: 170rpx;
+  height: 314rpx;
+  margin: auto;
+  padding-top: 50rpx;
+  position: relative;
+}
+
+.avatar_bg .avatar image {
+  width: 170rpx;
+  height: 170rpx;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0.3;
+  top: 50rpx;
+}
+
+.avatar_bg .avatar .cover {
+  width: 170rpx;
+  height: 170rpx;
+  background-color: #000;
+  border-radius: 50%;
+  opacity: 0.3;
+  position: absolute;
+  top: 50rpx;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar_bg .avatar .cover image {
+  margin-top: 18rpx;
+  width: 50rpx;
+  height: 50rpx;
+  opacity: 1;
+}
+
+.avatar_bg .avatar view {
+  font-size: 28rpx;
+  color: #333;
+  position: absolute;
+  top: 240rpx;
+}
+
+.info {
+  height: 440rpx;
+  background-color: #fff;
+  /* padding: 0 10rpx; */
+}
+
+.info .van-cell {
+  width: 725rpx;
+  padding-right: 0;
+}
+
+.info input-class {
+  height: 100rpx;
+}
+
+/* 弹出层的样式 */
+.popup {
+  height: 68%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.popup .one {
+  width: 100rpx;
+  height: 160rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.popup .one .bg {
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #f6f6f6;
+  border-radius: 8rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+van-popup .btn {
+  padding-bottom: 10rpx;
+  height: 80rpx;
+  background-color: #fff;
+  width: 80%;
+}

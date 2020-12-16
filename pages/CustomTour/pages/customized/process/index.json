@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "index-component": "/component/custom-nav-component/custom-nav-component",
+    "order-not-find":"/component/order-not-find/order-not-find"
+  },
+  "navigationStyle": "custom"
+}

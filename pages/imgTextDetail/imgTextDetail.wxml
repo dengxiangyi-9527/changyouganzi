@@ -1,0 +1,14 @@
+<!--index.wxml-->
+	<view class="wrap" wx:for="{{detailInfo}}" wx:key="*this">
+		<view class="header">
+			<image src="{{item.image}}" mode="" class="image"></image>
+			<view class="headerText">
+				<view class="textLeft">
+					{{item.title}}
+				</view>
+			</view>
+		</view>
+		<view class="main"><text class="mainText">{{item.main}}</text></view>
+	</view>
+
+

@@ -1,0 +1,637 @@
+/* pages/cjjs/neworder/index.wxss */
+.wrap{
+  width: 750rpx;
+  height: auto;
+  box-sizing: border-box;
+  background-color: #F2F3F7;
+}
+.wrap .bc_img{
+  width: 100%;
+  height: 274rpx;
+}
+
+.wrap .bc_img image{
+  width: 750rpx;
+  height: 274rpx;
+  border: none;
+  vertical-align: top;
+}
+.wrap .carInfo{
+  background-color: #FFF;
+  width: 710rpx;
+  top: 30rpx;
+  padding: 40rpx 30rpx;
+  box-sizing: border-box;
+  position: absolute;
+  border-radius: 24rpx;
+  margin-left: 20rpx;
+}
+.wrap .main {
+  width: 750rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.wrap .carInfo .titleBox{
+  color: #333;
+  font-size: 42rpx;
+  line-height: 54rpx;
+  font-weight: bold;
+}
+.wrap .carInfo .lineInfo{
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.wrap .carInfo .lineInfo .lineBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrap .carInfo .lineInfo .lineBox .circle{
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  border: 2rpx solid #EDEDED;
+}
+.wrap .carInfo .lineInfo .lineBox .line{
+  width: 2rpx;
+  height: 90rpx;
+  background-color: #EDEDED;
+  margin: 4rpx 0;
+}
+.wrap .carInfo .locInfo{
+  flex: 1;
+  margin-left: 30rpx;
+}
+.wrap .carInfo .locInfo .locBox{
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .carInfo .locInfo .locBox:nth-child(2){
+  margin-top: 20rpx;
+}
+.wrap .carInfo .locInfo .locBox .cityBox .cityName{
+  font-size: 36rpx;
+  line-height: 50rpx;
+  color: #333;
+  font-weight: bold;
+}
+.wrap .carInfo .locInfo .locBox .cityBox .locDetail{
+  font-size: 28rpx;
+  color: #999;
+  line-height: 40rpx;
+  margin-top: 2rpx;
+  max-width: 520rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.wrap .carInfo .locInfo .locBox .locText{
+  font-size: 24rpx;
+  color: #09AFFF;
+  line-height: 36rpx;
+}
+.wrap .carInfo .carTab{
+  display: flex;
+  padding-top: 20rpx;
+  border-top: 1rpx solid #EDEDED;
+  margin-top: 30rpx;
+}
+.wrap .carInfo .carTab .tabBox{
+  padding: 4rpx 16rpx;
+  box-sizing: border-box;
+  background-color: #FFF1E8;
+  border-radius: 4rpx;
+  color: #FF8B32;
+  font-size: 20rpx;
+  line-height: 30rpx;
+  margin-left: 20rpx;
+}
+.wrap .carInfo .carTab .tabBox:nth-child(1){
+  margin-left: 0;
+}
+.wrap .userInfo{
+  margin-top: 240rpx;
+  width: 100%;
+  padding: 41rpx 30rpx 20rpx 30rpx;
+  box-sizing: border-box;
+  background-color: #FFF;
+  border-radius: 24rpx;
+  padding-top: 41rpx;
+}
+.wrap .userInfo .userTitle{
+  font-size: 36rpx;
+  color: #333;
+  line-height: 50rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+.wrap .userInfo .userInfoBox .infoBox{
+  display: flex;
+  border-bottom: 1rpx solid #EDEDED;
+  align-items: center;
+  padding: 30rpx 0;
+  box-sizing: border-box;
+}
+.wrap .userInfo .userInfoBox .infoBox:nth-last-child(1){
+  border-bottom: none;
+}
+.wrap .userInfo .userInfoBox .infoBox .infoTitle{
+  display: flex;
+  align-items: center;
+}
+.wrap .userInfo .userInfoBox .infoBox .infoTitle image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.wrap .userInfo .userInfoBox .infoBox .infoTitle .titleText{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  color: #09AFFF;
+  margin-left: 24rpx;
+}
+.wrap .userInfo .userInfoBox .infoBox .inputBox{
+  margin-left: 48rpx;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+} 
+.wrap .userInfo .userInfoBox .infoBox .inputBox .palce{
+  font-size: 32rpx;
+  color: #D1D1D1;
+  line-height: 44rpx;
+  font-weight: 500;
+}
+.wrap .userInfo .userInfoBox .infoBox .inputBox .inputText{
+  color: #333333;
+  line-height: 44rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.wrap .userInfo .userInfoBox .infoBox .perseonNum{
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .userInfo .userInfoBox .infoBox .line{
+  display: flex;
+  width: 1rpx;
+  background-color: #D1D1D1;
+  height: 30rpx;
+}
+.wrap .userInfo .userInfoBox .infoBox .perseonNum .numTitle{
+  line-height: 44rpx;
+  font-size: 32rpx;
+  color: #09AFFF;
+  margin-right: 80rpx;
+}
+.wrap .userInfo .userInfoBox  .personBox{
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .userInfo .userInfoBox .infoBox .perseonNum .numBox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap .userInfo .userInfoBox .infoBox .perseonNum .numBox .btnBox{
+  width: 32rpx;
+  height: 32rpx;
+}
+.wrap .userInfo .userInfoBox .infoBox .perseonNum .numBox .btnBox image{
+  width: 32rpx;
+  height: 32rpx;
+  vertical-align: top;
+}
+.wrap .userInfo .userInfoBox .infoBox .perseonNum .numBox .num{
+  font-size: 30rpx;
+  line-height: 42rpx;
+  color: #333;
+  margin: 0 16rpx;
+}
+.couponInfo{
+  background-color: #FFF;
+  border-radius: 24rpx;
+  margin-top: 24rpx;
+}
+.couponInfo image{
+  width: 24rpx !important;
+  height: 24rpx !important;
+}
+.couponInfo .couponBox{
+  display: flex;
+  padding: 30rpx 24rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+.couponInfo .couponBox .textBox{
+  display: flex;
+  align-items: center;
+}
+.couponInfo .couponBox .coupontitle{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  color: #333333;
+}
+.couponInfo .couponBox .coupontap{
+  height: 30rpx;
+  padding: 0 8rpx;
+  border: 1rpx solid #24BFB0;
+  border-radius: 4rpx;
+  color: #24BFB0;
+  font-size: 20rpx;
+  line-height: 30rpx;
+  margin-left: 16rpx;
+}
+.couponInfo .couponBox .couponText{
+  font-size: 32rpx;
+  color: #09AFFF;
+  line-height: 44rpx;
+  font-weight: bold;
+  margin-right: 16rpx;
+}
+/* .scenicspotCar{
+  background-color: #Fff;
+  border-radius: 24rpx;
+  padding: 30rpx 30rpx 40rpx 30rpx;
+  box-sizing: border-box;
+  margin-top: 24rpx;
+}
+.scenicspotCar .titleImage{
+  width: 100%;
+  height: 90rpx;
+  margin-bottom: 30rpx;
+}
+.scenicspotCar .titleImage image{
+  width: 100%;
+  height: 90rpx;
+}
+.scenicspotCar .scenicspotBox{
+  display: flex;
+  align-items: center;
+  margin-top: 24rpx;
+}
+.scenicspotCar .scenicspotBox:nth-child(1){
+  margin-top: 0;
+}
+.scenicspotCar .scenicspotBox .scenicspotImage{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 24rpx;
+}
+.scenicspotCar .scenicspotBox .scenicspotImage image{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 24rpx;
+}
+.scenicspotCar .scenicspotBox .spotinfoBox{
+  flex: 1;
+  margin-left: 24rpx;
+}
+
+.scenicspotCar .scenicspotBox .spotinfoBox .spotinfoTitle{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  font-weight: 600;
+  color: #333;
+}
+.scenicspotCar .scenicspotBox .spotinfoBox .priceBox{
+  display: flex;
+  color: #FF4B3B;
+  align-items: flex-end;
+  margin-top: 4rpx;
+}
+.scenicspotCar .scenicspotBox .spotinfoBox .priceBox .priceIcon{
+  font-size: 24rpx;
+  line-height: 36rpx;
+  font-weight: 600;
+}
+.scenicspotCar .scenicspotBox .spotinfoBox .priceBox .priceNum{
+  font-size: 42rpx;
+  line-height: 54rpx;
+  font-weight: 600;
+  margin-left: 8rpx;
+}
+.scenicspotCar .scenicspotBox .spotinfoBox .sportdetail{
+  display: flex;
+  margin-top: 4rpx;
+  align-items: center;
+}
+.scenicspotCar .scenicspotBox .spotinfoBox .sportdetail .detailText{
+  color: #999;
+  font-size: 22rpx;
+  line-height: 34rpx;
+}
+.scenicspotCar .scenicspotBox .spotinfoBox .sportdetail .detailIcon{
+  width: 16rpx;
+  height: 16rpx;
+  margin-top: 5rpx;
+  margin-left: 8rpx;
+}
+.scenicspotCar .scenicspotBox .spotinfoBox .sportdetail .detailIcon image{
+  width: 16rpx;
+  height: 16rpx;
+  vertical-align: top;
+}
+.scenicspotCar .scenicspotBox .numBox{
+  display: flex;
+  align-items: center;
+}
+.scenicspotCar .scenicspotBox .numBox .mathIcon{
+  width: 32rpx;
+  height: 32rpx;
+}
+.scenicspotCar .scenicspotBox .numBox .mathIcon image{
+  width: 32rpx;
+  height: 32rpx;
+  vertical-align: top;
+}
+.scenicspotCar .scenicspotBox .numBox .num{
+  font-size: 30rpx;
+  line-height: 42rpx;
+  color: #333;
+  margin: 0 16rpx;
+} */
+  .selectSeat{
+    margin-top: 24rpx;
+    border-radius: 24rpx;
+    background-color: #FFF;
+    padding: 41rpx 30rpx 21rpx 30rpx;
+    box-sizing: border-box;
+  }
+  .selectSeat .seatTop{
+    display: flex;
+    justify-content: space-between;
+  }
+  .selectSeat .seatTop .topTitle{
+    font-size: 36rpx;
+    line-height: 50rpx;
+    font-weight: bold;
+    color: #333;
+  }
+  .selectSeat .seatTop .allChoose .van-checkbox__label{
+    font-size: 28rpx;
+    line-height: 40rpx;
+    color: #3E4B6E;
+  }
+ .selectSeat .seatMain{
+  margin-top: 25rpx;
+  display: flex;
+ }
+ .selectSeat .seatMain .mainLeft{
+   margin: 0 20rpx;
+   margin-top: 137rpx;
+ }
+ .selectSeat .seatMain .mainRight{
+  margin: 0 20rpx;
+  margin-top: 23rpx;
+ }
+ .selectSeat .seatMain .mainText{
+   font-size: 32rpx;
+   line-height: 44rpx;
+   color: #34BDFF;
+ }
+ .selectSeat .seatMain .mainCenter{
+   flex: 1;
+ }
+ .selectSeat .seatMain .mainCenter .seatStart{
+   display: flex;
+   justify-content: flex-end;
+ }
+ .selectSeat .seatMain .mainCenter .seatBox{
+   width: 88rpx;
+   height: 88rpx;
+   background-color: #000;
+ }
+ .selectSeat .seatMain .mainCenter .seatEnd{
+   display: flex;
+   justify-content: space-between;
+ }
+ .selectSeat .seatMain .mainCenter .seatLine{
+   margin-top: 25rpx;
+ }
+ .selectSeat .seatMain .mainCenter .seatCenter{
+   display: flex;
+   justify-content: space-between;
+ }
+ .prompt {
+  width: 100%;
+  margin-top: 24rpx;
+  border-radius: 16rpx;
+}
+.prompt .tit{
+  color: #3E4B6E;
+  font-size: 26rpx;
+  line-height: 38rpx;
+}
+ .prompt .content {
+  padding-bottom: 16rpx;
+}
+
+ .prompt .content view {
+  color: #3E4B6E;
+  font-size: 26rpx;
+  line-height: 38rpx;
+} 
+ .prompt .content view text {
+  color: #09afff;
+  font-size: 26rpx;
+  line-height: 38rpx;
+}
+ .protocol {
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  padding-bottom: 200rpx;
+}
+ .protocol .protocol_content {
+  color: #09AFFF;
+  font-size: 23rpx;
+}
+ .protocol .read {
+  color: #3E4B6E;
+} 
+.toPay{
+  width: 750rpx;
+  background-color: #FFF;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  z-index: 999999;
+  padding-bottom: 68rpx;
+  box-sizing: border-box;
+  box-shadow: 0 -2rpx 20rpx 0 rgba(91, 99, 108, 0.05);
+}
+.toPay .BottompriceBox{
+  display: flex;
+}
+.toPay .allPrice{
+  font-size: 46rpx;
+  line-height: 58rpx;
+  color: #FE4B3C;
+  margin-bottom: 12rpx;
+  margin-left: 30rpx;
+}
+.toPay .title{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+  margin-left: 30rpx;
+}
+.toPay .title .title_1{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #999;
+}
+.toPay .title .title_2{
+  width: 18rpx;
+  height: 12rpx;
+}
+.toPay .title .title_2 image{
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  margin-left: 8rpx;
+}
+.toPay .btnBox{
+  padding: 22rpx 62rpx;
+  background-color: #09AFFF;
+  border-radius: 50rpx;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFF;
+  font-size: 32rpx;
+  line-height: 44rpx;
+  font-weight: 600;
+  margin-right: 30rpx;
+  margin-top: 14rpx;
+}
+
+.popup .popopBox .modeltitle{
+  width: 750rpx;
+  display: flex;
+  height: 120rpx;
+  background-color: #FAFAFA;
+  position: fixed;
+  z-index: 999999;
+}
+.popup .popopBox .modeltitle .title{
+  width: 50%;
+  height: 120rpx;
+  text-align: center;
+  line-height: 120rpx;
+  font-weight: 400;
+  font-size: 32rpx;
+  color: #333;
+  z-index: 99999;
+}
+.popup .popopBox .main{
+  width: 750rpx;
+  height: 640rpx;
+  background-color: #fff;
+  z-index: 99999;
+  position: absolute;
+  top: 120rpx;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  padding-bottom: 200rpx;
+  overflow-y: auto;
+}
+.popup .popopBox .main .text{
+  font-size: 30rpx;
+  color: #666;
+  line-height: 42rpx;
+  margin-bottom: 15rpx;
+}
+.popup .popopBox .main .text1{
+  text-indent:60rpx
+}
+.popup .popopBox .main .formtop{
+  display: flex;
+  justify-content: space-between;
+}
+.popup .popopBox .main .formtop:nth-child(1){
+  margin-bottom: 20rpx;
+}
+.popup .popopBox .main .formtop .formText{
+  white-space: nowrap;
+  width: auto;
+}
+.popup .popopBox .main .formtop .mainBox{
+  flex: 1;
+}
+.popup .popopBox .main .formtop .tit{
+  margin-left: 60rpx;
+}
+.popup .popopBox .main .formtop .mainBox .formMain{
+  font-size: 30rpx;
+  color: #666;
+  line-height: 42rpx;
+  margin-bottom: 15rpx;
+}
+.popup .popopBox .main .formtt{
+  color: #333;
+  line-height: 42rpx;
+  margin-bottom: 20rpx;
+}
+.popup{
+  position: fixed;
+  background-color: rgba(0, 0, 0, .3);
+  width: 750rpx;
+  height: 100%;
+  z-index: 999;
+  top: 0;
+  display: flex;
+  align-items: flex-end;
+}
+.popup .popopBox{
+  width: 750rpx;
+  height: 760rpx;
+  position: relative;
+  z-index: 99999;
+  overflow: hidden;
+}
+
+.mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 268rpx;
+  background-color: rgba(0, 0, 0, .3);
+  box-sizing: border-box;
+  z-index: 9999;
+}
+.mask .maskBox{
+  position: fixed;
+  bottom: 168rpx;
+  width: 100%;
+  background-color: #FAFAFA;
+  z-index: 999999999;
+}
+.mask .maskBox .boxTitle{
+  width: 100%;
+  color: #333;
+  line-height: 50rpx;
+  padding: 30rpx 0 30rpx 30rpx;
+  font-size: 32rpx;
+  font-weight: 540;
+  box-sizing: border-box;
+}
+.mask .maskBox .boxNum{
+  border-top: 1rpx solid #EDEDED;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.mask .maskBox .boxNum .Numtext{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  color:#333;
+  font-weight: 520;
+}

@@ -1,0 +1,133 @@
+/* pages/editUserInfo/coupon/coupon.wxss */
+.coupon_main_css {
+  background-color: #FAFAFA;
+  width: 750rpx;
+  box-sizing: border-box;
+}
+
+.coupon_main_css .coupon_item {
+  width: 690rpx;
+  height: 278rpx;
+  margin: auto;
+  margin-top: 40rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid #D3D3D3;
+  box-shadow: 0rpx 2rpx 2rpx 0rpx #D3D3D3;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.coupon_main_css .coupon_item .quan {
+  width: 12rpx;
+  height: 24rpx;
+  background-color: #FAFAFA;
+  position: absolute;
+  border: 1rpx solid #D3D3D3;
+  bottom: 66rpx;
+}
+
+.coupon_main_css .coupon_item .left_quan {
+  left: 0rpx;
+  border-left: none;
+  border-radius: 0 12rpx 12rpx 0;
+}
+
+.coupon_main_css .coupon_item .right_quan {
+  right: -2rpx;
+  border-right: none;
+  border-radius: 12rpx 0 0 12rpx;
+}
+
+.coupon_main_css .coupon_item .dashed_border {
+  width: 655rpx;
+  height: 1rpx;
+  border: 1rpx dashed #ededed;
+  position: absolute;
+  bottom: 76rpx;
+  left: 20rpx;
+  z-index: 1;
+}
+
+.coupon_main_css .coupon_item .coupon_content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.coupon_main_css .coupon_item .coupon_item_left {
+  padding-left: 42rpx;
+  height: 278rpx;
+}
+
+.coupon_main_css .coupon_item .coupon_item_left .coupon_kind {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-top: 30rpx;
+  padding-bottom: 24rpx;
+}
+
+.coupon_main_css .coupon_item .coupon_item_left .coupon_kind image {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.coupon_main_css .coupon_item .coupon_item_left .coupon_kind view {
+  padding-left: 12rpx;
+  font-size: 24rpx;
+  color: #666666;
+}
+
+.coupon_main_css .coupon_item .coupon_item_left .coupon_title {
+  font-size: 33rpx;
+  color: #666666;
+  font-weight: bold;
+  padding-bottom: 4rpx;
+}
+
+.coupon_main_css .coupon_item .coupon_item_left .coupon_route {
+  font-size: 24rpx;
+  color: #999;
+  max-width: 394rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.coupon_main_css .coupon_item .coupon_item_left .coupon_time {
+  font-size: 22rpx;
+  color: #999;
+  padding-top: 48rpx;
+}
+
+.coupon_main_css .coupon_item .coupon_item_center {
+  width: 196rpx;
+  position: relative;
+}
+
+.coupon_main_css .coupon_item .coupon_item_center image {
+  position: absolute;
+  bottom: 0;
+  width: 194rpx;
+  height: 160rpx;
+  z-index: 99;
+  border: none;
+  vertical-align: top;
+}
+
+.coupon_main_css .coupon_item .coupon_item_right {
+  display: flex;
+  padding-right: 30rpx;
+  color:#D3D3D3;
+  height: 64rpx;
+  padding-top: 100rpx;
+
+}
+
+.coupon_main_css .coupon_item .coupon_item_right .price_fh {
+  font-size: 30rpx;
+  padding-top: 30rpx;
+}
+
+.coupon_main_css .coupon_item .coupon_item_right .price_money {
+  font-size: 60rpx;
+}

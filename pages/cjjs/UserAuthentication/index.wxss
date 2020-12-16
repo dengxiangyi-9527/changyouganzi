@@ -1,0 +1,65 @@
+/* pages/cjjs/UserAuthentication/index.wxss */
+page{
+  background-color: #F2F3F7;
+  width: 750rpx;
+  height: 100%;
+}
+.Wrap{
+  width: 750rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.Wrap .wrapBox{
+  width: 100%;
+  background-color: #fff;
+  border-radius: 24rpx;
+  margin-top: 30rpx;
+}
+.Wrap .wrapBox .inputBox{
+  padding: 24rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.Wrap .wrapBox .inputBox .inputTitle{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  color: #333;
+  margin-right: 40rpx;
+}
+.Wrap .wrapBox .inputBox input{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  flex: 1;
+  color: #333;
+}
+.Wrap .erroBox{
+  display: flex;
+  margin-top: 24rpx;
+}
+.Wrap .erroBox .erroIcon{
+  width: 28rpx;
+  height: 28rpx;
+  vertical-align: top;
+}
+.Wrap .erroBox .erroText{
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #FF8B32;
+  margin-left: 10rpx  ;
+}
+.Wrap .btnBox{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 48rpx;
+}
+.Wrap .btnBox .btn{
+  padding: 28rpx 283rpx;
+  box-sizing: border-box;
+  background-color: #09AFFF;
+  border-radius: 50.5rpx;
+  color: #fff;
+  font-size: 32rpx;
+  line-height: 44rpx;
+}

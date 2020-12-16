@@ -1,0 +1,15 @@
+{
+  "name": "user_terminal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vant/weapp": "^1.0.7",
+    "mini-ali-ui": "^1.0.5"
+  }
+}

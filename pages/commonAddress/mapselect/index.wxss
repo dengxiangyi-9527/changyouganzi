@@ -1,0 +1,54 @@
+/* pages/commonAddress/mapselect/index.wxss */
+pages{
+  width: 750rpx;
+  height: 100%;
+}
+map{
+  width: 750rpx;
+  height: 100%;
+}
+ .markBox{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 15%;
+  left: 15%;
+}
+ .markBox .markText{
+  background-color: #fff;
+  padding: 16rpx 30rpx;
+  box-sizing: border-box;
+  border-radius: 36rpx;
+  color: #333;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  font-weight: 700;
+  max-width: 580rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+ .markBox .markIcon{
+  width: 50rpx;
+  height: 67rpx;
+  margin-top: 24rpx;
+}
+.btnBox{
+  width: 750rpx;
+  position: fixed;
+  bottom: 120rpx;
+  display: flex;
+  justify-content: center;
+}
+.btnBox .btn{
+  padding: 19rpx 309rpx;
+  box-sizing: border-box;
+  background-color: #18AFFF;
+  color: #fff;
+  line-height: 50rpx;
+  font-size: 36rpx;
+  border-radius: 12rpx;
+}

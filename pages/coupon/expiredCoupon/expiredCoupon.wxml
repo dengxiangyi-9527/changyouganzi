@@ -1,0 +1,41 @@
+<!--pages/editUserInfo/coupon/coupon.wxml-->
+<view class="coupon_main_css">
+	<view class="coupon_item" wx:for="{{couponList}}" wx:key="*this">
+		<!-- 左右的小圆圈 -->
+		<view class="left_quan quan"></view>
+		<view class="right_quan quan"></view>
+		<view class="dashed_border"></view>
+
+		<view class="coupon_content">
+			<view class="coupon_item_left">
+				<view class="coupon_kind">
+					<image src="https://static2.jd-gz.com/cjjs_icon_sx@3x.png"></image>
+					<view>城际接送</view>
+				</view>
+
+				<view class="coupon_title">
+					代金券
+				</view>
+
+				<view class="coupon_route">
+					仅{{item.line}}路线可用
+				</view>
+
+				<view class="coupon_time">
+					已于{{item.use_time || item.expire_time}}过期
+				</view>
+			</view>
+
+			<view class="coupon_item_center">
+				<image src="https://static2.jd-gz.com/coupon_gq.png"></image>
+			</view>
+
+			<view class="coupon_item_right">
+				<view class="price_fh">￥</view>
+				<view class="price_money">{{item.money}}</view>
+			</view>
+
+		</view>
+	</view>
+
+</view>

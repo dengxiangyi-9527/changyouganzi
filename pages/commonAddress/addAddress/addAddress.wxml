@@ -1,0 +1,29 @@
+<view class="wrap">
+  <view class="searchBox">
+    <view class="selectBox">
+      <view class="nowCity" catchtap="chooseCity">{{nowCity}}</view>
+      <image src="https://static2.jd-gz.com/xiasanjian.png"></image>
+      <view class="line"></view>
+       <input bindinput="searchloc" value="{{keywords}}" class="searchInput" placeholder="请选择你的常用地点"  placeholder-style="font-size:30rpx;line-height:40rpx;color:#999；font-weight:500"></input>
+    </view>
+    <view class="onClose">取消</view>
+  </view>
+  <view class="main" wx:if="{{loclist.length !== 0}}">
+    <view class="locitem" wx:for="{{loclist}}" wx:key="*this" wx:for-item="str" catchtap="chooseloc" data-item="{{str}}" >
+      <view class="loctitle">
+        <view wx:for="{{str.name}}" wx:key="*this" style="display:flex">
+          <view class="lockeyword" wx:if="{{item == keywords}}">{{item}}</view>
+          <view class="locname" wx:if="{{item !== keywords}}">{{item}}</view>
+        </view>
+      </view>
+      <view class="locmain">{{str.district}}{{str.address}}</view>
+    </view>
+  </view>
+
+  <view class="goBack" catchtap="map_address" wx:if="{{keywords == '' || (keywords != ''&& loclist.length == 0)}}">
+    <view class="backBox">
+      <image src="https://static2.jd-gz.com/mapMaker.png"></image>
+      <view class="text">在地图上选址</view>
+    </view>
+  </view>
+</view>

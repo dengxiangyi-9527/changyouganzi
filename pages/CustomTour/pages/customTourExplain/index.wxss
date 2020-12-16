@@ -1,0 +1,110 @@
+/* pages/CustomTour//pages/customTourExplain/index.wxss */
+page{
+  width: 750rpx;
+  min-height: 100%;
+  background-color: #F2F3F7;
+}
+.wrap{
+  width: 750rpx;
+}
+.head{
+  width: 750rpx;
+  background-color: #fff;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.fromloc{
+  display: flex;
+  align-items: center;
+}
+.lineMain{
+  display: flex;
+  align-items: center;
+  margin-top: 8rpx;
+  margin-left: 6rpx;
+}
+.circular{
+  width: 6rpx;
+  height: 6rpx;
+  border-radius: 50%;
+  background-color: #18AFFF;
+}
+.headTitle{
+  font-size: 20rpx;
+  line-height: 30rpx;
+  color: #999999;
+  margin-left: 12rpx;
+}
+.headMain{
+  font-size: 22rpx;
+  line-height: 34rpx;
+  color: #333;
+  font-weight: bold;
+  margin-left: 16rpx;
+}
+.main{
+  width: 750rpx;
+  padding: 20rpx 20rpx 30rpx 20rpx;
+  box-sizing: border-box;
+}
+.tabBox{
+  width: 100%;
+  background-color: #FFF;
+  padding: 48rpx 30rpx 40rpx 30rpx;
+  box-sizing: border-box;
+  border-radius: 16rpx;
+}
+.priceBox{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.time{
+  font-size: 40rpx;
+  line-height: 52rpx;
+  color: #333;
+  font-weight: bold;
+}
+.price{
+  display: flex;
+  align-items: center;
+  color: #FE4B3C;
+}
+.allprice{
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  font-size: 24rpx;
+  line-height: 33rpx;
+  color: #999;
+  margin-top: 15rpx;
+}
+.tabTitle{
+  font-size: 24rpx;
+  line-height: 33rpx;
+  color: #333;
+  font-weight: bold;
+  margin-top: 48rpx;
+}
+.tabTitle:nth-child(1){
+  margin-top: 30rpx;
+}
+.tabMain{
+  font-size: 24rpx;
+  line-height: 33rpx;
+  color: #999;
+  margin-top: 24rpx;
+}
+.btnBox{
+    width: 100%;
+    margin-top: 48rpx;
+    background-color: #18AFFF;
+    border-radius: 12rpx;
+    padding: 19rpx 0;
+    box-sizing: border-box;
+    font-size: 36rpx;
+    line-height: 50rpx;
+    color: #FFf;
+    font-weight: bold;
+    text-align: center;
+}

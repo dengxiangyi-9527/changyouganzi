@@ -1,0 +1,203 @@
+<!--pages/CustomTour//pages/index/index.wxml-->
+<view class="indexWrap" style="background-color:{{tabindex == 3 ? '#191B21' : ''}}">
+  	<index-component my-property='{{nav}}' class="headNav" />
+    <view class="headBcimng" wx:if="{{tabindex==1||tabindex==2}}">
+      <image src="https://static2.jd-gz.com/customTour_bcimg.png"></image>
+    </view>
+    <view class="mainBox" wx:if="{{tabindex==1||tabindex==2}}">
+      <view class="projectBox">
+        <view class="headTab">
+          <view class="tabText" wx:if="{{tabindex != 1}}" data-id="1" catchtap="tabChange">按天包车</view>
+          <view class="tab1" wx:if="{{tabindex == 1}}">
+            <image src="https://static2.jd-gz.com/custom_tab1.png"></image>
+          </view>
+          <view class="tabText" wx:if="{{tabindex != 2}}" data-id="2" catchtap="tabChange">私人定制</view>
+          <view class="tab2" wx:if="{{tabindex == 2}}">
+            <image src="https://static2.jd-gz.com/custom_tab2.png"></image>
+          </view>
+          <view class="tabText" wx:if="{{tabindex != 3}}" data-id="3" catchtap="tabChange">团建定制</view>
+          <view class="tab3" wx:if="{{tabindex == 3}}">
+            <image src="https://static2.jd-gz.com/custom_tab3.png"></image>
+          </view>
+        </view>
+        <view class="tabMain" wx:if="{{tabindex == 1}}">
+          <view class="tabMainBox">
+            <view class="fromNull" catchtap="getFrom" wx:if="{{fromLocationInfo == ''}}">
+              <view class="mainTitle">上车地点</view>
+            </view>
+            <view class="fromNull" catchtap="getFrom" wx:if="{{fromLocationInfo != ''}}">
+              <view class="cityName">{{cityName}}</view>
+              <view class="fromloc">{{fromLocationInfo}}</view>
+            </view>
+            <view class="centerBox">
+              <view class="timeBox">
+                <view class="dateBox" catchtap="showPopup" wx:if="{{currentDate == ''}}" data-item="start">出发日期</view>
+                <view class="dateBox" catchtap="showPopup" wx:if="{{currentDate != ''}}" data-item="start" style="color:#333333;font-weight:bold">{{currentDate}}</view>
+                <view class="dayNum" wx:if="{{currentDate != '' && endDate != ''}}">{{dayNum}}天</view>
+                <view class="dateBox" catchtap="showPopup" wx:if="{{endDate == ''}}" data-item="end">结束日期</view>
+                <view class="dateBox" catchtap="showPopup" wx:if="{{endDate != ''}}" data-item="end" style="color:#333333;font-weight:bold">{{endDate}}</view>
+              </view>
+            </view>
+            <view class="btnBox">
+              <view class="btn">
+                <view class="btnText" catchtap="inquiryPackage">查询套餐</view>
+              </view>
+            </view>
+            
+          </view>
+        </view>
+        <view class="tabMain" wx:if="{{tabindex == 2}}">
+          <view class="tabMainBoxCenter">
+              <view class="locLine">
+                <view class="locCityBox">
+                  <view class="locCityName_null"  wx:if="{{cityFrom == ''}}">出发地</view>
+                  <view class="locCityName" catchtap="getCity" data-item="from" wx:if="{{cityFrom != ''}}">{{cityFrom}}</view>
+                  <view class="locCityIcon">
+                    <image src="https://static2.jd-gz.com/custom_timeline.png"></image>
+                  </view>
+                  <view class="locCityName_null" catchtap="getCity" data-item="to" wx:if="{{cityTo == ''}}">目的地</view>
+                  <view class="locCityName" catchtap="getCity" data-item="to" wx:if="{{cityTo != ''}}">{{cityTo}}</view>
+
+                </view>
+              </view>
+              <view class="locLine">
+                <view class="locCityBox">
+                  <view class="locCityName_null" catchtap="showPopup" wx:if="{{currentDate == ''}}" data-item="start">出发日期</view>
+                  <view class="locCityName" catchtap="showPopup" wx:if="{{currentDate != ''}}" data-item="start">{{currentDate}}</view>
+                  <view class="locCityNum">{{dayNum}}天</view>
+                  <view class="locCityName_null" catchtap="showPopup" wx:if="{{endDate == ''}}" data-item="end">结束日期</view>
+                  <view class="locCityName" catchtap="showPopup"  wx:if="{{endDate != ''}}" data-item="end">{{endDate}}</view>
+                </view>
+              </view>
+              <view class="locLine">
+                <view class="locCityBox">
+                  <view class="locCityName_null">
+                    <input placeholder="联系人" bindinput="getUserName" placeholder-class="locCityName_null" class="personInfo"> </input>
+                  </view>
+                  <view class="locCityName_null">
+                      <input placeholder="联系人手机号" bindinput="getUserTel" placeholder-class="locCityName_null" class="inputClass personInfo"> </input>
+                  </view>
+                </view>
+              </view>
+              <view class="locLine">
+                <view class="locCityPerson" catchtap="personChange">
+                  <view class="person_null">{{adultNum}}<text style="font-size:24rpx;line-height:44rpx">成人</text></view>
+                  <view class="person_null">{{kidNum}}<text style="font-size:24rpx;line-height:44rpx">儿童</text></view>
+                  <view class="person_null">{{oldNum}}<text style="font-size:24rpx;line-height:44rpx">老人</text></view>
+                </view>
+              </view>
+              <view class="btnBox">
+                <view class="btn">
+                  <view class="btnText" catchtap="gettrip">免费获取专属行程</view>
+                </view>
+              </view>
+              <view class="btnBox">
+              <view class="mineBox" catchtap="goDetail" data-item="私人定制">
+                <view class="leftBox" >
+                  <image src="https://static2.jd-gz.com/custom_jishiben.png"></image>
+                  <view class="mineTitle">我的定制单</view>
+                </view>
+                <image src="https://static2.jd-gz.com/custom_jiantou1.png"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="kefuBox" wx:if="{{tabindex == 1}}">
+          <view class="telBox">
+            <image src="https://static2.jd-gz.com/customhead.png"></image>
+            <view class="telText">
+              <view class="telTexttop">在线客服</view>
+              <view class="telTextbtm">解决你的问题，规划出行方案</view>
+            </view>
+            <view class="telBtn" catchtap="callTel">咨询TA</view>
+          </view>
+      </view>
+    </view>
+
+    <van-popup show="{{ show }}" bind:close="onClose" position="bottom">
+			<van-picker show-toolbar columns="{{ dateList }}" bind:cancel="onCancel" bind:confirm="confirm" bind:change="onChnage" />
+		</van-popup>
+    <van-popup show="{{ cityShow }}" bind:close="onClose" position="bottom">
+			<van-picker show-toolbar columns="{{ cityList }}" bind:cancel="onCancel" bind:confirm="cityconfirm" bind:change="cityonChnage" />
+		</van-popup>
+    <van-popup bind:close="onClose" position="bottom" show="{{ personShow }}" >
+     	<van-picker show-toolbar columns="{{ multiArray }}" bind:cancel="onCancel" bind:confirm="personConfirm" bind:change="personNumChange"/>
+    </van-popup>
+    <view class="page">
+      <view class="mainBox" wx:if="{{tabindex == 3}}" style="top:180rpx">
+        <view class="projectBox" style="box-shadow: 0 1rpx 0rpx 0 rgba(242, 187, 156, 1);">
+          <view class="headTab">
+            <view class="tabText tab3titleColor" wx:if="{{tabindex != 1}}" data-id="1" catchtap="tabChange">按天包车</view>
+            <view class="tab1 tab3titleColor" wx:if="{{tabindex == 1}}">
+              <image src="https://static2.jd-gz.com/custom_tab1.png"></image>
+            </view>
+            <view class="tabText tab3titleColor" wx:if="{{tabindex != 2}}" data-id="2" catchtap="tabChange">私人定制</view>
+            <view class="tab2 tab3titleColor" wx:if="{{tabindex == 2}}">
+              <image src="https://static2.jd-gz.com/custom_tab2.png"></image>
+            </view>
+            <view class="tabText" wx:if="{{tabindex != 3}}" data-id="3" catchtap="tabChange">团建定制</view>
+            <view class="tab3" wx:if="{{tabindex == 3}}">
+              <image src="https://static2.jd-gz.com/custom_tab3.png"></image>
+            </view>
+          </view>
+          <view class="tabMain" wx:if="{{tabindex == 3}}">
+            <view class="tabMainBoxCenter" style="background-color:#262730">
+                <view class="locLine">
+                  <view class="locCityBox tab3border">
+                    <view class="locCityName_null tab3textnullColor" wx:if="{{cityFrom == ''}}">出发地</view>
+                    <view class="locCityName tab3textColor" catchtap="getCity" data-item="from" wx:if="{{cityFrom != ''}}">{{cityFrom}}</view>
+                    <view class="locCityIcon">
+                      <image src="https://static2.jd-gz.com/custom_timeline.png"></image>
+                    </view>
+                    <view class="locCityName_null tab3textnullColor"  catchtap="getCity" data-item="to" wx:if="{{cityTo == ''}}">目的地</view>
+                    <view class="locCityName tab3textColor" catchtap="getCity" wx:if="{{cityTo != ''}}">{{cityTo}}</view>
+                  </view>
+                </view>
+                <view class="locLine">
+                  <view class="locCityBox tab3border">
+                    <view class="locCityName_null tab3textnullColor" catchtap="showPopup" wx:if="{{currentDate == ''}}" data-item="start">出发日期</view>
+                    <view class="locCityName tab3textColor" catchtap="showPopup" wx:if="{{currentDate != ''}}" data-item="start">{{currentDate}}</view>
+                    <view class="locCityNum tab3textColor ">{{dayNum}}天</view>
+                    <view class="locCityName_null tab3textnullColor" catchtap="showPopup" wx:if="{{endDate == ''}}" data-item="end">结束日期</view>
+                    <view class="locCityName tab3textColor" catchtap="showPopup"  wx:if="{{endDate != ''}}" data-item="end">{{endDate}}</view>
+                  </view>
+                </view>
+                <view class="locLine">
+                  <view class="locCityBox tab3border">
+                    <view class="locCityName_null">
+                      <input placeholder="联系人" bindinput="getUserName" placeholder-class="locCityName_null tab3textnullColor" class="personInfo tab3textColor"> </input>
+                    </view>
+                    <view class="locCityName_null">
+                        <input placeholder="联系人手机号" bindblur="inspectTel" bindinput="getUserTel" placeholder-class="locCityName_null tab3textnullColor" class="inputClass personInfo tab3textColor"> </input>
+                    </view>
+                  </view>
+                </view>
+                <view class="locLine">
+                  <view class="locCityPerson tab3border" catchtap="personChange">
+                    <view class="person_null tab3textColor ">{{adultNum}}<text style="font-size:24rpx;line-height:44rpx">成人</text></view>
+                    <view class="person_null tab3textColor ">{{kidNum}}<text style="font-size:24rpx;line-height:44rpx">儿童</text></view>
+                    <view class="person_null tab3textColor ">{{oldNum}}<text style="font-size:24rpx;line-height:44rpx">老人</text></view>
+                  </view>
+                </view>
+                <view class="btnBox">
+                  <view class="btn tab3border">
+                    <view class="btnText tab3btn" catchtap="gettrip">免费获取专属行程</view>
+                  </view>
+                </view>
+                <view class="btnBox">
+                <view class="mineBox" catchtap="goDetail" data-item="团建定制">
+                  <view class="leftBox" >
+                    <image src="https://static2.jd-gz.com/custom_jishibentab3.png"></image>
+                    <view class="mineTitle tab3textColor ">我的定制单</view>
+                  </view>
+                  <image src="https://static2.jd-gz.com/custom_jiantou1.png"></image>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+</view>

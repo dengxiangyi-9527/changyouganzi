@@ -1,0 +1,153 @@
+
+<!-- 第二版 -->
+<view  wx:if="{{background.length !== 0}}" style="width:750rpx;height:{{maskHeight+160+'px'}}">
+	<view class="head">
+		<view class="head_top">待出发，感谢您使用畅游甘孜</view>
+		<view class="head_bottom">请提前半小时到达出发点，避免延误</view>
+	</view>
+	<view  class="swiperBox" style="height:{{(maskHeight-60)+'px'}}">
+		<view class="mainBox" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" animation="{{ani2}}">
+			<view class="main" wx:for="{{background}}" wx:key="index" style="height:{{(maskHeight-90)+'px'}}">
+				<view class="swiper" id="{{'meat'+item.id}}" wx:if="{{item.type == 3}}">
+					<view class="swiperTime">
+						<image src="https://static2.jd-gz.com/20200526105121.png"></image>
+						{{item.date}} · {{item.num}}人
+					</view>
+					<view class="swiperLoc">
+						<view class="locBox">
+							<view class="circular" style="background-color:#09AFFF"></view>
+							<view class="locText">{{item.start_point}}</view>
+						</view>
+						<view class="locBox">
+							<view class="circular" style="background-color:#24BFB0"></view>
+							<view class="locText">{{item.end_point}}</view>
+						</view>
+					</view>
+
+					<view class="swiperCode">
+						<view class="codeTitle">乘车票二维码</view>
+						<view class="codeBox">
+							<canvas canvas-id="{{item.id}}" style="width:500px;height:500px;" ></canvas>
+							<view  class="qrcode_box">
+									<image src="{{tempFilePath}}" style="width:240rpx;height:240rpx;display:block"></image>
+							</view>
+						</view>
+					</view>
+
+					<view class="swiperError">
+						<view class="erroTitle">退改规则</view>
+						<view class="erroText" wx:if="{{item.type==2}}">司机接单后，无法取消订单</view>
+						<view class="erroText" catchtap="toDel" data-item="{{item}}" wx:if="{{item.type==1 || item.type == 3}}">取消订单</view>
+					</view>
+					
+					<view class="swiperPrice">
+						<view class="priceBox">
+							<view class="priceTitle">订单票价</view>
+							<view class="priceNumBox">
+								<view class="price">{{item.price/100}}</view>
+								<view class="priceText">元</view>
+								<image src="https://static2.jd-gz.com/right_icon%403x.png"></image>
+							</view>
+						</view>
+						<view class="telBox">
+							手机号：{{item.phone}}
+						</view>
+					</view>
+					
+					<view class="titleImg">
+						<image src="https://static2.jd-gz.com/20200526105110.png" wx:if="{{item.type==1}}"></image>
+						<image src="https://static2.jd-gz.com/20200526105118.png" wx:if="{{item.type==2}}"></image>
+						<image src="https://static2.jd-gz.com/express.png" wx:if="{{item.type==3}}"></image>
+					</view>
+					<view class="leftOne cercleBox" style="top:{{cercleOne}}"></view>
+					<view class="leftTwo cercleBox" style="top:{{cercleTwo}}"></view>
+					<view class="leftThree cercleBox" style="top:{{cercleThree}}"></view>
+					<view class="leftFour cercleBox" style="top:{{cercleFour}}" wx:if="{{item.through_train.length>0}}"></view>
+					<view class="rightOne cercleBox" style="top:{{cercleOne}}"></view>
+					<view class="rightTwo cercleBox" style="top:{{cercleTwo}}"></view>
+					<view class="rightThree cercleBox" style="top:{{cercleThree}}"></view>
+					<view class="rightFour cercleBox" style="top:{{cercleFour}}" wx:if="{{item.through_train.length>0}}"></view>
+				</view> 
+        <view class="swiper" id="{{'meat'+item.id}}" wx:if="{{item.type == 2}}">
+					<view class="swiperTime">
+						<image src="https://static2.jd-gz.com/20200526105121.png"></image>
+						{{item.date}} · {{item.member_number}}人
+					</view>
+					<view class="swiperLoc">
+						<view class="locBox">
+							<view class="circular" style="background-color:#09AFFF"></view>
+							<view class="locText">{{item.start_name}}</view>
+						</view>
+						<view class="locBox">
+							<view class="circular" style="background-color:#24BFB0"></view>
+							<view class="locText">{{item.end_name}}</view>
+						</view>
+					</view>
+
+					<view class="swiperCode">
+						<view class="codeTitle">乘车票二维码</view>
+						<view class="codeBox">
+							<canvas canvas-id="{{item.id}}" style="width:500px;height:500px;" ></canvas>
+							<view  class="qrcode_box">
+									<image src="{{tempFilePath}}" style="width:240rpx;height:240rpx;display:block"></image>
+							</view>
+						</view>
+					</view>
+
+					<view class="swiperError">
+						<view class="erroTitle">退改规则</view>
+						<view class="erroText" wx:if="{{item.type==2}}">司机接单后，无法取消订单</view>
+						<view class="erroText" catchtap="toDel" data-item="{{item}}" wx:if="{{item.type==1 || item.type == 3}}">取消订单</view>
+					</view>
+					
+					<view class="swiperPrice">
+						<view class="priceBox">
+							<view class="priceTitle">订单票价</view>
+							<view class="priceNumBox">
+								<view class="price">{{item.price_pay/100}}</view>
+								<view class="priceText">元</view>
+								<image src="https://static2.jd-gz.com/right_icon%403x.png"></image>
+							</view>
+						</view>
+						<view class="telBox">
+							手机号：{{item.phone}}
+						</view>
+					</view>
+					
+					<view class="titleImg">
+						<image src="https://static2.jd-gz.com/20200526105110.png" wx:if="{{item.type==1}}"></image>
+						<image src="https://static2.jd-gz.com/20200526105118.png" wx:if="{{item.type==2}}"></image>
+						<image src="https://static2.jd-gz.com/express.png" wx:if="{{item.type==3}}"></image>
+					</view>
+					<view class="leftOne cercleBox" style="top:{{cercleOne}}"></view>
+					<view class="leftTwo cercleBox" style="top:{{cercleTwo}}"></view>
+					<view class="leftThree cercleBox" style="top:{{cercleThree}}"></view>
+					<view class="leftFour cercleBox" style="top:{{cercleFour}}" wx:if="{{item.through_train.length>0}}"></view>
+					<view class="rightOne cercleBox" style="top:{{cercleOne}}"></view>
+					<view class="rightTwo cercleBox" style="top:{{cercleTwo}}"></view>
+					<view class="rightThree cercleBox" style="top:{{cercleThree}}"></view>
+					<view class="rightFour cercleBox" style="top:{{cercleFour}}" wx:if="{{item.through_train.length>0}}"></view>
+				</view> 				
+			</view>
+		</view>	
+	</view>
+	<view class="markBox" style="top:{{(maskHeight+10)+'px'}}">
+		<view class="markItem {{index==num ? '#markItemAction ': ''}}" wx:for="{{background}}" wx:key="index"></view>
+	</view>
+</view>
+
+
+<!-- 暂无成车票 -->
+<view class="wrap" style="height:100%" wx:if="{{background.length == 0}}">
+		<image src="https://static2.jd-gz.com/noneorder_pic@2x.png"></image>
+		<view class="nullText">暂无乘车票，<text style="color:#18AFFF;text-decoration:underline" catchtap="goticket">去购票~</text></view>
+</view>
+
+<tabbar activeIndex='1'></tabbar>
+
+
+
+
+
+
+

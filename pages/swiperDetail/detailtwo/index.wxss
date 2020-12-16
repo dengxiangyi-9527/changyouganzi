@@ -1,0 +1,116 @@
+/* pages/swiperDetail/detailtwo/index.wxss */
+page{
+  width: 750rpx;
+}
+.bgimg{
+  width: 750rpx;
+  height: 16612.5rpx;
+  vertical-align: top;
+}
+.content {
+  padding: 30rpx;
+  margin-bottom: 60rpx;
+}
+
+.content .title {
+  font-size: 40rpx;
+  padding-bottom: 50rpx;
+  border-bottom: 2rpx solid #999999;
+}
+
+.content .box .gifpic {
+  width: 690rpx;
+  height: 384rpx;
+  margin-top: 50rpx;
+}
+
+.content .box .introduction {
+  font-size: 30rpx;
+  line-height: 75rpx;
+  color: #3e3e3e;
+  font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Noto Sans", "Noto Sans CJK SC", "Microsoft YaHei", "Apple Color Emoji", "Segoe UI Symbol", Arial, sans-serif;
+}
+
+.content .box .three2 {
+  width: 690rpx;
+  border-bottom: 2rpx solid rgb(198, 171, 136);
+  border-top: 2rpx solid rgb(198, 171, 136);
+  margin-top: 60rpx;
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 20rpx 0;
+}
+.content .box .three2 .txtBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.content .box .three2 .txtBox .text1{
+  font-size: 27rpx;
+  padding: 0 20rpx;
+  line-height: 90rpx;
+  text-align: left;
+}
+.content .box .three2 .text{
+  font-size: 27rpx;
+  padding: 0 20rpx;
+  line-height: 55rpx;
+}
+.content .box .three2 .right-border {
+  width: 2rpx;
+  height: 80rpx;
+  background-color: rgb(198, 171, 136);
+  position: absolute;
+  top: -20rpx;
+  right: 10rpx;
+}
+
+.content .box .three2 .left-border {
+  width: 2rpx;
+  height: 80rpx;
+  background-color: rgb(198, 171, 136);
+  position: absolute;
+  bottom: -20rpx;
+  left: 10rpx;
+}
+
+.content .box .three2 image {
+  width: 600rpx;
+  height: 360rpx;
+}
+.content .box .center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.content .box .center .top{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100rpx;
+}
+.content .box .center .top .toptext{
+  font-size: 28rpx;
+}
+.content .box .center .top .topImg{
+  width: 380rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 70rpx;
+}
+.content .box .center .top .topImg image{
+  width: 380rpx;
+  height: 542rpx;
+}
+.content .box .center .imageBox{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 100rpx;
+}
+

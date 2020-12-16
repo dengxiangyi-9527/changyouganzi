@@ -1,0 +1,111 @@
+.wrap{
+  width: 750rpx;
+  background-color: #fff;
+}
+.wrap .searchBox{
+  width: 750rpx;
+  padding: 23rpx 30rpx 30rpx 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.wrap .searchBox .selectBox{
+  flex: 1;
+  background-color: #F6F7F9;
+  padding: 16rpx 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  border-radius: 38rpx;
+  margin-right: 24rpx;
+}
+.wrap .searchBox .selectBox .nowCity{
+  color: #666;
+  font-size: 32rpx;
+  line-height: 44rpx;
+}
+.wrap .searchBox .selectBox image{
+  width: 16rpx;
+  height: 16rpx;
+  margin-left: 17rpx;
+}
+.wrap .searchBox .selectBox .line{
+  width: 1rpx;
+  height: 24rpx;
+  background-color: #DEDEDE;
+  margin-left: 33rpx;
+  margin-right: 24rpx;
+}
+.wrap .searchBox .selectBox .searchInput{
+  flex: 1;
+  border: none;
+  font-size: 30rpx;
+  line-height: 40rpx;
+  color: #333;
+  font-weight: 600;
+  max-width: 350rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}  
+.wrap .searchBox .onClose{
+  font-size: 30rpx;
+  color: #666;
+  line-height: 42rpx;
+}
+.main{
+  width: 750rpx;
+  padding:0 30rpx;
+  box-sizing: border-box;
+  margin-top: 24rpx;
+  background-color: #fff;
+  margin-bottom: 120rpx;
+}
+.main .locitem{
+  border-bottom: 1rpx solid #EDEDED;
+  padding: 30rpx 0 30rpx 0;
+  box-sizing: border-box;
+}
+.main .locitem .loctitle{
+  display: flex;
+  font-size: 32rpx;
+  line-height: 44rpx;
+  font-weight: 600;
+  color: #333333;
+}
+.main .locitem .loctitle .lockeyword{
+  color: #15AFFF;
+}
+.main .locitem .locmain{
+  font-size: 24rpx;
+  color: #666666;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-top: 10rpx;
+}
+
+.wrap  .goBack{
+  padding: 0rpx 30rpx;
+  box-sizing: border-box;
+}
+.wrap  .goBack .backBox{
+  padding: 30rpx 9rpx;
+  box-sizing: border-box;
+  width: 100%;
+  border-bottom: 1rpx solid #EDEDED;
+  display: flex;
+  align-items: center;
+}
+.wrap  .goBack .backBox image{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: top;
+  margin-right: 16rpx;
+}
+.wrap  .goBack .backBox .text{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  color: #333;
+  font-weight: bold;
+}

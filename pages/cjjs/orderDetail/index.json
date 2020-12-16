@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-steps": "../../miniprogram_npm/@vant/weapp/steps/index",
+    "van-popup": "../../miniprogram_npm/@vant/weapp/popup/index",
+    "progressBar": "/component/progressBar/progressBar"
+  },
+  "navigationBarTitleText": "订单详情",
+  "onReachBottomDistance":10
+}

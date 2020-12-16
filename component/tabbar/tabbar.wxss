@@ -1,0 +1,68 @@
+/* component/tabbar/tabbar.wxss */
+.tabbar {
+  width: 750rpx;
+  height: 120rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  z-index: 9999;
+}
+
+/* iphone X按钮 */
+
+.ipx_button {
+  width: 100%;
+  height: 160rpx;
+  background: #fff;
+  padding-bottom: 68rpx;
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+
+.tabbar .tabbar_single {
+  width: 33.33%;
+  height: 120px;
+  text-align: center;
+}
+
+.tabbar .tabbar_single .img {
+  display: block;
+  width: 52rpx;
+  height: 52rpx;
+  margin: 15rpx auto 5rpx auto;
+}
+
+.tabbar .tabbar_single .ticket {
+  width: 140rpx;
+  height: 140rpx;
+  position: absolute;
+  bottom: 46rpx;
+  left: 50%;
+  margin-left: -66rpx;
+}
+.tabbar .tabbar_single .ipx_ticket{
+  bottom: 82rpx !important;
+}
+.tabbar .tabbar_single .name {
+  width: 100%;
+  text-align: center;
+  font-size: 24rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.tabbar .tabbar_single .active_name {
+  width: 100%;
+  text-align: center;
+  font-size: 24rpx;
+  color: #18AFFF;
+  font-weight: bold;
+}

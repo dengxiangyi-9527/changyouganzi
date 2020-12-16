@@ -1,0 +1,14 @@
+<van-search value="{{ value }}" placeholder="请输入搜索关键词" use-action-slot bind:change="onChange" bind:search="onSearch">
+  <view slot="action"  class="serach" wx:if = "{{!value}}">搜索</view>
+  <view slot="action" catchtap="onClick" class="serach" wx:if = "{{value}}">取消</view>
+</van-search>
+
+<van-index-bar scroll-top="{{ scrollTop }}">
+  <view wx:if="{{searchList.length == 0 }}"  wx:for="{{cityNameList}}" wx:key="*this" wx:for-index="key">
+    <van-index-anchor index="{{key}}" class="tit"/>
+    <van-cell title="文本" class="item" wx:for="{{item}}" wx:key="*this" bindtap="chooseCity" data-name="{{item}}" style="background-color:#fff">{{item.name}}</van-cell>
+  </view>
+    <van-cell title="文本" class="item" wx:for="{{searchList}}" wx:key="*this" bindtap="chooseCity" data-name="{{item}}" wx:if="{{searchList.length !== 0}}" style="background-color:#fff">{{item.name}}</van-cell>
+    <view class="warnText" wx:if="{{value !== '' && searchList.length == 0}}">暂无搜索结果</view>
+</van-index-bar>
+

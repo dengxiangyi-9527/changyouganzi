@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-popup": "../../miniprogram_npm/@vant/weapp/popup/index",
+    "tabbar":"/component/tabbar/tabbar"
+  },
+  "navigationBarTitleText": "乘车票",
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle":"dark",
+  "backgroundColor":"#FAFAFA"
+}

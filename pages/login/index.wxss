@@ -1,0 +1,79 @@
+/* pages/getuserinfo/index.wxss */
+page{
+  height: auto;
+}
+.logo {
+  width: 392rpx;
+  height: 288rpx;
+  margin: auto;
+  margin-top: 204rpx;
+  margin-bottom: 108rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  }
+
+.logo image{
+  width: 144rpx;
+  height: 144rpx;
+  border-radius: 16rpx;
+}
+
+.logo .logo_tit{
+  color: #333;
+  font-size: 46rpx;
+  margin-top: 48rpx;
+  margin-bottom: 16rpx;
+}
+.logo .logo_num{
+  color: #999;
+  font-size: 28rpx;
+}
+
+button{
+  border-radius: 12rpx;
+  width: 690rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+}
+
+button::after{
+  border: none;
+}
+
+.wx{
+  background-color: #09BB07;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wx image{
+  width: 44rpx;
+  height: 44rpx;
+  margin-right: 12rpx;
+}
+
+.phone{
+  background-color: #fff;
+  color: #3E4B6E;
+  font-size: 28rpx;
+}
+
+.footer{
+  width: 598rpx;
+  height: 40rpx;
+  font-size: 28rpx;
+  color: #999;
+  position: absolute;
+  bottom: 70rpx;
+  left: 80rpx;
+}
+.footer .userPre, .footer .IvPre{
+  color: #3E4B6E;
+}
+
+.getPhoneNum{
+  background-color: #18AFFF;
+  color: #fff;
+}

@@ -1,0 +1,40 @@
+<!--pages/editUserInfo/medicalCheckResult/medicalCheckResult.wxml-->
+<view class="content">
+		<view class="tot">
+			<image src="https://static2.jd-gz.com/verificheck.png" mode=""></image>
+			<!-- <view class="ztoast" :class="[isOutTime ? 'ztoast_block' : 'ztoast_none']">提交成功，等待后台审核</view> -->
+		</view>
+
+		<view class="tit">
+			<view class="tit_big">抗疫认证信息</view>
+			<view class="tit_text" wx:if="{{status==0}}">抗疫认证正在审核中，请耐心等待1-2天。</view>
+			<view class="tit_text success" wx:if="{{status==2}}" >抗疫认证审核成功,乘车请携带本人身份证</view>
+			<view class="tit_text fail" wx:if="{{status==1}}" >抗疫认证审核失败</view>
+		</view>
+
+		<view class="user_info">
+			<view class="item">
+				<text class="left">真实姓名</text>
+				<text class="right">{{real_name}}</text>
+			</view>
+			<view class="item">
+				<text class="left">职业</text>
+				<text class="right">{{job}}</text>
+			</view>
+			<view class="item">
+				<text class="left">工作单位</text>
+				<text class="right">{{company}}</text>
+			</view>
+		</view>
+
+		<view class="card_pic">
+			<view class="item">
+				<image src="https://static2.jd-gz.com/sfcard.png" mode="" class="pic_bg"></image>
+				<image src="{{nagivate_img}}" mode="" class="pic_up"></image>
+			</view>
+		</view>
+    
+       <button class="submit" bindtap="goCar" wx:if="{{status==2}}">去乘车</button> 
+		   <button class="submit" bindtap="goMedicalCheck" wx:if="{{status==1}}">重新认证</button>
+   
+	</view>

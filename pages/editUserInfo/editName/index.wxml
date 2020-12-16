@@ -1,0 +1,6 @@
+<view class="editinfo">
+	<van-cell-group>
+		<van-field value="{{ username3 }}" placeholder="设置昵称" input-align="left" clearable="true" maxlength="12" bind:input='input' bind:blur='finish' focus="{{true}}"/>
+		<text class="txt">{{num}}/12</text>
+	</van-cell-group>
+</view>

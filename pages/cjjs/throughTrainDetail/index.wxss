@@ -1,0 +1,224 @@
+/* pages/cjjs/throughTrainDetail/index.wxss */
+.wrap{
+  width: 750rpx;
+  position: relative;
+}
+.wrap .top{
+  width: 750rpx;
+  height: 513rpx;
+  /* background-color: #000; */
+}
+.wrap .top image{
+  width: 750rpx;
+  height: 513rpx;
+  vertical-align: top;
+}
+.wrap .main{
+  width: 750rpx;
+  position: absolute;
+  top: 464rpx;
+  background-color: #F2F3F7;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60rpx;
+}
+.wrap .main .mainTop{
+  width: 750rpx;
+  background-color: #FFF;
+  border-radius: 30rpx;
+  padding: 40rpx 30rpx;
+  box-sizing: border-box;
+}
+.wrap .main .mainTop .topBoxTItle{
+  font-size: 36rpx;
+  color: #333333;
+  line-height: 50rpx;
+  font-weight: bold;
+}
+.wrap .main .mainTop .topBoxTab{
+  display: flex;
+  align-items: center;
+  margin-top: 8rpx;
+}
+.wrap .main .mainTop .topBoxTab .tabBox{
+  padding: 0 8rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  font-weight: 600;
+  line-height: 37rpx;
+  border-radius: 8rpx;
+  margin-left: 8rpx;
+}
+.wrap .main .mainTop .topBoxTab .tabColorG{
+  color: #37C776;
+  background-color: #EDF9F3;
+}
+.wrap .main .mainTop .topBoxTab .tabColorB{
+  color: #09AFFF;
+  background-color: #E2F5FF;
+}
+.wrap .main .mainTop .topBoxTab .tabBox:nth-child(1){
+  margin-left: 0;
+}
+.wrap .main .mainTop .topText{
+  color: #333;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+.wrap .main .mainDetail{
+  width: 750rpx;
+  flex: 1;
+  margin-top: 24rpx;
+  background-color: #fff;
+  padding: 40rpx 20rpx 0 20rpx;
+  box-sizing: border-box;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+}
+.wrap .main .mainDetail .detailTitle{
+  font-size: 36rpx;
+  line-height: 50rpx;
+  color: #333;
+  font-weight: bold;
+  margin-left: 10rpx;
+}
+.wrap .main .mainDetail .detailBox .detailItem{
+  width: 100%;
+  background-color: #F6F7F9;
+  border-radius: 24rpx;
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.wrap .main .mainDetail .detailBox .detailItem .imgBox{
+  width: 140rpx;
+  height: 140rpx;
+  background-color: #000;
+}
+.wrap .main .mainDetail .detailBox .detailItem .imgBox image{
+  width: 140rpx;
+  height: 140rpx;
+  vertical-align: top;
+}
+.wrap .main .mainDetail .detailBox .detailItem .detailText{
+  margin-left: 24rpx;
+  flex:1;
+}
+.wrap .main .mainDetail .detailBox .detailItem .detailText .textTitle{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #333;
+}
+.wrap .main .mainDetail .detailBox .detailItem .detailText .textPrice{
+  font-size: 42rpx;
+  color: #FF4B3B;
+  line-height: 54rpx;
+  font-family:DIN-Medium,DIN;
+  margin:8rpx 0;
+}
+.wrap .main .mainDetail .detailBox .detailItem .lookDetail{
+  display: flex;
+  color: #999;
+  font-size: 22rpx;
+  line-height: 34rpx;
+  align-items: center;
+}
+.wrap .main .mainDetail .detailBox .detailItem .lookDetail image{
+  width: 16rpx;
+  height: 16rpx;
+  vertical-align: top;
+  margin-left: 8rpx;
+}
+.wrap .main .mainDetail .detailBox .detailItem .numBox{
+  display: flex;
+  align-items: center;
+}
+.wrap .main .mainDetail .detailBox .detailItem .numBox .mathIcon{
+  width: 32rpx;
+  height: 32rpx;
+}
+.wrap .main .mainDetail .detailBox .detailItem .numBox .mathIcon image{
+  width: 32rpx;
+  height: 32rpx;
+  vertical-align: top;
+}
+.wrap .main .mainDetail .detailBox .detailItem .numBox .num{
+  font-size: 30rpx;
+  line-height: 42rpx;
+  color: #333;
+  margin: 0 16rpx;
+}
+.toPay{
+  width: 750rpx;
+  background-color: #FFF;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  /* justify-content: space-between; */
+  justify-content: center;
+  z-index: 999999;
+  padding-bottom: 68rpx;
+  padding: 14rpx 80rpx 68rpx 80rpx;
+  box-sizing: border-box;
+  box-shadow: 0 -2rpx 20rpx 0 rgba(91, 99, 108, 0.05);
+}
+.toPay .btn{
+  padding: 22rpx 262rpx;
+  background-color: #09AFFF;
+  color: #FFF;
+  font-size: 32rpx;
+  line-height: 44rpx;
+  font-weight: 600;
+  border-radius: 50rpx;
+}
+/*
+.toPay .BottompriceBox{
+  display: flex;
+}
+.toPay .allPrice{
+  font-size: 46rpx;
+  line-height: 58rpx;
+  color: #FE4B3C;
+  margin-bottom: 12rpx;
+  margin-left: 30rpx;
+}
+.toPay .title{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+  margin-left: 30rpx;
+}
+.toPay .title .title_1{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #999;
+}
+.toPay .title .title_2{
+  width: 18rpx;
+  height: 12rpx;
+}
+.toPay .title .title_2 image{
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  margin-left: 8rpx;
+}
+.toPay .btnBox{
+  padding: 22rpx 62rpx;
+  background-color: #09AFFF;
+  border-radius: 50rpx;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFF;
+  font-size: 32rpx;
+  line-height: 44rpx;
+  font-weight: 600;
+  margin-right: 30rpx;
+  margin-top: 14rpx;
+} */

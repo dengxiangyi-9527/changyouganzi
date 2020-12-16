@@ -1,0 +1,66 @@
+<!-- 
+<view class="content">
+	<view class="title">
+		感恩6月，4重好礼限时享~
+	</view>
+	<view class="box">
+		<image src="https://static2.jd-gz.com/three1.gif" class="gifpic"></image>
+		<view class="three2">
+			<view class="right-border">
+			</view>
+			<view class="left-border">
+			</view>
+      <view class="text">为庆祝畅游甘孜小程序上线，成都-康定旅游包车开通，4重好礼限时享，数量有限，先到先得，赶快来参与吧~</view>
+		</view>
+    <view class="center">
+        <view class="top">
+          <view class="toptext">1.新用户注册：获得<text style="color: rgb(249, 110, 87);font-weight:bold;font-size:40rpx">50.1元优惠券</text>,首次乘车可<text style="color:rgb(249, 110, 87)">99.9</text>元乘车</view>
+          <view class="topImg">
+            <image src="https://static2.jd-gz.com/_20200526172854.png" style="height:160rpx"></image>
+            <image src="https://static2.jd-gz.com/20200605175400.png" style="height:826rpx;margin-top:40rpx"></image>
+          </view>
+        </view>
+        <view class="top">
+          <view class="toptext">2.<text style="color: rgb(249, 110, 87);font-weight:bold;font-size:40rpx">20元代金券</text>:注册后立即到帐，二次乘车可抵扣。</view>
+          <view class="topImg" style="width:412rpx">
+            <image style="width:412rpx;height:160rpx" src="https://static2.jd-gz.com/_20200526173650.png"></image>
+          </view>
+        </view>
+        <view class="top">
+          <view class="toptext">3.<text style="color: rgb(249, 110, 87);font-weight:bold;font-size:40rpx">20元代金券</text>:分享两位好友以上注册小程序，只要其中任一人完成首单，即可领取。</view>
+          <view class="topImg" style="width:412rpx">
+            <image style="width:412rpx" src="https://static2.jd-gz.com/5c6b4554c42a67c7d6564589fc6881de-sz_73878.jpg"></image>
+          </view>
+        </view>
+        <view class="top">
+          <view class="toptext">4.感恩防疫，重磅优惠：2020年内所有援鄂、援甘孜州的防疫人员乘坐我司旅游包车均<text style="color: rgb(249, 110, 87);font-weight:bold;font-size:40rpx">免费</text>接送!</view>
+          <view class="topImg" style="width:412rpx">
+            <image style="width:412rpx" src="https://static2.jd-gz.com/fyindex1.png"></image>
+          </view>
+        </view>
+
+        <view class="imageBox">
+          <image src="https://static2.jd-gz.com/three8.gif" style="width:36rpx;height:36rpx"></image>
+        </view>
+        <view class="imageBox" style="margin-top:30rpx">
+          <image src="https://static2.jd-gz.com/ea21a9b4c9266fe2f1db087428f55a99-sz_11654.gif" style="width:100%rpx;height:40rpx"></image>
+        </view>
+        <view class="imageBox" style="margin-top:100rpx">
+          <image src="https://static2.jd-gz.com/62d5ba55254a4694297013dbbcff95b3-sz_25316.jpg" style="width:764rpx;height:324rpx"></image>
+        </view>
+        <view class="three2">
+          <view class="right-border">
+          </view>
+          <view class="left-border">
+          </view>
+          <view class="txtBox">
+            <view class="text1">① 需持有本人有效身份证件。</view>
+            <view class="text1">② 乘车时请一定全程佩戴口罩。</view>
+            <view class="text1">③ 主动配合工作人员进行体温检测。</view>
+            <view class="text1">④ 途中如有身体不适，请主动、及时告知司机。</view>
+          </view>
+		    </view>
+    </view>
+	</view>
+</view> -->
+<image src="https://static2.jd-gz.com/longimg.jpg" class="bgimg"></image>

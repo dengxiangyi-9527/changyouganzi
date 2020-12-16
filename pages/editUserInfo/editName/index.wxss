@@ -1,0 +1,25 @@
+/* pages/editUserInfo/editName/index.wxss */
+page{
+  background-color: #FAFAFA;
+}
+.editinfo{
+  width: 690rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
+  margin: auto;
+  /* margin-top: 30rpx; */
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+}
+.editinfo .txt{
+  position: absolute;
+  top: -5rpx;
+  right: 72rpx;
+  color: #333;
+}
+.van-cell:after{
+  border: none !important;  
+}

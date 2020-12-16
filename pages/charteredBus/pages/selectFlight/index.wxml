@@ -1,0 +1,143 @@
+<view class="content">
+  <view class="section_main">
+    <view class="section">
+      <view class="left">
+        <image src="https://static2.jd-gz.com/left_icon@3x(2).png"></image>
+        <text catchtap="previousDay" style="color:{{textColor}}">前一天</text>
+      </view>
+      <view class="now" catchtap="chooseTime">
+        <text>{{timer}}</text>
+        <image src="https://static2.jd-gz.com/left_icon@3x(3).png"></image>
+      </view>
+      <view class="right">
+        <text catchtap="nextDay">后一天</text>
+        <image src="https://static2.jd-gz.com/right_icon@3x.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="carTabBox">
+    <view class="{{item.check ? 'ActiveTabBox tabBox' : 'tabBox'}}" wx:for="{{seatList}}" wx:key="id" catchtap="chooseSeat" data-item="{{item.id}}">
+      <view class="{{item.check ? 'Activetext seatNum' : 'seatNum'}}">{{item.num}}人座</view>
+      <view class="{{item.check ? 'Activetext carPrice' : 'carPrice'}}">{{item.price/100}}元</view>
+    </view>
+  </view>
+  <view class="ticket_info" wx:if="{{listshow}}">
+    <!-- 有票车次 -->
+    <view class="ticket_item" catchtap="toOrder" wx:for="{{classesList}}" wx:key="*this" data-item="{{item}}">
+      <view class="item_top">使用优惠劵立减20元+</view>
+      <view class="item_box">
+        <view class="item_box_top">
+          <view class="boxLeft">
+            <view class="item_box_top_left">
+              <!-- <view class="left_text">用户决定</view>
+              <view class="left_text">发车时间</view> -->
+              <view class="left_text">上门接送</view>
+            </view>
+            <view class="item_box_top_center">
+              <view class="lineBox">
+                <view class="lineCercle"></view>
+                <view class="line"></view>
+                <view class="lineCercle"></view>
+              </view>
+              <view class="text_Box">
+                <view class="flightBox">
+                  {{item.from.name}}
+                  <image class="flightIcon" src="https://static2.jd-gz.com/locIcon.png"></image>
+                </view>
+                <view class="flightBox">
+                  {{item.to.name}}
+                  <image class="flightIcon" src="https://static2.jd-gz.com/locIcon.png"></image>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="item_box_top_right">
+            <view class="priceBox">
+              <text style="color:#FF4B3B;margin-right:8rpx">￥</text>
+              <text style="color:#FF4B3B;font-size:42rpx;line-height:54rpx;font-weight:bold;margin-right:4rpx">{{item.adult_price}}</text>
+              <text style="color:#999;">起</text>
+            </view>
+            <view class="originalPrice" wx:if="{{item.adult_original_price != 0}}">￥{{item.adult_original_price}}</view>
+            <view class="item_box_top_right_text" style="color:#FF4B3B" wx:if="{{item.rest_tickets<=2}}">
+              <image src="https://static2.jd-gz.com/redfire.png"></image>
+              仅剩{{item.rest_tickets}}位
+            </view>
+            <view class="item_box_top_right_text" style="color:#666666" wx:if="{{item.rest_tickets>=6}}">
+              <image></image>
+              充足
+            </view>
+            <view class="item_box_top_right_text" style="color:#FF8B32" wx:if="{{item.rest_tickets>=3&&item.rest_tickets<=5}}">
+              <image src="https://static2.jd-gz.com/yellowfire.png"></image>
+              火热预订
+            </view>
+          </view>
+        </view>
+        <view class="item_box_bottom">
+          <view class="item_box_bottom_error">预计上客时段</view>
+          <image class="clockicon" src="https://static2.jd-gz.com/clock.png"></image>
+          <view class="time_text">{{item.pick_up_time}}-{{item.start_time}}</view>
+        </view>
+      </view>
+      <view class="leftBox"></view>
+      <view class="rightBox"></view>
+    </view>
+    <!-- 无票车次 -->
+
+    <view class="ticket_item" wx:for="{{classesListNull}}" wx:key="*this" data-item="{{item}}" style="opacity:0.5">
+      <view class="item_top">使用优惠劵立减20元+</view>
+      <view class="item_box">
+        <view class="item_box_top">
+          <view class="boxLeft">
+            <view class="item_box_top_left">
+              <!-- <view class="left_text">用户决定</view>
+              <view class="left_text">发车时间</view> -->
+              <view class="left_text">上门接送</view>
+            </view>
+            <view class="item_box_top_center">
+              <view class="lineBox">
+                <view class="lineCercle"></view>
+                <view class="line"></view>
+                <view class="lineCercle"></view>
+              </view>
+              <view class="text_Box">
+                <view class="flightBox">
+                  {{item.from.name}}
+                  <image class="flightIcon" src="https://static2.jd-gz.com/locIcon.png"></image>
+                </view>
+                <view class="flightBox">
+                  {{item.to.name}}
+                  <image class="flightIcon" src="https://static2.jd-gz.com/locIcon.png"></image>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="item_box_top_right">
+            <view class="priceBox">
+              <text style="color:#FF4B3B;margin-right:8rpx">￥</text>
+              <text style="color:#FF4B3B;font-size:42rpx;line-height:54rpx;font-weight:bold;margin-right:4rpx">{{item.adult_price}}</text>
+              <text style="color:#999;">起</text>
+            </view>
+            <view class="originalPrice" wx:if="{{item.adult_original_price != 0}}">￥{{item.adult_original_price}}</view>
+            <view class="item_box_top_right_text" style="color:#666666;font-weight:bold">
+              <image></image>
+              已售空
+            </view>
+          </view>
+        </view>
+        <view class="item_box_bottom">
+          <view class="item_box_bottom_error">预计上客时段</view>
+          <image class="clockicon" src="https://static2.jd-gz.com/clock.png"></image>
+          <view class="time_text">{{item.pick_up_time}}-{{item.start_time}}</view>
+        </view>
+      </view>
+      <view class="leftBox"></view>
+      <view class="rightBox"></view>
+    </view>
+  </view>
+  <view class="warnText" wx:if="{{!listshow}}">暂无搜索班次哦～</view>
+  <view catchtouchmove='ture'>
+    <van-popup show="{{ show }}" bind:close="onClose" position="bottom" z-index="99999" >
+        <van-picker show-toolbar columns="{{ dateList }}" bind:cancel="closeTime" bind:confirm="timeConfirm"/>
+    </van-popup>
+  </view>
+</view>

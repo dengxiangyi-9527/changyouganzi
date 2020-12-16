@@ -1,0 +1,45 @@
+<!--pages/editUserInfo/medicalCheck/medicalCheck.wxml-->
+<view class="content">
+	<view class="bg_pic">
+		<image src="https://static2.jd-gz.com/ky_bg.png"></image>
+	</view>
+	<!-- 内容部分 -->
+	<view class="main">
+		<image src="https://static2.jd-gz.com/ky_main_bg.png" class="ky_main_bg"></image>
+		<view class="main_tit">
+			<view class="txt">抗疫认证</view>
+			<view>2020全年所有援鄂及州内防疫人员旅游包车免费乘车</view>
+		</view>
+		<view class="formData">
+			<view class="formDataItem">
+				<view class="formDataItem_tit">真实姓名</view>
+				<input placeholder="请如实填写" placeholder-style='color: #BAC2D4;font-size: 32rpx;font-weight: normal;' type="text" bindinput="inputMsg" data-type="name"></input>
+			</view>
+			<view class="formDataItem">
+				<view class="formDataItem_tit">职业</view>
+				<input data-type="job" placeholder="请输入您的职业名称" placeholder-style='color: #BAC2D4;font-size: 32rpx;font-weight: normal;' type="text" bindinput="inputMsg"></input>
+			</view>
+				<view class="formDataItem">
+				<view class="formDataItem_tit">单位名称</view>
+				<input data-type="company" placeholder="请输入您的单位名称" placeholder-style='color: #BAC2D4;font-size: 32rpx;font-weight: normal;' type="text" bindinput="inputMsg"></input>
+			</view>
+
+
+			<view class="card">
+				<view class="card_left">
+					<view class="card_left_tit">工作证照片</view>
+					<view>上传您的工作证正面</view>
+				</view>
+				<view class="card_right" bindtap="takePhone">
+					<image src="https://static2.jd-gz.com/sfcard.png" class="card_right_bg"></image>
+          <image src="{{cardSrc}}" class="user_pic"></image>
+          <!-- <image src="https://static2.jd-gz.com/Fi0eGrp76y7B0mndplUMTYJpdOLt" class="user_pic"></image> -->
+          <view class="again" wx:if="{{cardSrc}}">点击重新上传</view>
+				</view>
+			</view>
+
+		</view>
+
+    <button class="submit {{allIput == true? 'allIputed':''}}" bindtap="submitMsg">提交审核</button>
+	</view>
+</view>

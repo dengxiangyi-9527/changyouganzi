@@ -1,0 +1,72 @@
+/* pages/RideExpress/selectionLoc/index.wxss */
+page{
+  width: 750rpx;
+  background-color: #F6F7F9;
+}
+.top{
+  width: 750rpx;
+  box-sizing: border-box;
+  padding: 30rpx;
+  background-color: #fff;
+}
+.top .selectBox{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top .selectBox .searchBox{
+  flex: 1;
+  display: flex;
+  padding: 16rpx 0 16rpx 30rpx;
+  background-color: #F6F7F9;
+  border-radius: 38rpx;
+  align-items: center;
+}
+.top .selectBox .searchBox .text{
+  color: #999;
+  font-size: 32rpx;
+  line-height: 44rpx;
+  box-sizing: border-box;
+}
+.top .selectBox .searchBox .line{
+  margin-left: 32rpx;
+  width: 1rpx;
+  padding: 10rpx 0;
+  background-color: #DEDEDE;
+}
+.top .selectBox .searchBox .searchInput{
+  height: 100%;
+  padding-left: 24rpx;
+  flex: 1;
+}
+.top .selectBox .closetext{
+  margin-left: 24rpx;
+  color: #666;
+  font-size: 30rpx;
+  line-height: 42rpx;
+}
+.top .nowcity{
+  font-size: 30rpx;
+  line-height: 42rpx;
+  color: #09AFFF;
+  margin-top: 30rpx;
+}
+.input-placeholder{
+  font-size: 30rpx;
+  line-height: 40rpx;
+  color: #999;
+}
+.listBox{
+  width: 750rpx;
+  background-color: #fff;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+  margin-top: 36rpx;
+  margin-bottom: 78rpx;
+}
+.listBox .listItem{
+  width: 100%;
+  border-bottom: 1rpx solid #EDEDED;
+  padding: 30rpx 0;
+}

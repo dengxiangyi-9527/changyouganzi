@@ -1,0 +1,46 @@
+<!--pages/CustomTour//pages/customTourExplain/index.wxml-->
+<view class="wrap">
+    <view class="head">
+      <view class="fromloc">
+        <view class="circular"></view>
+        <view class="headTitle">上车地点</view>
+        <view class="headMain">{{loc}}</view>
+      </view>
+      <view class="lineMain">
+        <view class="headTitle">出发时间</view>
+        <view class="headMain">{{time}}</view>
+      </view>
+
+      <view class="lineMain">
+         <view class="headTitle">包车时间</view>
+         <view class="headMain">{{dayNum}}天</view>
+      </view>  
+    </view>
+    <view class="main">
+        <view class="tabBox">
+            <view class="priceBox">
+                <view class="time">8小时300公里</view>
+                <view class="price">
+                    <view style="font-size:24rpx;line-height:36rpx;">￥</view>
+                    <view style="font-size:40rpx;line-height:52rpx;font-weight:bold">800</view>
+                    <view style="font-size:24rpx;line-height:36rpx;">起/天</view>
+                </view>
+            </view>
+            <view class="allprice">1天总价</view>
+            <view class="tabTitle">套餐说明</view>
+            <view class="tabMain">用车当日可使用8小时，包含300公里 (多日包车中，当日未用完的部分不可累计)</view>
+            <view class="tabTitle">套餐包含</view>
+            <view class="tabMain">套餐包含车辆使用费、燃油费、司机服务费、司机餐食费</view>
+            <view class="tabTitle">套餐不含</view>
+            <view class="tabMain">
+                <view>套餐中，不包含以下内容产生的费用:</view>
+                <view>1、超时长费:超出套餐时长外产生的费用(收费标准详见订单填写页)</view>
+                <view>2、超公里费:超出套餐公里数产生的费用(收 费标准详见订单填写页) </view>
+                <view>3、空驶费:实际下车地点与下单时填写的不一致，导致的司机车辆空驶的费用。(具体收 费标准详见订单填写页) </view>
+                <view>4、第三方费用:实际行驶中产生的停车费、过路过桥费、高速费等</view>
+                <view>5、个人费用:如您的景点门票，游玩项目等</view>
+            </view>
+            <view class="btnBox" catchtap="goList">去选车</view>
+        </view>
+    </view>
+</view>

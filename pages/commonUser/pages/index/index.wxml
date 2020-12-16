@@ -1,0 +1,35 @@
+<!--pages/commonUser/pages/index.wxml-->
+<view class="wrap">
+  <view class="wraperro">
+      <image src="https://static2.jd-gz.com/voice.png"></image>
+      <view class="erroText">请确保录入信息正确与证件一致，否则无法认证成功哦</view>
+  </view>
+  <view class="main">
+    <view class="userList">
+      <view class="addUserInfo" catchtap="addUser">
+        <view class="imgText">
+          <image src="https://static2.jd-gz.com/addNum.png"></image>
+          <view class="addUserText">新增乘客（成人、学生、儿童）</view>
+        </view>
+      </view>
+      <view class="userInfoItem" wx:for="{{userList}}" wx:key="*this">
+        <view class="itemBox">
+          <view class="userInfoBox">
+            <image src="https://static2.jd-gz.com/lajitong.png" catchtap="delUser" data-item="{{item}}"></image>
+            <view class="textBox">
+              <view class="name">{{item.name}}</view>
+              <view class="id_card">{{item.id_card_number}}</view>
+            </view>
+          </view>
+          <view class="iconBox">
+            <image src="https://static2.jd-gz.com/gouxuan.png" wx:if="{{item.check}}" data-item="{{item}}" catchtap="close"></image>
+            <image src="https://static2.jd-gz.com/kongxinyuan.png" wx:if="{{!item.check}}" data-item="{{item}}" catchtap="gouxuan"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="btnBox" wx:if="{{userList.length>0}}">
+    <view class="btn" catchtap="isOk">确定</view>
+  </view>
+</view>

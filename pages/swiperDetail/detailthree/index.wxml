@@ -1,0 +1,104 @@
+<view class="content">
+	<view class="title">
+		来了，来了，成都-康定旅游包车接送终于来了！
+	</view>
+	<view class="box">
+		<image src="https://static2.jd-gz.com/three1.gif" class="gifpic"></image>
+		<view class="introduction">
+		导语：为响应全域旅游统揽经济社会发展的指导思想，紧紧围绕建设国家全域旅游示范区、国际生态文化旅游目的地为目标，深入落实甘孜州州政府“六大战略”部署。为提高州内群众出行品质，提升游客州内旅游体验度，畅游甘孜提供更正规、更安全、更高品质的出行。
+		</view>
+
+		<view class="three2">
+			<view class="right-border">
+			</view>
+			<view class="left-border">
+			</view>
+			<image src="https://static2.jd-gz.com/car.png">
+			</image>
+		</view>
+
+		<view class="content_item">
+			<view class="title_num"><text>01</text></view>
+			<view class="title_text">更省心</view>
+			<view class="content_main">
+			6月1日，旅游包车接送成康路线（成都-康定）开始试运行，成都三环内、双流区、温江区免费上门接送，康定新县城、老县城内免费接送。无需提着大包小包转车，做到门对门点对点的接送，减少旅途疲惫
+			</view>
+			<view class="three2">
+				<view class="right-border">
+				</view>
+				<view class="left-border">
+				</view>
+				<image src="https://static2.jd-gz.com/driver.png">
+				</image>
+			</view>
+		</view>
+
+		<view class="content_item">
+			<view class="title_num"><text>02</text></view>
+			<view class="title_text">更安心</view>
+			<view class="content_main" style="line-height: 40rpx;padding-top:10rpx">
+				<text decode="{{true}}">车辆：合法营运牌照，出车前严格安全检查、消毒。\n
+        司机：持证上岗，定期培训、考核。\n
+        乘客：购票前，实名认证；乘车时，票证一致方可上车。\n
+        环境：9座高端商务车，航空座椅。车内均备有氧气。\n
+        保障：每位乘客均赠送60万座位险
+        </text>
+			</view>
+			<view class="three2">
+				<view class="right-border">
+				</view>
+				<view class="left-border">
+				</view>
+				<image src="https://static2.jd-gz.com/zuowei.jpg">
+				</image>
+			</view>
+		</view>
+
+		<view class="content_item">
+			<view class="title_num"><text>03</text></view>
+			<view class="title_text">更智能</view>
+			<view class="content_main">
+				肩负打造甘孜州内自己的出行名片的重任，我们也打破传统旅游包车的购票、乘车模式，通过小程序二维码实现实时查询时刻表、余座、扫码乘车等功能。
+			</view>
+			<view class="three2">
+				<view class="right-border">
+				</view>
+				<view class="left-border">
+				</view>
+				<image src="https://static2.jd-gz.com/code.jpg" style="width: 304rpx;height: 304rpx;">
+				</image>
+			</view>
+		</view>
+
+		<!-- <view class="class_time">
+			<view class="time_title">班次时刻表</view>
+			<image src="https://static2.jd-gz.com/cd_kd.png"></image>
+			<image src="https://static2.jd-gz.com/kd_cd.png" style="margin-top:20rpx"></image>
+		</view> -->
+
+		<view class="content_item">
+			<view class="title_text">今年6月开始，</view>
+			<view class="title_text">陆续开通成都往返州内18个县市旅游包车，</view>
+			<view class="title_text">敬请期待</view>
+			<view>
+				<image src="https://static2.jd-gz.com/three8.gif" style="width:36rpx;height:36rpx;margin-left:324rpx;margin-top:15rpx"></image>
+			</view>
+			<view>
+				<image src="https://static2.jd-gz.com/62d5ba55254a4694297013dbbcff95b3-sz_25316.jpg" style="width:670rpx;height:280rpx;"></image>
+			</view>
+			<view class="three2" style="margin-top:10rpx">
+				<view class="right-border">
+				</view>
+				<view class="left-border">
+				</view>
+				<text decode="{{true}}" class="notice">
+					① 需持有本人有效身份证件。\n
+					② 乘车时请一定全程佩戴口罩。\n
+					③ 主动配合工作人员进行体温检测。\n
+					④ 途中如有身体不适，请主动、及时告知司机。\n
+				</text>
+			</view>
+		</view>
+
+	</view>
+</view>

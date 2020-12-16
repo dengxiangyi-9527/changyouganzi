@@ -1,0 +1,69 @@
+<!--pages/cjjs/newPay/index.wxml-->
+<view class="wrap">
+  <cjjs-component my-property='{{nav}}'/>
+  <view class="headImg">
+      <image src="https://static2.jd-gz.com/paybackground.png"></image>
+  </view>
+  <view class="main">
+    <view class="countDonw">
+      <image src="https://static2.jd-gz.com/time.png"></image>
+      <view class="textcolorW">支付剩余</view>
+      <view class="textcolorY">{{Minutes}}</view>
+      <view class="textcolorW">分</view>
+      <view class="textcolorY">{{getSeconds}}</view>
+      <view class="textcolorW">秒</view>
+    </view>
+    <view class="orderDetail">
+      <view class="detailTitle">订单详情</view>
+      <view class="carInfoBox">
+        <view class="dateBox">
+          <view class="dateTitle">出发时间</view>
+          <view class="dateInfo">{{timer}}</view>
+        </view>
+        <view class="line"></view>
+        <view class="timeBox">
+            <image src="https://static2.jd-gz.com/timelist.png"></image>
+            <view class="timeInfo">{{days}}天</view>
+        </view>
+        <view class="line"></view>
+        <view class="cityBox">
+            <view class="cityTitle">上车地点</view>
+            <view class="cityInfo">{{from }}-{{to }}</view>
+        </view>
+      </view>
+      <view class="userBox">
+        <view class="userInfo">
+            {{userName}}｜{{personNum}}人｜{{tel}}
+        </view>
+        <view class="allprice">合计：￥{{allPrice}}</view>
+      </view>
+      <view class="carBox">
+        <view class="carBox_title">
+          <view class="carBox_headimg">
+            <image src="https://static2.jd-gz.com/kefuhead3.png"></image>
+            <view class="carName">畅游甘孜（私人订制）</view>
+          </view>
+          <view class="carErro">方案规划成功</view>
+        </view>
+        <view class="kefuBox">
+          <view class="kefuBtn">
+            <image src="https://static2.jd-gz.com/kefuhead2.png"></image>
+            联系客服
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="payBox">
+        <view class="weixin">
+          <image src="https://static2.jd-gz.com/wechat_icon@3x.png"></image>
+          <view class="text">微信支付</view>
+        </view>
+        <view class="checkBox">
+          <image src="https://static2.jd-gz.com/paycheck_s@3x.png"></image>
+        </view>
+    </view>
+  </view>
+</view>
+<view class="toPay">
+    <view class="btn" bindtap="confirmPay">立即支付¥{{allPrice}}</view>
+</view> 

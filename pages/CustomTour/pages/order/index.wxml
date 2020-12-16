@@ -1,0 +1,139 @@
+<!--pages/CustomTour//pages/order/index.wxml-->
+<view class="wrap">
+   <view class="carBox">
+      <view class="carInfo">
+        <image class="carImg" src="{{carInfo.image}}"></image>
+        <view class="carText">
+          <view class="carName">{{carInfo.name}}</view>
+          <view class="info">{{carInfo.intro}}</view>
+        </view>
+      </view>
+      <view class="timeLoc">
+        <view class="timeBox">
+          <view class="timelocTitle">租期</view>
+          <view class="time">
+            <view class="date">{{currentDate}}</view>
+            <view class="dayNum">
+              <view class="dayLine"></view>
+              <view class="day">{{dayNum}}天</view>
+              <view class="dayLine"></view>
+            </view>
+            <view class="date">{{endDate}}</view>
+          </view>
+        </view>
+        <view class="locBox">
+          <view class="timelocTitle">地址</view>
+          <view class="loc">上车点：{{fromLoc.fromLocationInfo}}</view>
+        </view>
+      </view>
+   </view>
+   <view class="main">
+      <view class="userInfo">
+        <view class="userTitle">乘客信息</view>
+        <view class="userInfoBox">
+          <view class="userInfoList">
+            <view class="userInfoItem" wx:for="{{userList}}" wx:key="*this">
+              <view class="itemInfo">
+                <view class="itemUser">
+                  <image src="https://static2.jd-gz.com/codeBusUser.png" wx:if="{{!item.delcheck}}" ></image>
+                  <image src="https://static2.jd-gz.com/codeBusUser_active.png" wx:if="{{item.delcheck}}"></image>
+                  <view class="itemUserInfo">
+                    <view class="itemUserName">{{item.name}}</view>
+                    <view class="itemUserid">{{item.id_card_number}}</view>
+                  </view>
+                </view>
+              </view>
+              <view class="closeBox">
+                <scroll-view scroll-x="{{true}}" class="scrolview" bindscrolltolower="scrollend" bindscrolltoupper = "scrollstart" data-item="{{item}}">
+                  <view class="scrollBox">
+                    <view class="itemclose" catchtap="delUser" data-item="{{item}}">删除</view>
+                  </view>
+                </scroll-view>
+              </view>
+            </view>
+          </view> 
+          <view class="infoBox" catchtap="addUser">
+            <view class="addUserInfo">
+              <image src="https://static2.jd-gz.com/addNum.png"></image>
+              <view class="addUserText">添加乘客（成人、学生、儿童）</view>
+            </view>
+          </view>
+          <view class="infoBox">
+            <view class="infoTitle">
+              <image src="https://static2.jd-gz.com/teiPhone.png"></image>
+              <view class="titleText">手机号码</view>
+            </view>
+            <view class="inputBox">
+              <input value="{{tel}}" bindblur="inspectTel" bindinput="getUserTel" placeholder="请输入你的手机号" placeholder-class="palce" disabled="{{isRead}}" class="inputText"></input>
+            </view>
+          </view>
+          <view class="infoBox">
+            <view class="infoTitle">
+              <image src="https://static2.jd-gz.com/remarks.png"></image>
+              <view class="titleText">备注</view>
+            </view>
+            <view class="inputBox">
+              <input value="{{remarks}}" bindinput="getRemarks" placeholder="如有其他需求，请留言在这里" placeholder-class="palce" disabled="{{isRead}}" class="inputText"></input>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="erroBox">
+        <view class="indexTitle">预定须知</view>
+        <view class="title">用车流程</view>
+        <view class="erroText">1、支付后订单详情页填写发票信息</view>
+        <view class="erroText">2、服务商90分钟内确认行程细节</view>
+        <view class="erroText">3、司机车辆信息短信通知</view>
+        <view class="erroText">4、司机在上车点等候</view>
+        <view class="title">退改说明</view>
+        <view class="erroText">乘客下单后半小时内全额退还，半小时后至预定日期零点退还一天费用的50%，到达发车日期概不退还</view>
+        <view class="title">费用说明</view>
+        <view class="erroText">详细费用规则说明查看，请点击<text style="color:#FF9646">费用说明</text></view>
+      </view>
+      <!-- <view class="electronicInvoice">
+        <view class="invoiceTitle">开具电子发票</view>
+        <view class="invoiceIcon">
+          <view class="iconText">不需要发票</view>
+          <image src="https://static2.jd-gz.com/right_icon%402x.png"></image>
+        </view>
+      </view> -->
+      <view class="prompt">
+			<text class="tit">出行提示</text>
+			<view class="content">
+				<view>1.为避免行李超限，未携带宠物笼等问题不能上车，请提前向客服人员确认；</view>
+				<view>2.如有其他紧急需求，请联系<text style="color:#09AFFF" catchtap="callPhone" data-item="19150185859">在线客服</text> </view>
+			</view>
+		</view>
+		<view class="protocol">
+			<van-checkbox value="{{ checked }}" bind:change="onChecked" checked-color="#18AFFF" icon-size="30rpx">
+				<text class="read">已阅读并同意</text>
+				<text class="protocol_content" catchtap="toProtocol" data-protocolType="carhire">《畅游甘孜约车协议》</text>
+			</van-checkbox>
+		</view>
+    <view class="toPay">
+      <view class="BottompriceBox">
+        <view class="allPrice">￥{{allPrice}}</view>
+        <view class='title' catchtap='showPriceDetail'>
+          <view class='title_1'>费用明细</view>
+          <view class='title_2'>
+            <image src="https://static2.jd-gz.com/{{showIcon? 'up_icon@3x':'rightd_icon%402x'}}.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="btnBox" catchtap="toPay">去付款</view>
+    </view>
+   </view>
+</view>
+<view class="mask" wx:if="{{showIcon}}" catchtap="closeMask" catchtouchmove="true">
+	<view class="maskBox">
+		<view class="boxTitle">订单价格说明</view>
+		<view class="boxNum">
+			<view class="Numtext">单价</view>
+			<view class="Numtext">￥{{carInfo.price/100}}/天</view>
+		</view>
+    <view class="boxNum">
+			<view class="Numtext">天数</view>
+			<view class="Numtext">{{dayNum}}天</view>
+		</view>
+	</view>
+</view>

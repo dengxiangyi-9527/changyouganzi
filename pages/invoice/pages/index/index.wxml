@@ -1,0 +1,16 @@
+<!--pages/invoice//pages/index/index.wxml-->
+<view class="invoice_wrap">
+    <view class="addInvoice">
+      <image src=""></image>
+      <view class="addInvoiceText">添加抬头</view>
+    </view>
+    <view class="invoiceList">
+      <view class="invoiceItem">
+        <view class="invoiceTitle">
+          <view class="titleText">四川红熊信息科技有限责任公司</view>
+          <view class="titleBox">历史使用</view>
+        </view>
+        <view class="invoiceNum">税号91510105MA640PLH2Q</view>
+      </view>
+    </view>
+</view>

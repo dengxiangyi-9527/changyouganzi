@@ -1,0 +1,59 @@
+<!--pages/editUserInfo/coupon/coupon.wxml-->
+<view class="coupon_main_css" wx:if="{{couponList.length !== 0}}">
+	<view class="coupon_item" wx:for="{{couponList}}" wx:key="*this" catchtap="goUse" data-item="{{item}}">
+		<!-- 左右的小圆圈 -->
+		<view class="left_quan quan"></view>
+		<view class="right_quan quan"></view>
+		<view class="dashed_border"></view>
+
+		<view class="coupon_content">
+			<view class="coupon_item_left">
+				<view class="coupon_kind">
+					<image src="https://static2.jd-gz.com/cjjs_icon@3x.png"></image>
+					<view>城际接送</view>
+				</view>
+
+				<view class="coupon_title">
+					代金券
+				</view>
+
+				<view class="coupon_route" wx:if="{{item.route_id !== 0}}">
+					仅{{item.line}}路线可用
+				</view>
+				<view class="coupon_route" wx:if="{{item.route_id == 0}}">
+					{{item.line}}
+				</view>
+
+				<view class="coupon_time">
+					有效期至 {{item.expire_time}}
+				</view>
+			</view>
+
+			<view class="coupon_item_right">
+				<view class="price_fh">￥</view>
+				<view class="price_money">{{item.money}}</view>
+			</view>
+
+			<view class="coupon_yx" wx:if="{{item.check}}">
+				<image src="https://static2.jd-gz.com/cjjs_coupon_yx.png"></image>
+			</view>
+
+			<view class="use_immediately" catchtap="goUse" data-item="{{item}}" wx:if="{{route_id == ''}}">
+				<view class="use_immediately_text">立即使用</view>
+				<view class="triangle_border_right"></view>
+			</view>
+		</view>
+	</view>
+	<view class="{{couponList.length <= 3 ? 'look_sxcoupon' : 'sxcpopon'}}" catchtap="goExCoupon">
+		<view style="color:#3E4B6E">查看已失效劵</view>
+		<image src="https://static2.jd-gz.com/right_icon@2x.png"></image>
+	</view>
+</view>
+
+<!-- 缺省页 -->
+<view class="coupon-not-find" wx:else>
+	<view class="no_content">
+		<image src="https://static2.jd-gz.com/noneorder_pic%402x.png"></image>
+		<view>暂无代金券 快去<text class="tuijian" bindtap="toTuiJian">推荐好友</text>吧</view>
+	</view>
+</view>

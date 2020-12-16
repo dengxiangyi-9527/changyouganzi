@@ -1,0 +1,141 @@
+button::before {
+  border: 0;
+  border: none;
+}
+
+button::after {
+  border: 0;
+  border: none;
+}
+.content {
+  padding: 0 30rpx;
+}
+
+.content .tot {
+  width: 388rpx;
+  height: 388rpx;
+  margin: 0 auto;
+  position: relative;
+}
+
+.content .tot image {
+  width: 388rpx;
+  height: 388rpx;
+}
+
+.content .tot .ztoast {
+  width: 348rpx;
+  height: 76rpx;
+  border-radius: 40rpx;
+  background-color: #18afff;
+  position: absolute;
+  top: 38%;
+  left: 5%;
+  opacity: 0.5;
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+  line-height: 76rpx;
+}
+
+.content .tot .ztoast_block {
+  display: block;
+}
+
+.content .tot .ztoast_none {
+  display: none;
+}
+
+
+.tit {
+  padding-top: 48rpx;
+}
+
+.tit .tit_big {
+  font-size: 42rpx;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 16rpx;
+}
+
+.tit .tit_text {
+  color: #3e4b6e;
+  font-size: 28rpx;
+}
+.tit .success{
+  color: #25BF25;
+}
+.tit .fail{
+  color: #FE4B3B;
+}
+
+
+.user_info {
+  width: 690rpx;
+  /* height: 240rpx; */
+  margin-top: 68rpx;
+}
+
+.user_info .item {
+  border-bottom: 2rpx solid #EDEDED;
+  /* border-color: rgba(237, 237, 237, 0.8); */
+  height: 92rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rpx;
+}
+
+.user_info .item .left {
+  color: #3e4b6e;
+  font-size: 32rpx;
+}
+
+.user_info .item .right {
+  color: #333333;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.card_pic {
+  width: 660rpx;
+  height: 253rpx;
+  background-color: #f5f6fa;
+  margin-top: 30rpx;
+ padding-left: 30rpx;
+}
+
+.card_pic .item {
+  width: 300rpx;
+  height: 192rpx;
+  padding-top: 30rpx;
+  position: relative;
+}
+
+.card_pic .pic_bg {
+  width: 300rpx;
+  height: 192rpx;
+}
+
+.card_pic .pic_up {
+  width: 268rpx;
+  height: 160rpx;
+  position: absolute;
+  top: 30rpx;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+
+}
+.submit {
+  height: 88rpx;
+  width: 660rpx;
+  border-radius: 44rpx;
+  text-align: center;
+  line-height: 88rpx;
+  font-size: 36rpx;
+  background-color: #18AFFF;
+  color: #fff;
+  margin: auto;
+  margin-top: 48rpx;
+  margin-bottom: 30rpx;
+}

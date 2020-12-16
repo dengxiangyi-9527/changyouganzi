@@ -1,0 +1,132 @@
+<view class="indexPage">
+	<index-component my-property="{{nav}}" />
+	<view class="content_box">
+		<swiper class="bg_banner" autoplay="true" interval="4000" circular="true" indicator-dots="true" indicator-color="#ccc" indicator-active-color="#ffffff">
+			<swiper-item wx:for="{{imgList}}" wx:key="index" bindtap="bindBannerTap" data-index="{{index}}">
+				<image src="{{item}}"></image>
+			</swiper-item>
+		</swiper>
+		<view class="info_box">
+			<view class="city_box">
+				<view class="city_box_inner">
+					<view class="station_box">
+						<view class="single_station single_city" catchtap="startCity" wx:if="{{startCity !== ''}}">{{startCity}}</view>
+						<view class="single_station station_sight station_sight_null" catchtap="startCity" wx:if="{{startCity == ''}}">出发地</view>
+						<view class="icon_box" catchtap="exchangeCity">
+							<image src="https://static2.jd-gz.com/_20200610095127%20%283%29.png"></image>
+						</view>
+						<view class="single_station station_sight single_city" catchtap="endCity"  wx:if="{{arriveCity !== ''}}">{{arriveCity}}</view>
+						<view class="single_station station_sight station_sight_null" catchtap="endCity" wx:if="{{arriveCity == ''}}">目的地</view>
+					</view>
+					<view class="station_box date_box">
+						<view class="single_station date_box"  catchtap="showPopup">{{currentDate}}</view>
+					</view>
+					<view class="search_btn" catchtap="toSerach">预约景区直通车</view>
+				</view>
+				<view class="single_radius"></view>
+				<view class="right_radius"></view>
+			</view>
+			<view class="tab_box">
+				<view  catchtap="toSckk">
+          <image src="https://static2.jd-gz.com/tab_quick1.png" class="spriteImg"></image>
+          <view class="tab_text">司乘快客</view>
+        </view>
+				<view  catchtap="toperpheralTaourism">
+          <image src="https://static2.jd-gz.com/tab_plane1.png" class="spriteImg"></image>
+          <view class="tab_text">周边游</view>
+        </view>
+				<view  catchtap="toDzbc">
+          <image src="https://static2.jd-gz.com/tab_chart1.png" class="spriteImg"></image>
+          <view class="tab_text">定制游</view>
+        </view>
+				<view  catchtap="toCjjs" class="cjjs">
+          <image src="https://static2.jd-gz.com/tab_cj1.png" class="spriteImg"></image>
+          <view class="tab_text">城际包车</view>
+        </view>
+				<view  catchtap="toZjzc">
+          <image src="https://static2.jd-gz.com/tab_rent1.png" class="spriteImg"></image>
+          <view class="tab_text">自驾租车</view>
+        </view>
+
+			</view>
+			<!-- 城市灵感 -->
+			<view class="city_inspiration">
+				<view class="title">
+					城市灵感
+				</view>
+				<view class="img">
+					<image src="https://static2.jd-gz.com/cslg1.png" bindtap="goImgTextDetail" data-index="1"></image>
+					<image src="https://static2.jd-gz.com/cslg2.png" bindtap="goImgTextDetail" data-index="2"></image>
+					<image src="https://static2.jd-gz.com/cslg3.png" bindtap="goImgTextDetail" data-index="3"></image>
+				</view>
+			</view>
+			<!-- 当地必体验 -->
+			<view class="local_experience"  style="padding: {{isIpx?'60rpx 30rpx 160rpx 30rpx':'60rpx 30rpx 120rpx 30rpx'}}">
+				<view class="title">
+					当地必体验
+				</view>
+
+				<view class="tab_box2">
+					<view class="tab_single" wx:for="{{tabList}}" wx:key="index" bindtap="bindTabChange" data-index="{{index}}">
+						<view class="{{currenIndex === index?'single_name single_name_active':'single_name'}} ">{{item.name}}</view>
+						<image src="https://static2.jd-gz.com/index_cur_tab.png" class="index_cur_tab" wx:if="{{currenIndex === index}}"></image>
+						<image src="https://static2.jd-gz.com/hot_icon.png" class="hot_icon" wx:if="{{index ===2}}"></image>
+					</view>
+				</view>
+
+				<view class="wrap_pic">
+					<view class="how_play item" wx:if="{{currenIndex ===0}}">
+						<image src="https://static2.jd-gz.com/1.png" bindtap="goImgTextDetail" data-index="4"></image>
+						<image src="https://static2.jd-gz.com/2.png" bindtap="goImgTextDetail" data-index="5"></image>
+						<image src="https://static2.jd-gz.com/3.png" bindtap="goImgTextDetail" data-index="6"></image>
+					</view>
+
+					<view class="eat_what item" wx:if="{{currenIndex === 1}}">
+						<image src="https://static2.jd-gz.com/eat1.png" bindtap="goImgTextDetail" data-index="7"></image>
+						<image src="https://static2.jd-gz.com/eat2.png" bindtap="goImgTextDetail" data-index="8"></image>
+						<image src="https://static2.jd-gz.com/eat3.png" bindtap="goImgTextDetail" data-index="9"></image>
+					</view>
+
+					<view class="hotel item" wx:if="{{currenIndex === 2}}">
+						<image src="https://static2.jd-gz.com/hotel1.png" bindtap="goImgTextDetail" data-index="10"></image>
+						<image src="https://static2.jd-gz.com/hotel2.png" bindtap="goImgTextDetail" data-index="11"></image>
+						<image src="https://static2.jd-gz.com/hotel3.png" bindtap="goImgTextDetail" data-index="12"></image>
+					</view>
+
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+<tabbar activeIndex='0'>
+
+</tabbar>
+<!-- 防疫遮罩层 -->
+<!-- <view class="maskBox" catchtap="delMask" wx:if="{{isMask&&!showCoupon}}">
+	<view class="boxImg">
+		<image src="https://static2.jd-gz.com/fyindex1.png" class="imgIcon" catchtap="goDetail"></image>
+		<image src="https://static2.jd-gz.com/cross@2x.png" class="imgDel" catchtap="delMask"></image>
+	</view>
+</view> -->
+<!-- 新人专享遮罩层 -->
+<!-- <view class="maskBox" wx:if="{{showCoupon}}">
+	<view class="boxImg">
+		<image src="https://static2.jd-gz.com/new_pop.png" class="imgIcon" data-type="receive" bindtap="bindActivity"></image>
+		<image src="https://static2.jd-gz.com/cross@2x.png" class="imgDel" data-type="close" bindtap="bindActivity"></image>
+	</view>
+</view> -->
+
+<!-- 时间选择 -->
+	<van-popup show="{{ show }}" bind:close="onClose" position="bottom" z-index="999999">
+		<van-picker show-toolbar columns="{{ dateList }}" bind:cancel="onCancel" bind:confirm="confirm" bind:change="onChnage" />
+	</van-popup>
+		<!-- 联系客服 -->
+<view class="customerservice" catchtap="toCall">
+	<image src="https://static2.jd-gz.com/lianxi27%402x.png"></image>
+</view>
+<!-- 吸顶tab -->
+<view class="topTab">
+	
+</view>
+
+ 

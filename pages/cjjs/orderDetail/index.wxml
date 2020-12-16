@@ -1,0 +1,159 @@
+<!--pages/cjjs/orderDetail/index.wxml-->
+<view class="bg" wx:if="{{orderDetail !== ''}}">
+  <image class="bg_img" src="https://static2.jd-gz.com/order_bg@3x.png"></image>
+
+  <!-- 退款状态 -->
+  <view class="status">
+    <image src="https://static2.jd-gz.com/kxsuccess_icon@3x.png"></image>
+    <view class="status_info">
+      <!-- 订单退款中/退款成功的/已完成的状态 -->
+      <view class="status_txt" wx:if="{{orderDetail.status === 5}}">订单已退款</view>
+      <view class="status_txt" wx:if="{{orderDetail.status === 10}}">订单退款中</view>
+      <view class="status_txt" wx:if="{{orderDetail.status === 9}}">订单已完成</view>
+      <view class="status_txt" wx:if="{{orderDetail.status === 8}}">订单已取消</view>
+      <view class="status_txt" wx:if="{{orderDetail.status === 1}}">订单未支付</view>
+      <view class="status_txt" wx:if="{{orderDetail.status === 2}}">订单已支付</view>
+      <view class="status_txt" wx:if="{{orderDetail.status === 6}}">订单已改签</view>
+      <view class="status_txt" wx:if="{{orderDetail.status === 11}}">订单已评价</view>
+      <view class="status_tost">感谢您使用畅游甘孜，希望您玩得愉快哦～</view>
+    </view>
+  </view>
+
+  <!-- 行程信息 -->
+  <view class="travel_info completed">
+    <view class="txt">
+      <view class="txt_right">
+        <view class="locationText">
+          <view class="timeText">{{time}} 出发</view>
+          <view class="typeText" style="color:#18AFFF" wx:if="{{orderDetail.status === 2 }}">待出行</view>
+          <view class="typeText" style="color:#FE4B3B" wx:if="{{orderDetail.status === 1}}">待支付...</view>
+          <view class="typeText" style="color:#25BF25" wx:if="{{orderDetail.status === 6 }}">改签成功</view>
+          <view class="typeText" style="color:#999999" wx:if="{{orderDetail.status === 8}}">已取消...</view>
+          <view class="typeText" wx:if="{{orderDetail.status === 10}}">退款中...</view>
+          <view class="typeText" style="color:#999999" wx:if="{{orderDetail.status === 5}}">已退款</view>
+          <view class="typeText" style="color:#999999" wx:if="{{orderDetail.status === 9 || orderDetail.status === 11}}">已完成</view>
+        </view>
+        <view class="location" style="overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">
+          <view style="overflow: hidden;text-overflow:ellipsis;white-space: nowrap;" class="locationText">{{orderDetail.from}}</view>
+          <image src="https://static2.jd-gz.com/arrow_icon@3x.png"></image>
+          <view style="overflow: hidden;text-overflow:ellipsis;white-space: nowrap;" class="locationText">{{orderDetail.to}}</view>
+        </view>
+      </view>
+      <!-- 订单已完成才有评价按钮 -->
+    </view>
+
+    <view class="travel_share">
+      <view class="wechat">
+        <!-- <image src="/static/user_sjjs_slices/wechatshare_icon@3x.png"></image>
+        <text>行程分享</text> -->
+        <view class="assess {{assesCompleted? 'assess_completed':''}}" catchtap="toAssess"  wx:if="{{assesBtn == true&&( orderDetail.status === 9)}}">评价</view>
+        <view class="assess " catchtap="reBook"  wx:if="{{orderDetail.status === 2}}">改签</view>
+        <view class="assess "  wx:if="{{(orderDetail.status === 2 || orderDetail.status === 6)&&orderDetail.price_pay != 0}}" catchtap="refund" >退款</view>
+        <view class="assess "  wx:if="{{orderDetail.status === 1}}" catchtap="toPay" >支付</view>
+        <view class="assess "  wx:if="{{(orderDetail.status === 2 && orderDetail.price_pay==0.00) ||  orderDetail.status === 1 || (orderDetail.status === 6 && orderDetail.price_pay==0.00)}}" catchtap="cancelOrder" data-item="cancel">取消订单</view>
+        <view class="assess assess_completed" bindtap="readAssess"  wx:if="{{orderDetail.status === 11 || assesBtn == false}}">查看评价</view>
+        <!-- <view class="assess "  wx:if="{{orderDetail.status === 8}}" catchtap="shareLocation"><button open-type="share" plain="false">分享行程</button></view> -->
+      </view>
+      <!-- <image src="/static/user_sjjs_slices/right_icon@3x.png" class="right"></image> -->
+    </view>
+  </view>
+
+      <!-- 用户信息 -->
+    <view class="user_info">
+      <view class="tit">用户信息</view>
+      <view class="info">
+        <view>
+          <text class="left">联系人</text>
+          <text>{{orderDetail.name}}</text>
+        </view>
+
+        <view>
+          <text class="left">手机号</text>
+          <text>{{tel}}</text>
+        </view>
+
+        <view>
+          <text class="left leftText">人数</text>
+          <text>{{orderDetail.member_number}}人</text>
+        </view>
+        <view style="display:flex">
+          <view class="left" style="min-width:84rpx">订单号</view>
+          <view>{{orderDetail.order_sn}}</view>
+        </view>
+         <view style="display:flex">
+          <view class="left" style="min-width:84rpx">上车点</view>
+          <view>{{orderDetail.start_name}}</view>
+        </view>
+        <view style="display:flex">
+          <view class="left" style="min-width:84rpx">下车点</view>
+          <view>{{orderDetail.end_name}}</view>
+        </view>
+        <view style="display:flex">
+          <view class="left leftText">总计</view>
+          <view>{{orderDetail.price_pay}}  ({{orderDetail.coupon_money/100}}元代金券)</view>
+        </view>
+      </view>
+    </view>
+
+  <view class="codeBox" wx:if="{{orderDetail.status === 2 || orderDetail.status === 6}}" catchtap="toerweicode" data-item="{{orderDetail}}">
+    <view class="codeText">
+      电子二维码<text>(待出行)</text>
+    </view>
+    <view class="codeIcon">
+      <image src="https://static2.jd-gz.com/ewm_icon@2x.png"></image>
+      <image src="https://static2.jd-gz.com/right_icon@2x.png"></image>
+    </view>
+  </view>
+
+  <!-- 直通车 -->
+  <view class="trainBox" wx:if="{{orderDetail.through_train.length>0}}">
+    <view class="title">景区直通车</view>
+    <view class="infoBox" wx:for="{{orderDetail.through_train}}" wx:key="index">
+      <view class="imgBox">
+        <image src="{{item.image}}"></image>
+      </view>
+      <view class="infoText">
+        <view class="infoTitle">{{item.title}}</view>
+        <view class="infoPrice"><view class="priceIcon">￥</view>{{item.price/100}}</view>
+        <view class="infoNum">x{{item.num}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 评价弹出层内容 -->
+<van-popup show="{{ showAsses }}" position="bottom" custom-style="height: {{pjPopup}}rpx;" bind:close="onAssesClose" class="popup_asses" >
+  <view class="tit">匿名评价
+    <image src="https://static2.jd-gz.com/cross_icon@3x.png" bindtap="onAssesClose"></image>
+  </view>
+
+  <view class="btns">
+    <view bindtap="clickAsser" class="{{isClickUnfineIcon?'btns_bg':''}}" data-flag="unfine">
+      <image src="https://static2.jd-gz.com/{{isClickUnfineIcon?'unfine_a@3x':'unfine_f@3x'}}.png"></image>
+      <text>不满意</text>
+    </view>
+
+    <view bindtap="clickAsser" class="{{isClickfineIcon?'btns_bg':''}}" data-flag="fine">
+      <image src="https://static2.jd-gz.com/{{isClickfineIcon?'fine_s@3x':'fine_f@3x'}}.png"></image>
+      <text>满意</text>
+    </view>
+
+  </view>
+  <view class="foot {{isClickIcon?'foot_change':''}}">{{footText}}</view>
+
+  <!-- 点击不满意或者满意出现下面的详细的评价信息 -->
+
+  <view class="unfine" style="display:{{pjDetail}}">
+  <!-- <view class="unfine" style="display:block"> -->
+    <view class="item">
+
+      <checkbox-group bindchange="checkboxChange" >
+        <label class="checkbox {{item.checked? 'aa':''}}" wx:for="{{asserData}}" wx:key="index" catchtap='checkbox' data-index="{{index}}">
+          <checkbox value="{{item.text}}" checked="{{item.checked}}" />{{item.text}}
+        </label>
+      </checkbox-group>
+
+    </view>
+    <button class="tj" bindtap="assesTj" style="display:{{tjBtn}}">匿名提交</button>
+  </view>
+</van-popup>

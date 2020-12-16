@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "order-not-find":"/component/order-not-find/order-not-find",
+    "van-tab": "/miniprogram_npm/@vant/weapp/tab/index",
+    "van-tabs": "/miniprogram_npm/@vant/weapp/tabs/index",
+    "van-dialog": "/miniprogram_npm/@vant/weapp/dialog/index",
+    "tabbar":"/component/tabbar/tabbar"
+  },
+  "navigationBarTitleText": "我的订单",
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle":"dark",
+  "backgroundColor":"#FAFAFA"
+}

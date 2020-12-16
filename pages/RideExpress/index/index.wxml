@@ -1,0 +1,379 @@
+<!--pages/RideExpress/index.wxml-->
+<view class="wrap">
+	<map include-points="{{points}}" markers="{{markers}}" longitude="{{nowLng}}" latitude="{{nowLat}}"  bindregionchange="regionchange" id="map4select" polyline="{{polyline}}" style="height:{{mapHeight}}"></map>
+	<view class="bottomTap" id="meat">
+		<view class="markBox" wx:if="{{markerShow}}" z-index="999">
+			<image src="https://static2.jd-gz.com/20200521151648.png" class="markIcon"></image>
+		</view>
+		<view class="dingwei" catchtap="Currentposition">
+			<image src="https://static2.jd-gz.com/dingwei.png"></image>
+		</view>
+		<view class="tapTop" catchtap="topay">
+			<view class="topText">
+				<image class="topLeft" src="https://static2.jd-gz.com/tixing.png"></image>
+				已和司机沟通过，直接扫码
+			</view>
+			<image class="topRight" src="https://static2.jd-gz.com/rightjiantou.png"></image>
+		</view>
+		<view class="tapBottom">
+			<view class="bottomTaps">
+				<view class="taptext" catchtap="changedrives">
+					<view wx:if="{{driveInfo == ''}}">选择司机</view>
+					<view wx:if="{{driveInfo !== ''}}" class="text">{{driveInfo.name}}</view>
+					<image class="taptextImag" src="https://static2.jd-gz.com/right_icon%402x.png"></image>
+				</view>
+				<view class="taptext" catchtap="clickTime">
+					<view wx:if="{{timecomfrim ==''}}">出发时间</view>
+					<view wx:if="{{timecomfrim != ''}}">{{timecomfrim}}</view>
+					<image class="taptextImag" src="https://static2.jd-gz.com/right_icon%402x.png"></image>
+				</view>
+				<view class="taptext" catchtap="chnageperson">
+					<view wx:if="{{personNum == ''}}">出发人数</view>
+					<view wx:if="{{personNum !== ''}}">{{personNum}}人</view>
+					<image class="taptextImag" src="https://static2.jd-gz.com/right_icon%402x.png"></image>
+				</view>
+			</view>
+			<view class="location" catchtap="fromloc">
+				<view class="locBox">
+					<view class="startCle"></view>
+					<view class="locText" wx:if="{{fromloc !== ''}}">{{fromloc.name}}</view>
+					<view class="locText" wx:else style="color:#BAC2D4;font-weight:500">请选择上车地点</view>
+				</view>
+			</view>
+			<view class="location" catchtap="toloc">
+				<view class="locBox">
+					<view class="endCle"></view>
+					<view class="locText" wx:if="{{toloc !== ''}}">{{toloc.name}}</view>
+					<view class="locText" wx:else style="color:#BAC2D4;font-weight:500">请选择下车地点</view>
+				</view>
+			</view>
+
+			<view class="btnBox">
+				<view class="trueBtn" catchtap="addUserInfo">确认</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<!-- 填写相关信息 -->
+<view class="relevant_information" wx:if="{{isUserInfo}}">
+	<view class="relevant_information_wrap">
+		<view class="title">
+			<text>请填写相关信息</text>
+			<image src="https://static2.jd-gz.com/clear2.png" catchtap="onclose"></image>
+		</view>
+
+		<view class="input_name">
+			<input type="text" value="{{userName}}" bindinput="getuserName" placeholder="请填写姓名" placeholder-style="color:#BAC2D4;font-size:32rpx;font-weight: 600;"></input>
+		</view>
+
+		<view class="input_name">
+			<input type="number" value="{{userTel}}" type="number" bindinput="getuserTel" placeholder="请填写手机号" placeholder-style="color:#BAC2D4;font-size:32rpx;font-weight: 600;"></input>
+		</view>
+
+		<button catchtap="goOrder">下一步</button>
+	</view>
+</view>
+
+<!-- 费用明细 -->
+<view class="charge_details" wx:if="{{paydetail}}">
+	<view class="charge_details_wrap">
+		<view class="charge_title">
+			<text> 费用明细</text>
+			<image src="https://static2.jd-gz.com/clear2.png" catchtap="closedetail"></image>
+		</view>
+
+		<view class="charge_money">
+			￥{{orderDetail.price_pay}}
+		</view>
+
+		<view class="service_fee">
+			<text>用车服务费</text>
+			<text>￥{{orderDetail.price_pay}}</text>
+		</view>
+
+		<view class="border_view"></view>
+
+		<view class="one_price">
+			<view class="one_price_title">一口价说明</view>
+			<view class="one_price_content">*一口价包含一次服务过程中的所有行驶费用，含高速费、过桥费、停车费，但不包含和用车无直接关联的费用(如景区门票等)、超时等待费用。一口价计价方式不支持中途经停、绕路、临时改变路线</view>
+		</view>
+
+		<view class="price_description">
+			<view class="price_description_title">价格说明</view>
+			<view class="price_description_content">*划线价格: 用车的预估价，根据各供应商的报价展示， 该价格仅供参考。</view>
+			<view class="price_description_content">*未划线价格:用车的实时价，具体价格根据购买服务、国内专车活动、或会员使用优惠券发生变化，最终以订单结算时的价格为准。</view>
+			<view class="price_description_content">*未下单页面以图片或文字形式标注的一口价、优惠价等价格可能是在使用的优惠券或特定活动和时段等情形下的价格，具体请以结算的价格、优惠条件或者活动规则为准。</view>
+		</view>
+	</view>
+</view>
+<!-- 选择人数 -->
+<view class="personWrap" wx:if="{{ispersonBox}}" catchtap="onclose">
+	<view class="personBox" catchtap="d">
+		<view class="personTitle">
+			<view class="titleText">请选择出行人数</view>
+			<image src="https://static2.jd-gz.com/clear2.png" catchtap="onclose"></image>
+		</view>
+		<view class="personerro">乘车人数需包含儿童、婴幼儿</view>
+		<view class="personTabBox">
+			<view class="personTab {{item.check ?  'selectPersonNum' : ''}}" wx:for="{{personNumList}}" wx:key="*this" catchtap="selectPersonNum" data-item="{{item.value}}">
+				{{item.value}}
+				<view style="font-size:26rpx;font-weight:nomal;line-height:38rpx;margin-top:20rpx">人</view>
+			</view>
+
+		</view>
+		<view class="btnBox" style="margin-top:80rpx">
+			<view class="trueBtn" catchtap="confirmPerson">确认</view>
+		</view>
+	</view>
+</view>
+<!-- 选择时间 -->
+<view class="personWrap" wx:if="{{istimeBox}}" catchtap="onclose">
+	<view class="timeChange" catchtap="d">
+		<view class="timeTop">
+			<view class="topText">请选择出发时间</view>
+			<image src='https://static2.jd-gz.com/clear2.png' class="topImage" catchtap="onclose"></image>
+		</view>
+		<view class="chnageBox">
+			<van-picker columns="{{ columns }}" bind:change="timesChange" style="height:100%;width:100%" item-height="40" />
+		</view>
+		<view class="btnBox">
+			<view class="trueBtn" catchtap="comfirmTime">确认</view>
+		</view>
+	</view>
+</view>
+<!-- 订单核实 -->
+<view class="personWrap" wx:if="{{isorder}}" catchtap="closeverify">
+	<view class="timeChange" catchtap="dd">
+		<view class="timeTop" style="margin-bottom:16rpx">
+			<view class="topLeft">
+				<view class="topText">订单已生成，等待司机核实</view>
+			</view>
+			<image src="https://static2.jd-gz.com/clear2.png" catchtap="closeverify" style="width:44rpx;height:44rpx"></image>
+		</view>
+		<view style="color:#999;font-size:24rpx;line-height:36rpx;margin-bottom:23rpx">请耐心等候，司机将在半小时内确认行程</view>
+		<view class="driveInfoBox">
+			<view class="driveHead">
+				<image src="{{driveInfo.selfie_img}}" class="driveheadImg"></image>
+				<view class="driveInfo">
+						<view class="carName">{{driveInfo.car.brand}} {{driveInfo.car.brand}}{{driveInfo.car.car_model}}</view>
+						<view class="driveName">
+							{{driveInfo.name}}
+						<van-icon name="star" style="color:#FED63E" /><text style="color:#666666;margin-left:8rpx">{{driveInfo.star}}分</text>
+						</view>
+				</view>
+			</view>
+			<view class="rideBox">
+				<view class="rideInfo">
+					<view class="rideinfoBox">
+						<view class="circular" style="background-color:#D3D3D3;"></view>
+						<view class="infotext">{{timeint}} · {{personNum}}人</view>
+					</view>
+					<view class="rideinfoBox" style="margin-top:20rpx">
+						<view class="circular" style="background-color:#09AFFF;"></view>
+						<view class="infotext">{{fromloc.name}}</view>
+					</view>
+					<view style="width:2rpx;height:20rpx;background-color:#EDEDED;margin-left:4rpx"></view>
+					<view class="rideinfoBox">
+						<view class="circular" style="background-color:#24BFB0;"></view>
+						<view class="infotext">{{toloc.name}}</view>
+					</view>
+				</view>
+			</view>
+			<view class="actionList">
+				<view class="actionBox" style="padding-left:40rpx" catchtap="Modifytell">
+					<view class="actionText">修改手机号码</view>
+					<image class="actionImg" src="https://static2.jd-gz.com/right_icon%403x.png"></image>
+				</view>
+				<view class="actionBox">
+					<view class="actionText" catchtap="cancelOrder">取消订单</view>
+					<image class="actionImg" src="https://static2.jd-gz.com/right_icon%403x.png"></image>
+				</view>
+			</view>
+			<view class="btnBox">
+				<view class="trueBtn" catchtap="topay">确认行程，去扫码支付</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<!-- 取消订单 -->
+<!-- <view class="cancel_order" style="display:none">
+	<view class="cancel_order_wrap">
+		<view class="title">
+			<text>订单已取消</text>
+			<image src="https://static2.jd-gz.com/clear2.png" catchtap="closetell"></image>
+		</view>
+		<view class="topText">
+			本次用车已取消
+		</view>
+
+		<view class="rideBox">
+			<view class="rideInfo">
+				<view class="rideinfoBox" style="margin-top:20rpx">
+					<view class="circular" style="background-color:#09AFFF;"></view>
+					<view class="infotext">{{fromloc.name}}</view>
+				</view>
+				<view style="width:2rpx;height:20rpx;background-color:#EDEDED;margin-left:4rpx"></view>
+				<view class="rideinfoBox">
+					<view class="circular" style="background-color:#24BFB0;"></view>
+					<view class="infotext">{{toloc.name}}</view>
+				</view>
+			</view>
+		</view>
+
+			<view class="btnBox">
+				<view class="trueBtn">重新发布行程</view>
+			</view>
+
+	</view>
+</view> -->
+
+
+<!-- 支付成功 -->
+<view class="personWrap" wx:if="{{ispay}}" catchtap="oncloseOrderDetail">
+	<view class="timeChange" catchtap="dd">
+		<view class="timeTop" style="margin-bottom:16rpx">
+			<view class="topLeft">
+				<view class="topText" wx:if="{{status == 2}}">支付成功，感谢您使用畅游甘孜</view>
+				<view class="topText" wx:if="{{status == 9 || status == 11 || status == 5}}">行程已结束，感谢您使用畅游甘孜</view>
+			</view>
+			<image src="https://static2.jd-gz.com/clear2.png" catchtap="oncloseOrderDetail" style="width:44rpx;height:44rpx"></image>
+		</view>
+		<view style="color:#999;font-size:24rpx;line-height:36rpx;margin-bottom:23rpx" wx:if="{{status == 2}}">请提前半小时到达出发点，避免延误</view>
+		<view style="color:#999;font-size:24rpx;line-height:36rpx;margin-bottom:23rpx" wx:if="{{status == 9}}">祝您旅途愉快</view>
+		<view style="color:#999;font-size:24rpx;line-height:36rpx;margin-bottom:23rpx" wx:if="{{status == 11}}">感谢您的评价</view>
+		<view style="color:#999;font-size:24rpx;line-height:36rpx;margin-bottom:23rpx" wx:if="{{status == 5}}">司机已取消订单，订单金额将原路返回您的账户</view>
+		<view class="driveInfoBox">
+			<view class="driveHead">
+				<image src="{{driveInfo.selfie_img}}" class="driveheadImg"></image>
+				<view class="driveInfo">
+						<view class="carName">{{driveInfo.car.brand}} {{driveInfo.car.brand}}{{driveInfo.car.car_model}}</view>
+						<view class="driveName">
+							{{driveInfo.name}}
+						<van-icon name="star" style="color:#FED63E" /><text style="color:#666666;margin-left:8rpx">{{driveInfo.star}}分</text>
+						</view>
+				</view>
+			</view>
+			<view class="rideBox">
+				<view class="rideInfo">
+					<view class="rideinfoBox">
+						<view class="circular" style="background-color:#D3D3D3;"></view>
+						<view class="infotext">{{timeint}} · {{personNum}}人</view>
+					</view>
+					<view class="rideinfoBox" style="margin-top:20rpx">
+						<view class="circular" style="background-color:#09AFFF;"></view>
+						<view class="infotext">{{fromloc.name}}</view>
+					</view>
+					<view style="width:2rpx;height:20rpx;background-color:#EDEDED;margin-left:4rpx"></view>
+					<view class="rideinfoBox">
+						<view class="circular" style="background-color:#24BFB0;"></view>
+						<view class="infotext">{{toloc.name}}</view>
+					</view>
+				</view>
+				<view class="ridePrice" catchtap="gopaydetail">
+					{{orderDetail.price_pay}}
+					<view class="pricetext">
+						元
+						<image src="https://static2.jd-gz.com/right_icon%403x.png"></image>
+					</view>
+				</view>
+			</view>
+			<view class="codeBox" wx:if="{{status == 2}}">
+				<view class="codeTitle">
+					电子二维码
+					<text class="titleText" wx:if="{{status == 3 || status == 2}}">待出行</text>
+					<text class="titleText" style="color:#999999" wx:if="{{status == 9||status == 11 || status == 8 || status == 5}}">已失效</text>
+				</view>
+				<view class="erweiBox">
+					<canvas canvas-id="qrcode" style="width:400px;height:400px;" ></canvas>
+					<view  class="qrcode_box">
+						<image src="{{tempFilePath}}" style="width:240rpx;height:240rpx;display:block"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="btnBox" wx:if="{{status == 9 || status == 11}}">
+			<view class="trueBtn" catchtap="goAccess" wx:if="{{status == 9}}">去评价</view>
+			<view class="trueBtn"  wx:if="{{status == 11}}" catchtap="lookAccess">查看评价</view>
+		</view>
+	</view>
+</view>
+
+<!-- 修改手机号 -->
+<view class="modify_phone_number" wx:if="{{istell}}">
+	<view class="modify_phone_number_wrap">
+		<view class="title">
+			<text>修改手机号</text>
+			<image src="https://static2.jd-gz.com/clear2.png" catchtap="closetell"></image>
+		</view>
+
+		<view class="current">
+			当前手机号为{{nowPhone}}
+		</view>
+
+		<view class="input_number">
+			<input cursor="20" bindinput="getuserTel" focus="{{true}}" type="number" placeholder="请输入要修改的手机号" placeholder-style="color:#BAC2D4;font-size:32rpx;font-weight:bold;"></input>
+		</view>
+
+		<button catchtap="changeTel">确定</button>
+	</view>
+</view>
+
+<!-- 评价 -->
+<view class="personWrap" wx:if="{{isAccess}}">
+	<view class="timeChange">
+			<view class="timeTop" style="margin-bottom:16rpx">
+				<view class="topLeft">
+					<view class="topText">匿名评价</view>
+				</view>
+				<image src="https://static2.jd-gz.com/clear2.png" catchtap="oncloseAccess" style="width:44rpx;height:44rpx"></image>
+			</view>
+			<view style="color:#999;font-size:24rpx;line-height:36rpx;margin-bottom:23rpx">您的评价会让司机做得更好</view>
+			<view class="AccessBox">
+				<view class="boxTop">
+						<view class="TopbtnBox" catchtap="unSatisfied" style="background-color:{{isClickUnfineIcon ?'#FDFAF1' : '#F7F7F7'}}">
+							<image src="https://static2.jd-gz.com/{{isClickUnfineIcon?'unfine_a@3x':'unfine_f@3x'}}.png"></image>
+      				<view>不满意</view>
+						</view>
+						<view class="TopbtnBox" catchtap="satisfied" style="background-color:{{isClickfineIcon ?'#FDFAF1' : '#F7F7F7'}}">
+						 	<image src="https://static2.jd-gz.com/{{isClickfineIcon?'fine_s@3x':'fine_f@3x'}}.png"></image>
+      				<view>满意</view>
+						</view>
+				</view>
+				<view class="erroText" wx:if="{{isClickfineIcon}}">非常满意，无可挑剔</view>
+				<view class="erroText" wx:if="{{isClickUnfineIcon}}">感谢您的意见反馈</view>
+				<view class="itemBox">
+						<view class="{{item.check ? 'itemBtnClick' : 'itemBtn'}}" wx:for="{{accessList}}" wx:key="*this" data-item="{{item}}" catchtap="chooseAccess">{{item.text}}</view>
+				</view>
+			</view>
+			<view class="btnBox">
+				<view class="trueBtn" catchtap="submitAccess" wx:if="{{accessBtn}}">匿名提交</view>
+			</view>
+	</view>
+</view>
+
+<!-- 订单取消 -->
+<view class="personWrap" wx:if="{{iscancelOrder}}">
+	<view class="timeChange">
+		<view class="timeTop" style="margin-bottom:16rpx">
+			<view class="topLeft">
+				<view class="topText">订单已取消</view>
+			</view>
+			<image src="https://static2.jd-gz.com/clear2.png" catchtap="oncloseOrderDetail" style="width:44rpx;height:44rpx"></image>
+		</view>
+		<view style="color:#999;font-size:24rpx;line-height:36rpx;margin-bottom:23rpx">本次用车已取消</view>
+			<view class="rideinfoBox" style="margin-top:20rpx">
+				<view class="circular" style="background-color:#09AFFF;"></view>
+				<view class="infotext">{{fromloc.name}}</view>
+			</view>
+			<view style="width:2rpx;height:20rpx;background-color:#EDEDED;margin-left:4rpx"></view>
+			<view class="rideinfoBox">
+				<view class="circular" style="background-color:#24BFB0;"></view>
+				<view class="infotext">{{toloc.name}}</view>
+			</view>
+			<view class="btnBox">
+				<view class="trueBtn" catchtap="onclose" wx:if="{{accessBtn}}">重新发布行程</view>
+			</view>
+	</view>
+</view>

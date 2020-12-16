@@ -1,0 +1,51 @@
+<!--pages/cjjs/mapselect/locList/index.wxml-->
+  <view class="wrap">
+    <view class="selectBox">
+      <view class="searchBox">
+        <view class="cityBox" catchtap="changeCity">
+          <view class="cityName">{{cityName}}</view>
+          <image src="https://static2.jd-gz.com/xiasanjian.png"></image>  
+        </view>
+        <view class="line"></view>
+        <input bindinput="searchloc" value="{{keywords}}" class="searchInput" placeholder="{{searchText}}"  placeholder-style="font-size:30rpx;line-height:40rpx;color:#999；font-weight:500"></input>
+      </view>
+      <view class="selectText" catchtap="onclose">取消</view>
+    </view>
+    <view class="main" wx:if="{{loclist.length !== 0}}">
+      <view class="locitem" wx:for="{{loclist}}" wx:key="*this" wx:for-item="str" catchtap="chooseloc" data-item="{{str}}" >
+        <view class="loctitle">
+          <view wx:for="{{str.name}}" wx:key="*this" style="display:flex">
+            <view class="lockeyword" wx:if="{{item == keywords}}">{{item}}</view>
+            <view class="locname" wx:if="{{item !== keywords}}">{{item}}</view>
+          </view>
+        </view>
+        <view class="locmain">{{str.district}}{{str.address}}</view>
+      </view>
+    </view>
+    <view class="commonRoutes" wx:if="{{keywords == ''}}">
+      <view class="routeList">
+        <view class="listItem" wx:for="{{Commonaddress}}" wx:key="*this" data-item="{{item}}" catchtap="chooseloc">
+          <view class="itemTop">
+            <view class="city">
+              <view class="cityName">{{item.city_name}}</view>
+              <view class="cityTab">常用地址</view>
+            </view>
+            <image src="https://static2.jd-gz.com/locEdit.png" class="citybtn" catchtap="changeLoc" data-item="{{item}}"></image>
+          </view>
+          <view class="itemLoc">{{item.address+item.name}}</view>
+        </view>
+      </view>
+      <view class="goAdd" wx:if="{{Commonaddress.length >= 0 && Commonaddress.length < 5}}" catchtap="addLoc">
+        <view class="addIcon">
+          <image src="https://static2.jd-gz.com/_20200617113509.png"></image>
+        </view>
+        <view class="addText">新增常用地址</view>
+      </view>
+      <view class="goBack" catchtap="goBack">
+          <view class="backBox">
+            <image src="https://static2.jd-gz.com/mapMaker.png"></image>
+            <view class="text">在地图上选址</view>
+          </view>
+      </view>
+    </view>
+  </view>

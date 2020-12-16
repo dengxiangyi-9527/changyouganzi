@@ -1,0 +1,72 @@
+<!--pages/CustomTour//pages/customized/sudmit/index.wxml-->
+<view class="submit_wrap">
+  <view class="head_bc">
+    <image src="https://static2.jd-gz.com/custombc2.png"></image>
+  </view>
+  <view class="submit_main">
+    <view class="head_img">
+      <image src=""></image>
+      <view class="head_text">
+        <view class="text" style="font-size:40rpx;line-height:52rpx;font-weight:bold">Hi，我是您的私人订制师</view>
+        <view class="text">填写需求/确认行程/欢乐出游</view>
+      </view>
+    </view>
+    <view class="tab_box">
+      <view class="tab_title">第几次去？</view>
+      <view class="btn_box">
+        <view class="{{item.check ? 'btn btn_avtive' : 'btn'}}" wx:for="{{data1}}" wx:key="index" data-id="{{item.id}}" catchtap="numChange">
+          {{item.name}}
+          <image src="https://static2.jd-gz.com/boxbottomIcon.png" wx:if="{{item.check}}"></image>
+        </view>
+      </view>
+      <view class="tab_title">需要提供的服务（可多选）</view>
+      <view class="btn_box" style="padding-bottom:0;border:none">
+        <view class="{{item.check ? 'btn btn_avtive' : 'btn'}}" wx:for="{{data2}}" wx:key="index" catchtap="serviceChange" data-id="{{item.id}}">{{item.name}} <image src="https://static2.jd-gz.com/boxbottomIcon.png" wx:if="{{item.check}}"></image></view>
+      </view>
+    </view>
+    <view class="tab_box">
+      <view class="tab_title">人均预算</view>
+      <view class="price_box">
+          <view class="{{item.check ? 'btn btn_avtive' : 'btn'}}" wx:for="{{data3}}" wx:key="index" catchtap="priceChange" data-id="{{item.id}}">{{item.name}}<image src="https://static2.jd-gz.com/boxbottomIcon.png" wx:if="{{item.check}}"></image></view>
+      </view>
+    </view>
+    <view class="tab_box">
+      <view class="userInfoBox">
+				<view class="userInfoList">
+					<view class="userInfoItem" wx:for="{{userList}}" wx:key="*this">
+						<view class="itemInfo">
+							<view class="itemUser">
+								<image src="https://static2.jd-gz.com/codeBusUser.png" wx:if="{{!item.delcheck}}" ></image>
+								<image src="https://static2.jd-gz.com/codeBusUser_active.png" wx:if="{{item.delcheck}}"></image>
+								<view class="itemUserInfo">
+									<view class="itemUserName">{{item.name}}</view>
+									<view class="itemUserid">{{item.id_card_number}}</view>
+								</view>
+							</view>
+						</view>
+						<view class="closeBox">
+							<scroll-view scroll-x="{{true}}" class="scrolview" bindscrolltolower="scrollend" bindscrolltoupper = "scrollstart" data-item="{{item}}">
+								<view class="scrollBox">
+									<view class="itemclose" catchtap="delUser" data-item="{{item}}">删除</view>
+								</view>
+							</scroll-view>
+						</view>
+					</view>
+				</view> 
+				<view class="infoBox" catchtap="addUser">
+					<view class="addUserInfo">
+						<image src="https://static2.jd-gz.com/addNum.png"></image>
+						<view class="addUserText">添加乘客（成人、学生、儿童）</view>
+					</view>
+				</view>
+			</view>
+    </view>
+    <view class="tab_box">
+      <view class="box_title">（选填）完善更多内容，定制服务更精准</view>
+      <view class="tab_title">备注 </view>
+      <textarea maxlength="500" bindinput="remarkInput" class="textareaText" auto-height="{{true}}" placeholder="您可以在此输入更具体的需求描述" placeholder-class="place"></textarea>
+    </view>
+    <view class="btnBox" catchtap="submit">提交需求</view>
+    <view class="erro_text">需求提交后，定制师将会通过您填写的电话联系您，请留意</view>
+  </view>
+</view>

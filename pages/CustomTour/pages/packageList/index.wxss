@@ -1,0 +1,138 @@
+/* pages/CustomTour//pages/packageList/index.wxss */
+page{
+  width: 750rpx;
+  min-height: 100%;
+}
+.wrap{
+  width: 750rpx;
+  height: 100%;
+  background-color: #FFF;
+}
+.timeBox{
+  width: 750rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #EDEDED ;
+  border-top: 1rpx solid #EDEDED ;
+}
+.timeTab{
+  width: 100%;
+  padding: 16rpx 0;
+  box-sizing: border-box;
+  background-color: #F6F6F6;
+  border-radius: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.time{
+  font-size: 26rpx;
+  line-height: 38rpx;
+  color: #333;
+}
+.timeCenter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dayNum{
+  font-size: 20rpx;
+  color: #999;
+  line-height: 30rpx;
+}
+.line{
+  width: 100rpx;
+  height: 10rpx;
+}
+.line image{
+  width: 100rpx;
+  height: 10rpx;
+  vertical-align: top;
+}
+.main{
+  width: 750rpx;
+  height: 100%;
+  display: flex;
+}
+.leftTab{
+  width: 140rpx;
+  height: 100%;
+  background-color: #F8F8F7;
+}
+.van-sidebar-item{
+  width: 140rpx !important;
+}
+.van-sidebar-item--selected{
+  border-left: 8rpx solid #09AFFF !important;
+}
+.van-sidebar-item__text{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #333;
+}
+.van-sidebar-item--selected .van-sidebar-item__text{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  color: #09AFFF;
+  font-weight: bold;
+}
+.van-sidebar-item {
+  background-color: #F8F8F7 !important;
+}
+.tabMain{
+  height: 100%;
+  flex: 1;
+  background-color: #FFF;
+}
+.carList{
+  width: 100%;
+  height: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.carItem{
+  width: 100%;
+  border-bottom: 1rpx solid #EDEDED;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40rpx 0;
+  box-sizing: border-box;
+}
+.carItem image{
+  width: 226rpx;
+  height: 109rpx;
+  vertical-align: top;
+}
+.carInfo{
+  margin-left: 22rpx;
+  display: flex;
+  flex-direction: column;
+}
+.name{
+  color: #333;
+  font-size: 36rpx;
+  line-height: 50rpx;
+  font-weight: bold;
+  white-space: nowrap;
+  max-width: 180rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.Info{
+  color: #333;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  white-space: nowrap;
+}
+.priceBox{
+  display: flex;
+  align-items: center;
+  color: #FF4B3B;
+  white-space: nowrap;
+}
+.carimgText{
+  display: flex;
+  align-items: center;
+}
+

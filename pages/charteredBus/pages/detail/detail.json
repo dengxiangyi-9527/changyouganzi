@@ -1,0 +1,6 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "chartered-component": "/component/custom-nav-component/custom-nav-component"
+  }
+}

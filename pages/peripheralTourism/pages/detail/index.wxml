@@ -1,0 +1,150 @@
+<!--pages/peripheralTourism//pages/detail/index.wxml-->
+<scroll-view class="wrap" scroll-into-view="{{mate}}" scroll-with-animation="{{true}}" scroll-y style="height:{{scrollHeight}}" bindscroll="scroll">
+  <view class="head">
+    <view class="swiperBox">
+      <swiper autoplay="{{flase}}" circular="{{true}}" bindchange="swiperChange" interval="{{2500}}" autoplay="{{true}}">
+        <block wx:for="{{imgs_json}}" wx:key="*this">
+          <swiper-item>
+            <image src="{{item}}" class="swiperImg"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="swiperIndex">{{swiperIndex}}/{{imgs_json.length}}张</view>
+    </view>
+    <view class="textMain">
+      <view class="mainTitle">{{detail.desc}}</view>
+      <view class="mainText">{{detail.desc2}}</view>
+      <view class="tabBox">
+        <view class="tabItem">上门接送</view>
+        <view class="tabItem">纯玩即走即停</view>
+      </view>
+      <view class="locBox">
+        <view class="loc">
+          出发地：{{detail.location_start}}
+        </view>
+        <view class="personNum">{{num}}人报名</view>
+      </view>
+      <view class="mainImg">
+        <image src="https://static2.jd-gz.com/changyouganzi.png"></image>
+        <view class="mainImgText">严格选品·金牌线路·优质行程·服务保障</view>
+      </view>
+    </view>
+  </view>
+  <view class="timeBox">
+    <view class="titleBox">
+      <view class="mainTitle ">选择套餐类型/日期</view>
+      <view class="titleTab" catchtap="telPhone">
+        <image src="https://static2.jd-gz.com/dingzhi.png"></image>
+      </view>
+    </view>
+    <view class="timeTabBox">
+      <scroll-view class="timeList" scroll-with-animation="{{true}}" scroll-x>
+      <block wx:for="{{dateList}}" wx:key="*this">
+        <view class="{{item.check ? 'active_timeTab timeTab' : 'timeTab'}}" id="{{'template'+item.template}}"  catchtap="chooseTime" data-template="{{item.template}}">
+          <view class="tabtime {{item.check ? 'active_text' : ''}}">{{item.time}}</view>
+          <view class="tabText {{item.check ? 'active_text' : ''}}">3-9人小车团</view>
+          <view class="tabPrice {{item.check ? 'active_text' : ''}}">￥{{detail.price_child/100}}</view>
+        </view>
+      </block>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="itineraryoverview">
+    <view class="mainTitle ">行程概览</view>
+    <view class="tripMainBox">
+      <view class="tripIcon">
+        <image src="https://static2.jd-gz.com/tianshu.png"></image>
+      </view>
+      <view class="tripTitle">天数：</view>
+      <view class="tripMain">{{detail.title}}</view>
+    </view>
+    <view class="tripMainBox">
+      <view class="tripIcon">
+        <image src="https://static2.jd-gz.com/chufa.png"></image>
+      </view>
+      <view class="tripTitle">出发：</view>
+      <view class="tripMain">{{detail.location_start}}</view>
+    </view>
+    <view class="tripMainBox">
+      <view class="tripIcon">
+        <image src="https://static2.jd-gz.com/jihe.png"></image>
+      </view>
+      <view class="tripTitle">集合：</view>
+      <view class="tripMain">{{detail.location_assemble}}</view>
+    </view>
+    <view class="tripMainBox">
+      <view class="tripIcon">
+        <image src="https://static2.jd-gz.com/jiesan.png"></image>
+      </view>
+      <view class="tripTitle">解散：</view>
+      <view class="tripMain">{{detail.location_dismiss}}</view>
+    </view>
+    <view class="tripMainBottom">
+      <view class="tripMainBottomText">点击快速查看活动说明、集合时间、报名咨询、出团通知</view>
+      <view class="tripMainBottomIcon">
+        <image src="https://static2.jd-gz.com/blueleftjiantou.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="tabMainBox">
+    <view class=" {{isFixed ? 'tabMainTitleFixed tabMainTitle' : 'tabMainTitle'}}" id="maintitle">
+      <view class="tabMainTitleItem" wx:for="{{tabList}}" wx:key="index" catchtap="chooseTab" data-text="{{item.text}}">
+        <view class="tabItemIcon" wx:if="{{item.check}}">
+          <image src="{{item.icon}}"></image>
+        </view>
+        <view class="tabItemText {{item.check ? 'active_tabItemText' : ''}}">{{item.text}}</view>
+      </view>
+    </view>
+    <view class="highlightsBox" id="highlights" style="margin-top:{{titleTop+'px'}}">
+      <view class="tabTitleBox">
+        <view class="titleBoxline"></view>
+        <view class="titleBoxtext">亮点</view>
+      </view>
+      <view class="highlightsMain">{{detail.focus}}</view>
+    </view>
+    <view class="specificItineraryBox" id="specificItinerary">
+      <view class="tabTitleBox">
+        <view class="titleBoxline"></view>
+        <view class="titleBoxtext">具体行程</view>
+      </view>
+      <rich-text nodes="{{detail.location_travel}}"></rich-text>
+    </view>
+    <view class="costNotice" id="costNotice">
+      <view class="tabTitleBox">
+        <view class="titleBoxline"></view>
+        <view class="titleBoxtext">费用须知</view>
+      </view>
+      <view class="costNoticeMain">
+        <view class="costNoticeMainTitle">费用须知</view>
+        <view class="costNoticeMainText" >
+          <view wx:for="{{detail.price_info}}" wx:key="*this">{{item}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="activeNotice" id="activeNotice">
+      <view class="tabTitleBox">
+        <view class="titleBoxline"></view>
+        <view class="titleBoxtext">活动须知</view>
+      </view>
+      <view class="activeNoticeMain">
+        <view wx:for="{{detail.notice}}" wx:key="*this">{{item}}</view>
+      </view>
+    </view>
+  </view >
+  <view class="signUpNow">
+    <view class="imgTextBox" catchtap="telPhone">
+      <view class="imgTextBoxIcon">
+        <image src="https://static2.jd-gz.com/kefuIcon.png"></image>
+      </view>
+      <view class="imgTextBoxText" >联系客服</view>
+    </view>
+    <view class="imgTextBox">
+      <view class="imgTextBoxIcon">
+        <image src="https://static2.jd-gz.com/shoucangIcon.png"></image>
+        <!-- <image src="https://static2.jd-gz.com/active_shoucangIcon.png"></image> -->
+      </view>
+      <view class="imgTextBoxText">收藏</view>
+    </view>
+    <view class="btnBox" catchtap="goMapSelect">立即报名</view>
+  </view>
+</scroll-view>

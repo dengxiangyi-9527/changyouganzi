@@ -1,0 +1,211 @@
+/* pages/RideExpress/selctCity/index.wxss */
+page{
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 750rpx;
+  height: 100%;
+}
+.top{
+  width: 750rpx;
+  height: 139rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 23rpx 29rpx 36rpx 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top .selectBox{
+  width: 607rpx;
+  background-color: #F6F7F9;
+  border-radius: 38rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding:  18rpx 0;
+}
+.top .selectBox .city{
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding:  0 30rpx;
+}
+.top .selectBox .city .cityName{
+  font-size: 32rpx;
+  color: #666666;
+  line-height: 44rpx;
+  max-width: 180rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.top .selectBox .city image{
+  width: 16rpx;
+  height: 16rpx;
+  margin-left: 17rpx;
+}
+.top .selectBox .line{
+  width: 1rpx;
+  height: 24rpx;
+  background-color: #DEDEDE;
+  box-sizing: border-box;
+}
+.top .selectBox .search{
+  box-sizing: border-box;
+  padding-left: 24rpx;
+  color: #333333;
+  font-size: 30rpx;
+  line-height: 40rpx;
+  font-weight: bold;
+  flex: 1;
+}
+.top .selectBox .onclear{
+  width: 30rpx;
+  height: 32rpx;
+  margin-right: 30rpx;
+}
+.main{
+  width: 750rpx;
+  padding:0 30rpx;
+  box-sizing: border-box;
+  margin-top: 24rpx;
+  background-color: #fff;
+  margin-bottom: 120rpx;
+}
+.main .locitem{
+  border-bottom: 1rpx solid #EDEDED;
+  padding: 30rpx 0 30rpx 0;
+  box-sizing: border-box;
+}
+.main .locitem .loctitle{
+  display: flex;
+  font-size: 32rpx;
+  line-height: 44rpx;
+  font-weight: 600;
+  color: #333333;
+}
+.main .locitem .loctitle .lockeyword{
+  color: #15AFFF;
+}
+.main .locitem .locmain{
+  font-size: 24rpx;
+  color: #666666;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-top: 10rpx;
+}
+.nullloclist{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26rpx;
+  color: #999;
+}
+ .commonRoutes{
+  width: 750rpx;
+}
+ .commonRoutes .routeList{
+  width: 100%;
+  padding:0 30rpx;
+  box-sizing: border-box;
+}
+ .commonRoutes .routeList .listItem{
+  padding: 30rpx 0;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #EDEDED;
+  /* display: flex; */
+}
+ .commonRoutes .routeList .listItem .itemTop{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+ .commonRoutes .routeList .listItem .itemTop .city{
+  display: flex;
+  align-items: center;
+}
+ .commonRoutes .routeList .listItem .itemTop .citybtn{
+  width: 28rpx;
+  height: 28rpx;
+}
+ .commonRoutes .routeList .listItem .itemTop .cityName{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  color: #333;
+  font-weight: 600;
+  margin-right: 16rpx;
+}
+ .commonRoutes .routeList .listItem .itemTop .cityTab{
+  padding: 0 12rpx;
+  box-sizing: border-box;
+  border: 1rpx solid #50BC8F;
+  border-radius: 4rpx;
+  color: #50BC8F;
+  font-size: 20rpx;
+  line-height: 30rpx;
+  background-color: #FFFFFF;
+}
+ .commonRoutes .routeList .listItem .itemLoc{
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #666;
+  max-width: 677rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+ .commonRoutes .goBack{
+  padding: 0rpx 30rpx;
+  box-sizing: border-box;
+}
+ .commonRoutes .goBack .backBox{
+  padding: 30rpx 9rpx;
+  box-sizing: border-box;
+  width: 100%;
+  border-bottom: 1rpx solid #EDEDED;
+  display: flex;
+  align-items: center;
+}
+ .commonRoutes .goBack .backBox image{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: top;
+  margin-right: 16rpx;
+}
+ .commonRoutes .goBack .backBox .text{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  color: #333;
+  font-weight: bold;
+}
+ .commonRoutes .goAdd{
+  width: 100%;
+  padding: 30rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #EDEDED;
+}
+ .commonRoutes .goAdd .addText{
+  color: #333;
+  font-size: 32rpx;
+  line-height: 44rpx;
+  font-weight: bold;
+  margin-left: 16rpx;
+}
+ .commonRoutes .goAdd .addIcon{
+  width: 40rpx;
+  height: 40rpx;
+}
+ .commonRoutes .goAdd .addIcon image{
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  border: none;
+}

@@ -1,0 +1,63 @@
+<view class="select_dirver">
+	<view class="">
+		<van-search value="{{ driveName }}" placeholder="搜索司机姓名" show-action bind:change="searchName" bind:cancel="onCancel" cancel-class="cancel" shape="round" left-icon="https://static2.jd-gz.com/search_icon%402x.png"/>
+	</view>
+
+	<view class="main" >
+		<view class="banner" catchtap="toCall">
+			<image src="https://static2.jd-gz.com/kefu.png"></image>
+		</view>
+		<!-- 司机列表 -->
+		<view class="dirver_item" wx:for="{{driveList}}" wx:key="*this" wx:if="{{driveName == '' && driveList.length !== 0}}">
+			<view class="left">
+				<view class="top">
+					<image src="{{item.selfie_img}}" class="driveheadImg"></image>
+					<view class="info">
+						<view class="car_kind">{{item.car.brand}} {{item.car.brand}}{{item.car.car_model}}</view>
+						<view class="name">
+							<text style="padding-right: 16rpx;">{{item.name}}</text>
+							<van-icon name="star" style="color:#FED63E" /><text style="color:#666666;margin-left:8rpx">{{item.star}}分</text>
+						</view>
+					</view>
+				</view>
+
+				<view class="common_routes">
+					<view class="routes_line" wx:if="{{item.car.route_name != '' }}">{{item.car.route_name}}</view>
+					<view class="routes_line"  wx:if="{{item.car.route_name != ''}}">{{item.car.route_name2}}</view>
+				</view>
+			</view>
+			<view class="right" catchtap="chooseDrive" data-item="{{item}}">
+				选择司机
+			</view>
+		</view>
+		<!-- 搜索司机列表 -->
+		<view class="dirver_item" wx:for="{{serDriveList}}" wx:key="*this" wx:if="{{driveName !== ''}}">
+			<view class="left">
+				<view class="top">
+					<image src="https://static2.jd-gz.com/jsj0521.png"></image>
+					<view class="info">
+						<view class="car_kind">{{item.car.brand}} {{item.car.brand}}{{item.car.car_model}}</view>
+						<view class="name">
+							<text style="padding-right: 16rpx;">{{item.name}}</text>
+							<van-icon name="star" style="color:#FED63E" /><text style="color:#666666;margin-left:8rpx">4.9分</text>
+						</view>
+					</view>
+				</view>
+
+				<view class="common_routes">
+					<view class="routes_line">成都-甘孜</view>
+					<view class="routes_line">成都-甘孜</view>
+				</view>
+			</view>
+			<view class="right" catchtap="chooseDrive" data-item="{{item}}">
+				选择司机
+			</view>
+		</view>
+	</view>
+
+	<!-- 无搜索的司机 -->
+	<view class="no_dirver" wx:if="{{serDriveList.length == 0 && driveName !== ''}}">
+		<image src="https://static2.jd-gz.com/taxi_driver_monochromatic@3x.png"></image>
+		<view style="color:#999999;font-size:24rpx">无该司机</view>
+	</view>
+</view>

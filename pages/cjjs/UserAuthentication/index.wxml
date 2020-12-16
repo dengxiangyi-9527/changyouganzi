@@ -1,0 +1,21 @@
+<!--pages/cjjs/UserAuthentication/index.wxml-->
+<view class="Wrap">
+  <view class="wrapBox">
+    <view class="inputBox">
+      <view class="inputTitle">乘客姓名</view>
+      <input  bindinput="getUserName" placeholder="请输入姓名" placeholder-style="font-size:32rpx;line-height:44rpx;color:#D1D1D1"></input>
+    </view>
+    <view class="inputBox">
+      <view class="inputTitle">身份证号</view>
+      <input  bindinput="getCarId" type="idcard" placeholder="请输入证件号用于购买车票" placeholder-style="font-size:32rpx;line-height:44rpx;color:#D1D1D1"></input>
+    </view>
+  </view>
+  <view class="erroBox">
+    <image class="erroIcon"></image>
+    <view class="erroText">用户实名认证，请填写您真实的姓名和身份证，一经实名不可修改。 如需帮助请联系客服。</view>
+  </view>
+  <view class="btnBox">
+    <view class="btn" catchtap="btnClick">确定</view>
+  </view>
+</view>
+ 

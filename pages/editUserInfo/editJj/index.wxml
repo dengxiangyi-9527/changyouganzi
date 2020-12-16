@@ -1,0 +1,7 @@
+<!--pages/editUserInfo/editJj/index.wxml-->
+<view class="main">
+	<van-cell-group >
+		<van-field value="{{ username3 }}" type='textarea' placeholder="设置个人简介" input-align="left" focus="{{true}}" clearable="true" maxlength="200" bind:input='input' bind:blur='finish' autosize='{{true}}'  border="{{ false }}" />
+    <text class="txt">{{num}}/200</text>
+	</van-cell-group>
+</view>

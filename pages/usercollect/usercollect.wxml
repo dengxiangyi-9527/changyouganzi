@@ -1,0 +1,47 @@
+<!--pages/usercollect/usercollect.wxml-->
+<view class="collect">
+  <view class="collectList">
+    <view class="collect_item">
+      <view class="item_img">
+        <image src=""></image>
+        <view class="img_text">包车/拼车</view>
+      </view>
+      <view class="item_info">
+        <view class="info_title">北京慕田域长城10小时纯玩包车一日游【市区景点可选/大噶似的噶似</view>
+        <view class="info_tab">
+          <view class="tab_box">上门接送</view>
+          <view class="tab_box">纯玩即走即停</view>
+        </view>
+        <view class="info_bottom">
+          <view class="info_price">
+            <text style="font-size:12pt;line-height:36rpx">￥</text>
+            <text>300</text>
+            <text style="color:#666666;font-size:22rpx">起</text>
+          </view>
+          <view class="info_assess">评价203</view>
+        </view>
+      </view>
+    </view>
+        <view class="collect_item">
+      <view class="item_img">
+        <image src=""></image>
+        <view class="img_text">包车/拼车</view>
+      </view>
+      <view class="item_info">
+        <view class="info_title">北京慕田域长城10小时纯玩包车一日游【市区景点可选/大噶似的噶似</view>
+        <view class="info_tab">
+          <view class="tab_box">上门接送</view>
+          <view class="tab_box">纯玩即走即停</view>
+        </view>
+        <view class="info_bottom">
+          <view class="info_price">
+            <text style="font-size:12pt;line-height:36rpx">￥</text>
+            <text>300</text>
+            <text style="color:#666666;font-size:22rpx">起</text>
+          </view>
+          <view class="info_assess">评价203</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

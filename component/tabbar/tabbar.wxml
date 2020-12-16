@@ -1,0 +1,8 @@
+<!--component/tabbar/tabbar.wxml-->
+<view class="tabbar flex_row {{isIpx ? 'ipx_button' : ''}}">
+	<view class="tabbar_single" wx:for="{{tabbar}}" wx:key="index" bindtap="tapName" data-url="{{item.url}}">
+		<image src="{{'https://static2.jd-gz.com/'+ item.active+ '.png'}}" class="image img {{isIpx ? 'ipx_ticket' : ''}}" wx:if="{{activeIndex === index}}"></image>
+		<image src="https://static2.jd-gz.com/{{item.icon}}.png" class="img {{isIpx ? 'ipx_ticket' : ''}}" wx:else></image>
+		<view class="{{activeIndex === index?'active_name':'name'}}">{{item.name}}</view>
+	</view>
+</view>

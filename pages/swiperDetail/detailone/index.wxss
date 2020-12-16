@@ -1,0 +1,169 @@
+/* pages/swiperDetail/detailone/index.wxss */
+page{
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.title{
+  font-size: 40rpx;
+  text-align: center;
+  margin-top: 30rpx;
+}
+.box{
+  border: 25rpx solid #18AFFF;
+  margin-bottom: 60rpx;
+}
+.boxTitle{
+  font-size: 60rpx;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  color: rgb(33, 33, 34);
+  margin-top: 40rpx;
+  display: flex;
+  justify-content: center;
+}
+.boxTitle view{
+  margin-left: 30rpx;
+}
+.boxTitle view:nth-child(3){
+  display: flex;
+  align-items: flex-end;
+}
+.boxTitle view:nth-child(4){
+  display: flex;
+  align-items: flex-end;
+}
+.box .boxTitleTwo{
+  font-size: 30rpx;
+  display: block;
+  text-align: center;
+  color: rgb(33, 33, 34);
+  margin:30rpx 25rpx 15rpx 30rpx;
+  font-weight: bold;
+}
+.box .imgBox{
+  height: 384rpx;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+  margin: 0 30rpx;
+  border-top: 15rpx solid #18AFFF;
+}
+.box .imgBox image{
+  width: 100%;
+  height: 100%;
+}
+.box .titleMain{
+  display: flex;
+  justify-content: center;
+}
+.box .titleMain .item{
+    position: static;
+    transform: rotateZ(45deg);
+    width: 100rpx;
+    height: 100rpx;
+    overflow: hidden;
+    background-color: rgb(0, 187, 255);
+}
+.box .titleMain .item .items{
+  width: 100rpx;
+  height: 100rpx;
+  position: static;
+  transform: rotateZ(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 65rpx;
+}
+.box .text{
+  margin-top: 65rpx;
+  padding: 0 30rpx;
+  font-size: 30rpx;
+  line-height: 60rpx;
+}
+.box .imageBox{
+  margin: 0 30rpx;
+  box-sizing: border-box;
+  height: 446rpx;
+  margin-top: 10rpx;
+  border-top: 2rpx dashed #18AFFF;
+}
+.box .imageBox image{
+  height: 446rpx;
+  width: 100%;
+}
+.box .boxCenter{
+  margin-top: 50rpx;
+  border-top: 25rpx solid #18AFFF;
+  padding: 10rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.box .boxCenter .textitem{
+  text-align: center;
+  font-size: 40rpx;
+  color: rgb(36, 154, 255);
+  line-height: 60rpx;
+  letter-spacing: 4rpx;
+  padding: 0px 6rpx;
+  text-shadow: rgb(255, 255, 255) 1px 1px, rgb(180, 221, 255) 2.3px 2.3px;
+}
+.box .boxCenter .image{
+  width: 100%;
+  height: 274rpx;
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+}
+.box .boxCenter .image image{
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+.box .boxCenter .textList{
+  font-size: 30rpx;
+  color: rgb(14, 14, 14);
+  line-height: 60rpx;
+  letter-spacing: 4rpx;
+  margin-left: 10rpx;
+}
+.box .boxCenter .textLine{
+  display: flex;
+  justify-content: space-around;
+}
+.box .boxCenter .textLine .line{
+  font-size: 30rpx;
+}
+.box .boxCenter .centerBottom{
+  display: flex;
+  margin: 0 20rpx;
+  margin-top: 30rpx;
+  justify-content: center;
+  margin-bottom: 60rpx;
+}
+.box .boxCenter .centerBottom image{
+  width: 150rpx;
+  height: 150rpx;
+}
+.box .boxCenter .centerBottom .bottomImage{
+  width: 126rpx;
+  height: 126rpx;
+}
+.box .boxCenter .centerBottom .bottomText{
+  border-left: 2rpx solid rgb(33, 33, 34);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 30rpx;
+  margin-left: 80rpx;
+}
+.box .boxCenter .centerBottom .bottomText view{
+  padding-left: 20rpx;
+  color: rgb(33, 33, 34);
+}
+.box .boxCenter .centerBottom .bottomText view:nth-child(1){
+  padding-bottom: 20rpx;
+
+}

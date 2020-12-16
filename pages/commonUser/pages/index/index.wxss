@@ -1,0 +1,134 @@
+/* pages/commonUser/pages/index.wxss */
+page{
+  width: 750rpx;
+  min-height: 100%;
+  background-color: #F2F3F7;
+}
+.wrap{
+  width: 750rpx;
+}
+.wraperro{
+  width: 750rpx;
+  padding: 11rpx 49rpx 11rpx 31rpx;
+  box-sizing: border-box;
+  background-color: #FFF8F2;
+  display: flex;
+  align-items: center;
+}
+.wraperro image{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: top;
+}
+.erroText{
+  font-size: 26rpx;
+  line-height: 38rpx;
+  margin-left: 8rpx;
+  color: #BC9668;
+}
+.userList{
+  background-color: #FFF;
+  margin-top: 30rpx;
+  border-radius: 24rpx;
+}
+.addUserInfo{
+  width: 100%;
+  padding:0rpx 30rpx;
+  box-sizing: border-box;
+}
+.imgText{
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #EDEDED;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.addUserInfo image{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: top;
+}
+.main{
+  width: 750rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.addUserText{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  font-weight: bold;
+  color: #09AFFF;
+  margin-left: 12rpx;
+}
+.userInfoItem{
+  padding: 0rpx 30rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.itemBox{
+  width: 100%;
+  padding: 30rpx 0 24rpx 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #EDEDED;
+}
+.userInfoBox{
+  display: flex;
+  align-items: center;
+}
+.userInfoBox image{
+  width: 44rpx;
+  height: 44rpx;
+  vertical-align: top;
+}
+.textBox{
+  margin-left: 33rpx;
+}
+.name{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  color: #333;
+  font-weight: 700;
+}
+.id_card{
+  font-size: 26rpx;
+  line-height: 38rpx;
+  color: #999;
+  margin-top: 16rpx;
+}
+.iconBox image{
+  width: 44rpx;
+  height: 44rpx;
+  vertical-align: top;
+}
+.onClose{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.btnBox{
+  width: 750rpx;
+  padding: 0 80rpx;
+  box-sizing: border-box;
+  margin-top: 40rpx;
+}
+.btn{
+  width: 100%;
+  padding: 22rpx 0;
+  box-sizing: border-box;
+  background-color: #09AFFF;
+  color: #FFF;
+  font-size: 32rpx;
+  line-height: 44rpx;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50rpx;
+}

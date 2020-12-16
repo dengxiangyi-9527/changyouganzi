@@ -1,0 +1,43 @@
+/* pages/getPhoneCode/index.wxss */
+.main {
+  padding: 0 48rpx;
+}
+
+.main .tit {
+  padding-top: 88rpx;
+}
+
+.main .tit .tit_big {
+  color: #333;
+  font-size: 56rpx;
+  margin-bottom: 24rpx;
+}
+
+.main .tit .tit_some {
+  color: #999;
+  font-size: 30rpx;
+}
+
+.main .tit .tit_some text {
+  color: #18AFFF;
+}
+
+.main .inp{
+  width: 100%;
+  height: 74rpx;
+  line-height: 74rpx;
+  padding-top: 180rpx;
+  border-bottom: 2rpx solid #EDEDED;
+  margin-bottom: 68rpx;
+}
+.main .inp input{
+ font-size: 42rpx;
+ color: #999;
+}
+
+.main .getCode{
+  margin-top: 10rpx;
+  background-color: #18AFFF;
+  border-radius: 44rpx;
+  color: #fff;
+}

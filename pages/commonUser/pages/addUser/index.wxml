@@ -1,0 +1,20 @@
+<!--pages/commonUser/pages/addUser/index.wxml-->
+<view class="wrap">
+   <view class="infoBox">
+     <view class="inputBox">
+        <view class="text">乘客姓名</view>
+       <input value="{{name}}" bindinput="userName" class="inputText" placeholder="请输入姓名" placeholder-style="font-weight:500"></input>
+     </view>
+     <view class="inputBox">
+        <view class="text">身份证号</view>
+       <input value="{{id_card_number}}" bindinput="userIdcard" class="inputText" placeholder="请输入身份证号" placeholder-style="font-weight:500"></input>
+     </view>
+   </view>
+   <view class="textErro">
+    <image src="https://static2.jd-gz.com/info-o.png"></image>
+    <view class="erro">用户实名认证，请填写您真实的姓名和身份证，一经实名不可修改。 如需帮助请联系客服。</view>
+   </view>
+   <view class="btnBox">
+    <view class="btn" catchtap="addUser">确定</view>
+   </view>
+</view>

@@ -1,0 +1,90 @@
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #F2F3F8
+}
+.wrap{
+  width: 100%;
+  margin-bottom: 60rpx;
+}
+.wrap .header{
+  width: 100%;
+  height: 610rpx;
+  background-color: #FFFFFF
+}
+.wrap .header .image{
+  width: 100%;
+  height: 500rpx;
+}
+.wrap .header .headerText{
+  width: 100%;
+  height: 110rpx;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .header .headerText .textLeft{
+  height: 110rpx;
+  line-height: 110rpx;
+  font-size: 36rpx;
+  color: #333333;
+}
+.wrap .header .headerText .textRight{
+  height: 110rpx;
+  font-size: 26rpx;
+  line-height: 110rpx;
+  color: #999999;
+}
+.wrap .header .headerText .textRight image{
+  width: 25rpx;
+  height: 20rpx;
+}	
+.wrap .main{
+  width: 100%;
+  padding: 30rpx;
+  background-color: #FFFFFF;
+  margin-top: 30rpx;
+  box-sizing: border-box;
+}
+.wrap .main .mainTitle{
+  font-size: 36rpx;
+  color: #333333;
+}
+.wrap .main .mainText{
+  font-size: 28rpx;
+  color: #999999;
+  line-height: 40rpx;
+}
+.wrap .mainLine{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30rpx;
+  background-color: #FFFFFF
+}
+.wrap .mainLine .lineTitle{
+  font-size: 36rpx;
+  line-height: 50rpx;
+  color: #333333;
+}
+.wrap .mainLine .lineList{
+  margin-top: 20rpx;
+  width: 100%;
+}
+.wrap .mainLine .lineList .listText{
+  font-size: 30rpx;
+  color: #13B5B1;
+  line-height: 42rpx;
+}
+.wrap  .mainLine .lineList .listText image{
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 12rpx;
+}
+.wrap  .mainLine .lineList .listLine{
+  height: 30rpx;
+  width: 2rpx;
+  margin: 21rpx 0rpx;
+  margin-left:10rpx;
+  background-color: #13B5B1
+}

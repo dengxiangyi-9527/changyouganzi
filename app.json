@@ -1,0 +1,179 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/order/pages/order/order",
+    "pages/order/pages/orderDetail/index",
+    "pages/order/pages/cancalOrderReason/index",
+    "pages/transfer/createOrder/index",
+    "pages/transfer/departure/index",
+    "pages/transfer/index/index",
+    "pages/ticket/ticket",
+    "pages/user/user",
+    "pages/login/index",
+    "pages/editUserInfo/edit/index",
+    "pages/editUserInfo/editName/index",
+    "pages/editUserInfo/editJj/index",
+    "pages/transfer/orderDetail/index",
+    "pages/getPhoneCode/index",
+    "pages/usercollect/usercollect",
+    "pages/editUserInfo/verified/verified",
+    "pages/editUserInfo/medicalCheck/medicalCheck",
+    "pages/editUserInfo/medicalCheckResult/medicalCheckResult",
+    "pages/editUserInfo/userprivacy/userprivacy",
+    "pages/coupon/couponRaiders/index",
+    "pages/coupon/recommendIndex/index",
+    "pages/coupon/couponList/coupon",
+    "pages/coupon/expiredCoupon/expiredCoupon",
+    "pages/bannerView/index",
+    "pages/imgTextDetail/imgTextDetail",
+    "pages/swiperDetail/detailone/index",
+    "pages/swiperDetail/detailtwo/index",
+    "pages/swiperDetail/detailfour/index",
+    "pages/swiperDetail/detailthree/index",
+    "pages/RideExpress/index/index",
+    "pages/RideExpress/selctCity/index",
+    "pages/RideExpress/selectDirver/indedx",
+    "pages/RideExpress/selectionLoc/index",
+    "pages/commonAddress/index/index",
+    "pages/commonAddress/addAddress/addAddress",
+    "pages/commonAddress/mapselect/index",
+    "pages/cjjs/index/index",
+    "pages/cjjs/selectFlight/index",
+    "pages/cjjs/selectCity/index",
+    "pages/cjjs/selectMap/index",
+    "pages/cjjs/orderDetail/index",
+    "pages/cjjs/UserAuthentication/index",
+    "pages/cjjs/mapselect/index/index",
+    "pages/cjjs/mapselect/locList/index",
+    "pages/cjjs/mapselect/selectCity/index",
+    "pages/cjjs/neworder/index",
+    "pages/cjjs/throughTrainDetail/index",
+    "pages/cjjs/newPay/index",
+    "pages/cjjs/payment/index",
+    "pages/cjjs/erweicode/index",
+    "pages/order/pages/orderList/index",
+    "pages/commonUser/pages/index/index",
+    "pages/commonUser/pages/addUser/index"
+  ],
+  "subPackages": [
+    {
+      "root": "pages/charteredBus/",
+      "independent": true,
+      "pages": [
+        "pages/index/index",
+        "pages/selectFlight/index",
+        "pages/selectCity/index",
+        "pages/selectMap/index",
+        "pages/charteredBus/index",
+        "pages/UserAuthentication/index",
+        "pages/mapselect/index/index",
+        "pages/mapselect/locList/index",
+        "pages/neworder/index",
+        "pages/throughTrainDetail/index",
+        "pages/newPay/index",
+        "pages/payment/index",
+        "pages/erweicode/index"
+      ]
+    },
+    {
+      "root": "pages/throughTrain/",
+      "independent": true,
+      "pages": [
+        "pages/trainList/index",
+        "pages/selectMap/index/index",
+        "pages/selectMap/locList/index",
+        "pages/throughTrainDetail/index",
+        "pages/order/index",
+        "pages/payment/index",
+        "pages/pay/index"
+      ]
+    },
+    {
+      "root": "pages/codeBus/",
+      "pages": [
+        "pages/order/index",
+        "pages/pay/index",
+        "pages/payMent/index",
+        "pages/qrCode/index"
+      ]
+    },
+    {
+      "root": "pages/peripheralTourism/",
+      "independent": true,
+      "pages": [
+        "pages/list/index",
+        "pages/detail/index",
+        "pages/mapSelect/index/index",
+        "pages/mapSelect/locList/index",
+        "pages/order/index",
+        "pages/pay/index"
+      ]
+    },
+    {
+      "root":"pages/CustomTour/",
+      "pages":[
+        "pages/index/index",
+        "pages/selectMap/locList/index",
+        "pages/selectMap/index/index",
+        "pages/customTourExplain/index",
+        "pages/packageList/index",
+        "pages/order/index",
+        "pages/pay/index",
+        "pages/orderDetail/index",
+        "pages/customized/detail/index",
+        "pages/customized/sudmit/index",
+        "pages/customized/process/index",
+        "pages/customized/pay/index"
+      ]
+    },
+    {
+      "root":"pages/invoice/",
+      "pages":[
+        "pages/index/index",
+        "pages/detail/index"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "selectedColor": "#09AFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/tabbarImg/home.png",
+        "selectedIconPath": "/static/tabbarImg/home-a.png"
+      },
+      {
+        "pagePath": "pages/ticket/ticket",
+        "text": "乘车票",
+        "iconPath": "/static/tabbarImg/ticket.png",
+        "selectedIconPath": "/static/tabbarImg/ticket-a.png"
+      },
+      {
+        "pagePath": "pages/order/pages/order/order",
+        "text": "订单",
+        "iconPath": "/static/tabbarImg/ticket.png",
+        "selectedIconPath": "/static/tabbarImg/ticket-a.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/static/tabbarImg/user.png",
+        "selectedIconPath": "/static/tabbarImg/wode_a.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "位置信息效果展示"
+    }
+  }
+}

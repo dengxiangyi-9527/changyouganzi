@@ -1,0 +1,2 @@
+<!-- <web-view src="https://static2.jd-gz.com/carhire2.html"></web-view> -->
+<web-view src="{{url}}"></web-view>

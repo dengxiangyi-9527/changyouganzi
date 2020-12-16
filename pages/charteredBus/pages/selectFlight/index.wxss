@@ -1,0 +1,303 @@
+/* pages/cjjs/selectCity/index.wxss */
+
+page{
+  background-color: #fafafa;
+}
+.content {
+  background-color: #fafafa;
+}
+
+.section_main {
+  width: 100%;
+  height: 120rpx;
+  position: relative;
+  /* top: 120rpx; */
+  box-shadow: 10rpx;
+  margin-right: 32rpx;
+  background-color: #fff;
+}
+
+.section {
+  width: 680rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+  position: absolute;
+  top: 20rpx;
+  left: 35rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to right,#FFFFFF,#F5F6FA,#F5F6FA,#F5F6FA,#FFFFFF);
+}
+
+.section view {
+  display: inline-block;
+}
+.section .now{
+  display: flex;
+  align-items: center;
+}
+
+.section image {
+  display: inline-block;
+  width: 28rpx;
+  height: 28rpx;
+}
+.section .left,.section .right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section .left text {
+  color: #999;
+  margin-left: 8rpx;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+
+.section .right text {
+  color: #333;
+  margin-right: 8rpx;
+  font-size: 28rpx;
+}
+
+.section .now text {
+  margin-right: 8rpx;
+  font-size: 28rpx;
+}
+
+.ticket_info {
+  position: relative;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  padding-bottom: 120rpx;
+}
+.ticket_info .ticket_item{
+  background-color: #fff;
+  box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.05);
+  border-radius: 24rpx;
+  position: relative;
+  margin-top: 24rpx;
+}
+.ticket_info .ticket_item .item_top{
+  line-height: 34rpx;
+  font-size: 22rpx;
+  color: #Fff;
+  padding: 0 30rpx 0 24rpx;
+  background-color: #37C776;
+  border-top-left-radius: 100rpx;
+  border-bottom-right-radius: 100rpx;
+  display: inline-block;
+  margin: 0;
+  vertical-align:top
+}
+.ticket_info .ticket_item .item_box{
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+.ticket_info .ticket_item .item_box .item_box_top{
+  display: flex;
+  justify-content: space-between;
+}
+.ticket_info .ticket_item .item_box .item_box_top .boxLeft{
+  display: flex;
+}
+.ticket_info .ticket_item .item_box .item_box_top .boxLeft .item_box_top_left .left_text{
+  color: #333;
+  font-size: 24rpx;
+  line-height: 36rpx;
+}
+.ticket_info .ticket_item .item_box .item_box_top .boxLeft .item_box_top_center{
+  display: flex;
+  align-items: center;
+  margin-left: 86rpx;
+}
+.ticket_info .ticket_item .item_box .item_box_top .boxLeft .item_box_top_center .lineBox{
+  margin-right: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ticket_info .ticket_item .item_box .item_box_top .boxLeft .item_box_top_center .lineBox .lineCercle{
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  border: 2rpx solid #EDEDED;
+}
+.ticket_info .ticket_item .item_box .item_box_top .boxLeft .item_box_top_center .lineBox .line{
+  width: 2rpx;
+  height: 46rpx;
+  background-color: #EDEDED;
+}
+.ticket_info .ticket_item .item_box .item_box_top .boxLeft .item_box_top_center .text_Box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.ticket_info .ticket_item .item_box .item_box_top  .boxLeft .item_box_top_center .text_Box  .flightBox{
+  color: #333;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  font-weight: bold;
+  margin-top: 16rpx;
+  display: flex;
+  align-items: center;
+}
+.ticket_info .ticket_item .item_box .item_box_top .boxLeft .item_box_top_center .text_Box .flightBox:nth-child(1){
+  margin-top: 0;
+}
+.ticket_info .ticket_item .item_box .item_box_top .boxLeft .item_box_top_center .text_Box .flightBox .flightIcon{
+  width: 20rpx;
+  height: 20rpx;
+  vertical-align: top;
+  margin-left: 6rpx;
+}
+.ticket_info .ticket_item .item_box .item_box_top .item_box_top_right{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.ticket_info .ticket_item .item_box .item_box_top .item_box_top_right .priceBox{
+  font-size: 24rpx;
+  line-height: 36rpx;
+}
+.ticket_info .ticket_item .item_box .item_box_top .item_box_top_right .originalPrice{
+  font-size: 20rpx;
+  line-height: 30rpx;
+  color: #999;
+  text-decoration: line-through;
+  font-weight: bold;
+}
+.ticket_info .ticket_item .item_box .item_box_top .item_box_top_right  .item_box_top_right_text{
+  display: flex;
+  font-size: 20rpx;
+  line-height: 30rpx;
+  align-items: center;
+  margin-top: 8rpx;
+}
+.ticket_info .ticket_item .item_box .item_box_top .item_box_top_right  .item_box_top_right_text image{
+  width: 16rpx;
+  height: 16rpx;
+  margin-right: 8rpx;
+}
+.ticket_info .ticket_item .item_box .item_box_bottom{
+  display: flex;
+  margin-top: 24rpx;
+  align-items: center;
+}
+.ticket_info .ticket_item .item_box .item_box_bottom .item_box_bottom_error{
+  font-size: 22rpx;
+  line-height: 34rpx;
+  color: #999;
+}
+.ticket_info .ticket_item .item_box .item_box_bottom  .clockicon{
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 44rpx;
+  margin-right: 20rpx;
+  vertical-align: top;
+}
+.ticket_info .ticket_item .item_box .item_box_bottom .time_text{
+  font-size: 30rpx;
+  line-height: 42rpx;
+  color: #333;
+  font-weight: bold;
+}
+.ticket_info .ticket_item .leftBox{
+  width: 20rpx;
+  height: 20rpx;
+  background-color: #FAFAFA;
+  position: absolute;
+  top: 50%;
+  left: -10rpx;
+  margin-top: -10rpx;
+  border-radius: 50%;
+}
+.ticket_info .ticket_item .rightBox{
+  width: 20rpx;
+  height: 20rpx;
+  background-color: #FAFAFA;
+  position: absolute;
+  top: 50%;
+  right: -10rpx;
+  margin-top: -10rpx;
+  border-radius: 50%;
+}
+/* .errotext{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12rpx 30rpx 12rpx 30rpx;
+  background-color: #EFF7FB;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #18AFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.errotext .text text{
+  text-decoration: underline;
+}
+.errotext image{
+  width: 32rpx;
+  height: 32rpx;
+} */
+/* .imageBox{
+  box-sizing: border-box;
+  padding:0 30rpx;
+}
+.imageBox image{
+  width: 100%;
+  height: 164rpx;
+} */
+.carTabBox{
+  display: flex;
+  width: 750rpx;
+  padding: 0rpx 20rpx;
+  box-sizing: border-box;
+  padding-top: 25rpx;
+  justify-content: space-between;
+}
+.carTabBox .tabBox{
+  flex: 1;
+  padding: 16rpx 0rpx;
+  box-sizing: border-box;
+  background-color: #FFF;
+  border-radius: 20rpx;
+  border: 1rpx solid #09AFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 22rpx;
+}
+.carTabBox .tabBox:nth-child(1){
+  margin-left: 0;
+}
+.carTabBox .ActiveTabBox{
+  background-color: #09AFFF;
+  border: 1rpx solid #FFF;
+}
+.carTabBox .tabBox .seatNum{
+  font-size: 36rpx;
+  line-height: 50rpx;
+  font-weight: bolder;
+  color: #333;
+}
+.carTabBox .ActiveTabBox .Activetext{
+  color: #FFF !important;
+}
+.carTabBox .tabBox .carPrice{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #999;
+}
+.warnText{
+  font-size: 26rpx;
+  line-height: 38rpx;
+  margin-top: 180rpx;
+  color: #999999;
+  text-align: center;
+}
+
+

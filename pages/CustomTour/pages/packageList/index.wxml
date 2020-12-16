@@ -1,0 +1,55 @@
+<!--pages/CustomTour//pages/packageList/index.wxml-->
+<view class="wrap">
+  <view class="timeBox">
+    <view class="timeTab">
+      <view class="time">{{currentDate}}</view>
+      <view class="timeCenter">
+        <view class="dayNum">{{dayNum}}天</view>
+        <view class="line">
+          <image src="https://static2.jd-gz.com/custom_timeline.png"></image>
+        </view>
+      </view>
+      <view class="time">{{endDate}}</view>
+    </view>
+  </view>
+  <view class="main">
+    <view class="leftTab">
+      <van-sidebar active-key="{{ activeKey }}" bind:change="onChange">
+        <van-sidebar-item title="全部"/>
+        <van-sidebar-item title="{{index}}座" wx:for="{{carList}}" wx:key="*this" data-item="{{index}}"/>
+      </van-sidebar>
+    </view>
+    <scroll-view class="tabMain" scroll-y="true">
+      <view class="carList">
+        <view class="carItem" wx:if="{{!item.disabled}}" wx:for="{{carInfoList}}" wx:key="*this" catchtap="toOrdedr" data-item="{{item}}">
+          <view class="carimgText">
+            <image src="{{item.image}}"></image>
+            <view class="carInfo">
+              <view class="name">{{item.name}}</view>
+              <view class="Info">{{item.intro}}</view>
+            </view>
+          </view>
+          <view class="priceBox">
+            <text style="font-size:22rpx;line-height:34rpx">￥</text>
+            <text style="font-size:40rpx;line-height:52rpx；font-weight:bold">{{item.price/100}}</text>
+            <text style="font-size:22rpx;line-height:34rpx">/天</text>
+          </view>
+        </view>
+        <view class="carItem" wx:if="{{item.disabled}}" style="opacity:{{item.disabled?'0.5':'1'}}" wx:for="{{carInfoList}}" wx:key="*this">
+          <view class="carimgText">
+            <image src="{{item.image}}"></image>
+            <view class="carInfo">
+              <view class="name">{{item.name}}</view>
+              <view class="Info">{{item.intro}}</view>
+            </view>
+          </view>
+          <view class="priceBox">
+            <text style="font-size:22rpx;line-height:34rpx">￥</text>
+            <text style="font-size:40rpx;line-height:52rpx；font-weight:bold">{{item.price/100}}</text>
+            <text style="font-size:22rpx;line-height:34rpx">/天</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

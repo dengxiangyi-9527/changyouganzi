@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-field": "../../../miniprogram_npm/@vant/weapp/field/index",
+    "van-icon": "../../../miniprogram_npm/@vant/weapp/icon/index",
+    "van-popup": "../../../miniprogram_npm/@vant/weapp/popup/index",
+    "van-datetime-picker": "../../../miniprogram_npm/@vant/weapp/datetime-picker/index",
+    "van-area": "../../../miniprogram_npm/@vant/weapp/area/index"
+  },
+  "navigationBarTitleText": "编辑个人资料"
+}

@@ -1,0 +1,476 @@
+/* pages/cjjs/orderDetail/index.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #FAFAFA;
+}
+.bg {
+  width: 100%;
+  /* height: 100%; */
+  background-color: #fafafa;
+  position: relative;
+}
+
+.bg .bg_img {
+  width: 100%;
+  height: 386rpx;
+}
+
+/* 退款状态 */
+
+.bg .status {
+  position: absolute;
+  top: 40rpx;
+  height: 108rpx;
+  width: 690rpx;
+  margin: 0 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.bg .status image {
+  float: left;
+  height: 72rpx;
+  width: 72rpx;
+  margin-right: 30rpx;
+}
+
+.bg .status .status_info {
+  color: #fff;
+}
+
+.bg .status .status_info .status_txt {
+  font-size: 42rpx;
+  margin-bottom: 16rpx;
+}
+
+.bg .status .status_info .status_tost {
+  font-size: 26rpx;
+}
+
+/* 行程信息 */
+
+.bg .travel_info {
+  position: absolute;
+  top: 188rpx;
+  height: 210rpx;
+  width: 630rpx;
+  padding: 30rpx;
+  margin: 0 20rpx;
+  border-radius: 16rpx;
+  box-shadow: 0 2rpx 10rpx 0 rgba(0, 0, 0, 0.04);
+}
+.bg .travel_info .locationText{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bg .travel_info .locationText .timeText{
+  font-size: 34rpx;
+  color: #333;
+  font-weight: 510;
+}
+.bg .travel_info .locationText .typeText{
+  font-size: 24rpx;
+  line-height: 44rpx;
+}
+/* 订单退款中，订单取消 */
+
+.bg .undone {
+  opacity: 0.5;
+  background-color: rgb(235, 233, 233);
+}
+
+/* 订单已完成的样式 */
+
+.bg .completed {
+  background-color: #fff;
+}
+
+.bg .travel_info .txt {
+  height: 140rpx;
+  display: flex;
+  /* justify-content: space-around; */
+  box-sizing: border-box;
+  padding-bottom: 24rpx;
+  border-bottom: 2rpx solid rgba(224, 223, 223, 0.3);
+}
+
+.bg .travel_info .txt image {
+  width: 42rpx;
+  height: 12rpx;
+  margin: 0 8rpx;
+}
+
+.bg .travel_info .txt .location {
+  display: flex;
+  align-items: center;
+  margin-top: 10rpx;
+}
+
+.bg .travel_info .travel_share .wechat .assess {
+  padding: 8rpx 24rpx 8rpx 24rpx;
+  height: 40rpx;
+  background-color: #fff;
+  border: 2rpx solid #a9e1ff;
+  border-radius: 50rpx;
+  margin-left: 30rpx;
+  color: #18AFFF;
+  font-size: 24rpx;
+  line-height: 40rpx;
+}
+.bg .travel_info .travel_share .wechat .assess button{
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #fff;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  text-align: center;
+  color: #09afff;
+  padding: 0;
+}
+.bg .travel_info .travel_share .wechat .assess:nth-child(1){
+  margin-left: 0;
+}
+.bg .travel_info .travel_share .wechat .assess_completed {
+  width: 160rpx;
+  border: 2rpx solid #d3d3d3;
+  color: #999;
+  text-align: center;
+}
+
+.bg .travel_info .travel_share {
+  height: 94rpx;
+  width: 630rpx;
+  margin-top: 26rpx;
+}
+
+.bg .travel_info .travel_share .wechat {
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  color: #666;
+  float: left;
+}
+
+.bg .travel_info .travel_share .wechat image {
+  height: 42rpx;
+  width: 42rpx;
+}
+
+.bg .travel_info .travel_share .right {
+  float: right;
+  height: 28rpx;
+  width: 28rpx;
+}
+
+/* 退款进度 */
+
+.bg .progress {
+  width: 100%;
+  position: absolute;
+  top: 480rpx;
+  border-radius: 16rpx;
+  background-color: #fff;
+}
+
+
+.bg .progress .txt {
+  height: 40rpx;
+}
+
+.bg .progress .txt view {
+  font-size: 28rpx;
+  color: #333;
+  float: left;
+}
+.bg .travel_info   .txt   .txt_right{
+  width: 100%;
+}
+
+.bg .progress .txt view .price {
+  color: #fe4b3c;
+}
+
+.bg .progress .txt .right {
+  float: right;
+  font-size: 24rpx;
+  color: #999;
+}
+
+
+/* 进度条 */
+
+.bg .progress .progress_state {
+  height: 214rpx;
+  width: 680rpx;
+  background-color: #666;
+  margin-top: 24rpx;
+}
+
+/* 用户信息 */
+
+.user_info {
+  margin-top: 50rpx;
+  width: 100%;
+  margin-top: 88rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 38rpx 20rpx 20rpx 20rpx;
+}
+
+.user_info .tit {
+  font-size: 32rpx;
+  color: #666;
+  margin-bottom: 16rpx;
+  font-weight:bold;
+  font-family:PingFang-SC-Bold,PingFang-SC;
+}
+
+
+.user_info .info view {
+  color: #999;
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+}
+
+.user_info .info view .left {
+  display: inline-block;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.user_info .info view  .leftText{
+  letter-spacing: 18rpx;
+}
+.codeBox{
+  width: 100%;
+  padding:30rpx 30rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  height: 100rpx;
+  box-sizing: border-box;
+  margin-bottom:20rpx;
+}
+.codeBox .codeText{
+  font-size: 28rpx;
+  color: #333;
+  line-height: 40rpx;
+  height: 100%;
+}
+.codeBox .codeText text{
+  flex: 1;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #18AFFF;
+  margin-left: 8rpx;
+}
+.codeBox .codeIcon{
+  width: 82rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.codeBox .codeIcon image:nth-child(1){
+  width: 42rpx;
+  height: 42rpx;
+}
+.codeBox .codeIcon image:nth-child(2){
+  width: 28rpx;
+  height: 28rpx;
+  margin-left: 10rpx;
+}
+.trainBox{
+  width: 100%;
+  padding: 20rpx 20rpx 190rpx 20rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+}
+.trainBox .title{
+  margin-left: 14rpx;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #333;
+}
+.trainBox .infoBox{
+  width: 100%;
+  background-color: #F6F7F9;
+  margin-top: 20rpx;
+  padding: 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  border-radius: 24rpx;
+}
+.trainBox .infoBox .imgBox{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 24rpx;
+}
+.trainBox .infoBox .imgBox image{
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+.trainBox .infoBox .infoText{
+  margin-left: 24rpx;
+}
+.trainBox .infoBox .infoText .infoTitle{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #333;
+  font-weight: 600;
+}
+.trainBox .infoBox .infoText .infoPrice{
+  color: #333;
+  font-size: 42rpx;
+  line-height: 54rpx;
+  margin-top: 5rpx;
+  display: flex;
+  align-items: flex-end;
+  font-weight: 600;
+}
+.trainBox .infoBox .infoText .infoPrice .priceIcon{
+  font-size: 24rpx;
+  line-height: 36rpx;
+  margin-right: 5rpx;
+}
+.trainBox .infoBox .infoNum{
+  font-size: 22rpx;
+  line-height: 34rpx;
+  color: #999;
+  margin-top: 3rpx;
+}
+/* 评价弹出层 */
+
+.popup_asses {
+  min-height: 406rpx;
+  position: relative;
+}
+
+.popup_asses .tit {
+  width: 100%;
+  height: 102rpx;
+  line-height: 102rpx;
+  text-align: center;
+  background-color: #f5f6fa;
+  color: #333;
+  font-size: 30rpx;
+  position: relative;
+}
+
+.popup_asses .tit image {
+  width: 32rpx;
+  height: 32rpx;
+  position: absolute;
+  top: 37rpx;
+  right: 30rpx;
+}
+
+.popup_asses .btns {
+  width: 630rpx;
+  height: 76rpx;
+  margin: 0 auto;
+  margin-top: 42rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup_asses .btns .btns_bg {
+  background-color: #fdfaf1;
+}
+
+.popup_asses .btns view image {
+  width: 90rpx;
+  height: 60rpx;
+  margin-right: 15rpx;
+}
+
+.popup_asses .btns view {
+  width: 300rpx;
+  height: 76rpx;
+  background-color: #f7f7f7;
+  border-radius: 12rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup_asses .foot {
+  width: 288rpx;
+  height: 36rpx;
+  color: #999;
+  font-size: 24rpx;
+  margin: 0 auto;
+  margin-top: 24rpx;
+}
+
+.popup_asses .foot_change {
+  color: #fe8b32;
+}
+
+/* 点击不满意 */
+
+.popup_asses .unfine {
+  min-height: 200rpx;
+  position: relative;
+}
+
+.popup_asses .unfine button {
+  background-color: #fff;
+}
+
+.popup_asses .unfine button::after {
+  border: none;
+}
+
+.popup_asses .unfine .item {
+  width: 550rpx;
+  min-height: 80rpx;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 28rpx;
+}
+
+.popup_asses .unfine .item .checkbox {
+  width: 256rpx;
+  height: 60rpx;
+  border: 2rpx solid #d3d3d3;
+  color: #999;
+  font-size: 24rpx;
+  display: inline-block;
+  margin-right: 15rpx;
+  margin-bottom: 10rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.checkbox .wx-checkbox-input {
+  border: none;
+  display: none;
+}
+
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  display: none;
+}
+
+.aa{
+  background-color: #e2f5ff;
+  color: #18afff;
+  border: 2rpx solid #18afff;
+}
+
+.popup_asses .unfine .tj {
+  background-color: #18afff;
+  border-radius: 12rpx;
+  width: 690rpx;
+  height: 88rpx;
+  color: #fff;
+  margin-top: 48rpx;
+}

@@ -1,0 +1,127 @@
+<!--pages/CustomTour//pages/customized/process/index.wxml-->
+<view class="process_wrap">
+  <index-component my-property="{{nav}}"/>
+  <view class="head_bc" wx:if="{{show}}">
+    <image src="https://static2.jd-gz.com/custombc2.png"></image>
+  </view>
+  <view class="main_wrap" wx:if="{{show}}" style="padding-bottom:180rpx">
+    <view class="main_title" wx:if="{{detail.status == 2}}">支付成功</view>
+    <view class="main_title" wx:if="{{detail.status == 10}}">待方案规划</view>
+    <view class="main_title" wx:if="{{detail.status == 3}}">订单已取消</view>
+    <view class="main_title" wx:if="{{detail.status == 8}}">订单已退款</view>
+    <view class="main_title" wx:if="{{detail.status == 1}}">订单待支付</view>
+    <view class="main_steps" wx:if="{{detail.status != 3}}">
+      <view class="step_top">
+        <view class="steps_item">
+          <view class="steps_icon">
+            <view class="icon" style="background-color:{{detail.status === 10 || detail.status === 1||detail.status === 2 ? '#FFF' :'#0EB7FD'}}"></view>
+          </view>
+        </view>
+        <view class="steps_line"></view>
+        <view class="steps_item">
+              <view class="steps_icon">
+                <view class="icon"  style="background-color:{{detail.status === 1 || detail.status === 2 ? '#FFF' :'#0EB7FD'}}"></view>
+              </view>
+        </view>
+        <view class="steps_line"></view>
+        <view class="steps_item">
+          <view class="steps_icon">
+            <view class="icon"  style="background-color:{{detail.status === 2 ? '#FFF' :'#0EB7FD'}}"></view>
+          </view>
+        </view>
+        <view class="steps_line"></view>
+        <view class="steps_item">
+          <view class="steps_icon">
+            <view class="icon"  style="background-color:{{detail.status === 2 ? '#FFF' :'#0EB7FD'}}"></view>
+          </view>
+        </view>
+      </view>
+      <view class="steps_textBox">
+        <view class="steps_text" style="color:{{detail.status === 10 || detail.status === 1||detail.status === 2 ? '#FFF' : '#0082B6'}}">待方案规划</view>
+        <view class="steps_text" style="color:{{detail.status == 1||detail.status === 2 ? '#FFF' : '#0082B6'}}">待支付</view>
+        <view class="steps_text" style="color:{{detail.status == 2 ? '#FFF' : '#0082B6'}}">预订成功</view>
+        <view class="steps_text" style="color:{{detail.status == 2 ? '#FFF' : '#0082B6'}}">交易成功 </view>
+      </view>
+    </view>
+    <view class="main_erro" wx:if="{{detail.status != 3}}">畅游甘孜（私人订制）已经承接您成都-康定的需求单，我将尽快为您提供方案</view>
+    <view class="main_erro" wx:if="{{detail.status == 3}}">订单已取消</view>
+    <view class="main_tabBox">
+      <view class="tab_title">定制需求</view>
+      <view class="tab_text">
+        <view class="tab_text_title">出行性质</view>
+        <view class="tab_text_main">{{detail.type }}</view>
+      </view>
+      <view class="tab_text">
+        <view class="tab_text_title">出发到达</view>
+        <view class="tab_text_main">{{detail.slocation}}-{{detail.elocation}}</view>
+      </view>
+      <view class="tab_text">
+        <view class="tab_text_title">出行时间</view>
+        <view class="tab_text_main">{{detail.stime}}至{{detail.etime}}</view>
+      </view>
+      <view class="tab_text">
+        <view class="tab_text_title">人均预算</view>
+        <view class="tab_text_main">{{detail.budget}}</view>
+      </view>
+      <view class="tab_text" wx:if="{{detail.status == 1}}">
+        <view class="tab_text_title" style="margin-right:196rpx">车型</view>
+        <view class="tab_text_main" >{{detail.car_model.name+detail.car_model.ridership+'座'}}</view>
+      </view>
+    </view>
+    <view class="main_tabBox">
+      <view class="tab_title">定制师信息</view>
+      <view class="personBox">
+        <image src="https://static2.jd-gz.com/kefuhead3.png"></image>
+        <view class="person_text">畅游甘孜（私人订制）</view>
+        <view class="person_Satus" wx:if="{{detail.status == 10}}">待方案规划</view>
+        <view class="person_Satus" wx:if="{{detail.status == 1||detail.status == 2}}">方案规划完成</view>
+      </view>
+      <view class="kefuBox" catchtap="gotTel">
+        <view class="kefuBtn">
+          <image src="https://static2.jd-gz.com/kefuhead2.png"></image>
+          联系客服
+        </view>
+      </view>
+    </view>
+    <view class="main_tabBox">
+      <view class="tab_title">订单信息</view>
+      <view class="tab_text">
+        <view class="tab_text_title" style="margin-right:168rpx">联系人</view>
+        <view class="tab_text_main">{{detail.name}}</view>
+      </view>
+      <view class="tab_text">
+        <view class="tab_text_title">联系电话</view>
+        <view class="tab_text_main">{{detail.phone}}</view>
+      </view>
+      <view class="tab_text">
+        <view class="tab_text_title">身份证号</view>
+        <view class="tab_text_main">{{detail.id_card_number}}</view>
+      </view>
+      <view class="tab_text">
+        <view class="tab_text_title">出行人数</view>
+        <view class="tab_text_main">{{detail.member+detail.old+detail.child}}人</view>
+      </view>
+      <view class="tab_text" wx:if="{{detail.status == 1}}">
+        <view class="tab_text_title">费用合计</view>
+        <view class="tab_text_main">¥{{detail.price}}</view>
+      </view>
+      <view class="tab_text">
+        <view class="tab_text_title">订单编号</view>
+        <view class="tab_text_main">{{detail.order_sn}}</view>
+      </view>
+      <view class="tab_text">
+        <view class="tab_text_title" style="margin-right:196rpx">备注</view>
+        <view class="tab_text_main">{{detail.remark}}</view>
+      </view>
+    </view>
+     <view class="cancelOrder" wx:if="{{detail.status == 10 || detail.status == 1}}" catchtap="cancelOrder">取消订单</view>
+  </view>
+    <view class="toPay" wx:if="{{detail.status == 1 && show}}">
+      <view class="BottompriceBox">
+        <view class="allPrice">￥{{detail.price}}</view>
+      </view>
+      <view class="btnBox" catchtap="toPay">去付款</view>
+    </view>
+    <order-not-find wx:if="{{!show}}"/>
+</view>
+

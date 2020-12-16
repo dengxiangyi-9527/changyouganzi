@@ -1,0 +1,21 @@
+<!--pages/cjjs/payment/index.wxml-->
+<view class="wrap">
+  <view class="header">
+    <image src="https://static2.jd-gz.com/paymentbc.png"></image>
+  </view>
+  <view class="main">
+    <cjjs-component my-property='{{nav}}'/>
+    <view class="paytitle">
+      <image src="https://static2.jd-gz.com/wechat.png" class="titleIcon"></image>
+      <view class="titleText">支付成功</view>
+    </view>
+    <view class="payText">我们将尽快为您安排司机，请耐心等待</view>
+    <view class="btnBox">
+      <view class="btn" catchtap="goOrder">查看订单</view>
+      <view class="btn" catchtap="goIndex">返回首页</view>
+    </view>
+  </view>
+  <view class="imgBox">
+    <image src="https://static2.jd-gz.com/tuijianyouli.png"></image>
+  </view>
+</view>

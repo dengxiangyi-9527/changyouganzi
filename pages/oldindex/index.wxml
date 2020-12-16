@@ -1,0 +1,106 @@
+<index-component my-property="{{nav}}" />
+<view class="header">
+	<swiper class="bg_banner" autoplay="true" interval="4000" circular="true" indicator-dots="true" indicator-color="#ccc" indicator-active-color="#ffffff">
+		<swiper-item wx:for="{{imgList}}" wx:key="index" bindtap="bindBannerTap" data-index="{{index}}">
+			<image src="{{item}}"></image>
+		</swiper-item>
+	</swiper>
+
+
+	<!-- 金刚图 -->
+	<view class="sprite">
+		<view class="spriteBox" catchtap="toCjjs">
+			<image src="https://static2.jd-gz.com/cjjs0527.png" class="spriteImg"></image>
+			<view class="spriteText">城际接送</view>
+		</view>
+		<view class="spriteBox" catchtap="toSckk">
+			<image src="https://static2.jd-gz.com/sckk.png" class="spriteImg"></image>
+			<view class="spriteText">极速出行</view>
+		</view>
+		<view class="spriteBox" catchtap="toJjs">
+			<image src="https://static2.jd-gz.com/jsj0521.png" class="spriteImg"></image>
+			<view class="spriteText">接送机</view>
+		</view>
+		<view class="spriteBox" catchtap="toDzbc">
+			<image src="https://static2.jd-gz.com/bccx0521.png" class="spriteImg"></image>
+			<view class="spriteText">包车出行</view>
+		</view>
+		<view class="spriteBox" catchtap="toZjzc">
+			<image src="https://static2.jd-gz.com/zjzc0521.png" class="spriteImg"></image>
+			<view class="spriteText">自驾租车</view>
+		</view>
+
+
+	</view>
+</view>
+
+<!-- 城市灵感 -->
+<view class="city_inspiration">
+	<view class="title">
+		城市灵感
+	</view>
+	<view class="img">
+		<image src="https://static2.jd-gz.com/cslg1.png" bindtap="goImgTextDetail" data-index="1"></image>
+		<image src="https://static2.jd-gz.com/cslg2.png" bindtap="goImgTextDetail" data-index="2"></image>
+		<image src="https://static2.jd-gz.com/cslg3.png" bindtap="goImgTextDetail" data-index="3"></image>
+	</view>
+</view>
+
+<!-- 当地必体验 -->
+<view class="local_experience">
+	<view class="title">
+		当地必体验
+	</view>
+
+	<!-- 怎么玩，吃什么，住哪里三个tab -->
+	<view class="tab_box">
+		<view class="tab_single" wx:for="{{tabList}}" wx:key="*this" bindtap="bindTabChange" data-index="{{index}}">
+			<view class="{{currenIndex === index?'single_name single_name_active':'single_name'}} ">{{item.name}}</view>
+			<image src="https://static2.jd-gz.com/index_cur_tab.png" class="index_cur_tab" wx:if="{{currenIndex === index}}"></image>
+			<image src="https://static2.jd-gz.com/hot_icon.png" class="hot_icon" wx:if="{{index ===2}}"></image>
+		</view>
+	</view>
+
+	<view class="wrap_pic">
+		<view class="how_play item" wx:if="{{currenIndex ===0}}">
+			<image src="https://static2.jd-gz.com/1.png" bindtap="goImgTextDetail" data-index="4"></image>
+			<image src="https://static2.jd-gz.com/2.png" bindtap="goImgTextDetail" data-index="5"></image>
+			<image src="https://static2.jd-gz.com/3.png" bindtap="goImgTextDetail" data-index="6"></image>
+		</view>
+
+		<view class="eat_what item" wx:if="{{currenIndex === 1}}">
+			<image src="https://static2.jd-gz.com/eat1.png" bindtap="goImgTextDetail" data-index="7"></image>
+			<image src="https://static2.jd-gz.com/eat2.png" bindtap="goImgTextDetail" data-index="8"></image>
+			<image src="https://static2.jd-gz.com/eat3.png" bindtap="goImgTextDetail" data-index="9"></image>
+		</view>
+
+		<view class="hotel item" wx:if="{{currenIndex === 2}}">
+			<image src="https://static2.jd-gz.com/hotel1.png" bindtap="goImgTextDetail" data-index="10"></image>
+			<image src="https://static2.jd-gz.com/hotel2.png" bindtap="goImgTextDetail" data-index="11"></image>
+			<image src="https://static2.jd-gz.com/hotel3.png" bindtap="goImgTextDetail" data-index="12"></image>
+		</view>
+
+	</view>
+</view>
+
+<!-- 防疫遮罩层 -->
+<view class="maskBox" catchtap="delMask" wx:if="{{isMask&&!showCoupon}}">
+	<view class="boxImg">
+		<image src="https://static2.jd-gz.com/fyindex1.png" class="imgIcon" catchtap="goDetail"></image>
+		<image src="https://static2.jd-gz.com/cross@2x.png" class="imgDel" catchtap="delMask"></image>
+	</view>
+</view>
+
+<!-- 新人专享遮罩层 -->
+<view class="maskBox" wx:if="{{showCoupon}}">
+	<view class="boxImg">
+		<image src="https://static2.jd-gz.com/new_pop.png" class="imgIcon" data-type="receive" bindtap="bindActivity"></image>
+		<image src="https://static2.jd-gz.com/cross@2x.png" class="imgDel" data-type="close" bindtap="bindActivity"></image>
+	</view>
+</view>
+<view>
+
+</view>
+<tabbar activeIndex='0'>
+
+</tabbar>

@@ -1,0 +1,37 @@
+<!--pages/cjjs/mapselect/index.wxml-->
+<view class="wrap">
+  <map style="height:{{mapHeight+'%'}}"
+      longitude="{{longitude}}" 
+      latitude="{{latitude}}" 
+      polygons="{{polygon}}"
+      bindregionchange="regionchange"
+      id="map4select"
+   ></map>
+   <cover-view class="Maptitle">蓝色区域内可上门接送</cover-view>
+   <cover-view class="markBox" style="top:{{markersHeight+'%'}}" id="marks">
+      <cover-view class="markText" >{{markText}}</cover-view>
+      <cover-image class="markIcon" src="https://static2.jd-gz.com/20200521151648.png"></cover-image>
+   </cover-view>
+   <cover-view class="dingweiBtn" style="top:{{mapHeight-28+'%'}}" catchtap="dingwei">
+      <cover-view class="dingweiText">查看接送范围</cover-view>
+      <cover-image src="https://static2.jd-gz.com/dingwei.png" class="dingweiIcon"></cover-image>
+   </cover-view>
+  <view class="bottomBox">
+    <view class="selectBox" id="meat">
+      <view class="locBox" catchtap="goFromLoc">
+        <view class="locIcon fromLocIcon"></view>
+        <view class="locNullInfo locInfo" wx:if="{{fromloc ==''}}">请选择上车地点</view>
+        <view class="locInfo" wx:if="{{fromloc !=''}}">{{fromloc.name}}</view>
+      </view>
+      <!-- <view class="line"></view>
+      <view class="locBox" catchtap="goEndLoc">
+        <view class="locIcon toLocIcon"></view>
+        <view class="locNullInfo locInfo" wx:if="{{endloc ==''}}">请选择下车地点</view>
+        <view class="locInfo" wx:if="{{endloc !=''}}">{{endloc.name}}</view>
+      </view> -->
+    </view>
+    <view class="btnBox">
+      <view class="btn" catchtap="mapOk">确认行程</view>
+    </view>
+  </view>
+</view>

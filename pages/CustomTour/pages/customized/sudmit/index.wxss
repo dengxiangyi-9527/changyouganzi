@@ -1,0 +1,323 @@
+/* pages/CustomTour//pages/customized/sudmit/index.wxss */
+page{
+  width: 750rpx;
+  min-height: 100%;
+  background-color: #F2F3F7;
+}
+.submit_wrap{
+  width: 750rpx;
+}
+.head_bc{
+  width: 750rpx;
+  height: 366rpx;
+}
+.head_bc image{
+  width: 750rpx;
+  height: 366rpx;
+  vertical-align: top;
+}
+.submit_main{
+  width: 750rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0rpx 20rpx;
+  padding-top: 82rpx;
+  padding-bottom: 106rpx;
+  box-sizing: border-box;
+}
+.head_img{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 28rpx;
+}
+.head_img image{
+  width: 100rpx;
+  height: 100rpx;
+  vertical-align: top;
+}
+.head_text{
+  margin-left: 24rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.text{
+  color: #FFF;
+  font-size: 26rpx;
+  line-height: 38rpx;
+}
+.tab_box{
+  background-color: #FFF;
+  padding: 30rpx;
+  padding-top: 1rpx;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+  border-radius: 16rpx;
+}
+.tab_title{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  color: #333;
+  font-weight: bold;
+  margin-top: 30rpx;
+}
+.btn_box{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 14rpx;
+  border-bottom: 1rpx solid #EDEDED;
+  padding-bottom: 30rpx;
+  padding-top: 16rpx;
+  box-sizing: border-box;
+}
+.btn{
+  margin: 0 10rpx;
+  margin-bottom: 16rpx;
+  padding: 12rpx 14rpx;
+  box-sizing: border-box;
+  border: 1rpx solid #BAC2D4;
+  color: #3E4B6E;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  border-radius: 16rpx;
+  min-width: 140rpx;
+  text-align: center;
+  position: relative;
+}
+.btn image{
+  width: 48rpx;
+  height: 48rpx;
+  position: absolute;
+  bottom: -30rpx;
+  right: -20rpx;
+}
+.btn_avtive{
+  border:1rpx solid #09AFFF;
+  background-color: #E2F5FF;
+  color: #09AFFF;
+  font-weight: 600;
+}
+.price_box{
+  width: 480rpx;
+  margin-top: 14rpx;
+  padding-bottom: 30rpx ;
+  display: flex;
+  flex-wrap: wrap;
+}
+.line_tab{
+  display: flex;
+  margin-top: 16rpx;
+}
+.box_title{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26rpx;
+  line-height: 36rpx;
+  color: #3E4B6E;
+  margin-top: 30rpx;
+}
+.textareaText{
+  width: 100%;
+  margin-top: 16rpx;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #333333;
+}
+.btnBox{
+  width: 100%;
+  margin-top: 30rpx;
+  background-image: linear-gradient(to right, #00ACFF,#00FFE5);
+  padding: 20rpx 0;
+  box-sizing: border-box;
+  border-radius: 44rpx;
+  color: #FFF;
+  font-size: 36rpx;
+  line-height: 50rpx;
+  font-weight: bold;
+  text-align: center;
+}
+.erro_text{
+  margin-top: 30rpx;
+  color: #999999;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  text-align: center;
+}
+.place{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #999;
+}
+ .userInfoBox .infoBox{
+  display: flex;
+  border-bottom: 1rpx solid #EDEDED;
+  align-items: center;
+  padding: 30rpx 0;
+  box-sizing: border-box;
+}
+ .userInfoBox .userInfoList{
+  width: 100%;
+}
+ .userInfoBox .userInfoList .userInfoItem{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #EDEDED;
+}
+
+ .userInfoBox .userInfoList .userInfoItem .itemInfo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx 0rpx 16rpx 0rpx;
+  box-sizing: border-box;
+}
+ .userInfoBox .userInfoList .userInfoItem .itemInfo .itemUser{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+ .userInfoBox .userInfoList .userInfoItem .itemInfo .itemUser .itemUserInfo{
+  margin-left: 30rpx;
+}
+ .userInfoBox .userInfoList .userInfoItem .itemInfo .itemUser .itemUserInfo .itemUserName{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  color: #333;
+  font-weight:700;
+}
+ .userInfoBox .userInfoList .userInfoItem .itemInfo .itemUser .itemUserInfo .itemUserid{
+  font-size: 26rpx;
+  line-height: 38rpx;
+  color: #999;
+}
+ .userInfoBox .userInfoList .userInfoItem .itemInfo .itemUser image{
+  width: 34rpx;
+  height: 34rpx;
+  vertical-align: top;
+}
+ .userInfoBox .userInfoList .userInfoItem .scrolview{
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+ .userInfoBox .userInfoList .userInfoItem .scrollBox{
+  width: 184rpx;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-left: 100rpx;
+}
+ .userInfoBox .userInfoList .userInfoItem .itemclose{
+  height: 100%;
+  padding: 46rpx 18rpx;
+  box-sizing: border-box;
+  background-color: #FE4B3C;
+  color: #fff;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+ .userInfoBox .userInfoList .userInfoItem .closeBox{
+  flex: 1;
+  overflow: hidden;
+}
+ .userInfoBox .infoBox:nth-last-child(1){
+  border-bottom: none;
+}
+ .userInfoBox .infoBox .infoTitle{
+  display: flex;
+  align-items: center;
+}
+ .userInfoBox .infoBox .infoTitle image{
+  width: 40rpx;
+  height: 40rpx;
+}
+ .userInfoBox .infoBox .infoTitle .titleText{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  color: #09AFFF;
+  margin-left: 24rpx;
+}
+ .userInfoBox .infoBox .inputBox{
+  margin-left: 48rpx;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+} 
+ .userInfoBox .infoBox .inputBox .palce{
+  font-size: 32rpx;
+  color: #D1D1D1;
+  line-height: 44rpx;
+  font-weight: 500;
+}
+ .userInfoBox .infoBox .inputBox .inputText{
+  color: #333333;
+  line-height: 44rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+ .userInfoBox .infoBox .perseonNum{
+  display: flex;
+  justify-content: space-between;
+}
+ .userInfoBox .infoBox .line{
+  display: flex;
+  width: 1rpx;
+  background-color: #D1D1D1;
+  height: 30rpx;
+}
+ .userInfoBox .infoBox .perseonNum .numTitle{
+  line-height: 44rpx;
+  font-size: 32rpx;
+  color: #09AFFF;
+  margin-right: 80rpx;
+  margin-left: 24rpx;
+}
+ .userInfoBox  .personBox{
+  display: flex;
+  justify-content: space-between;
+}
+ .userInfoBox .infoBox .perseonNum .numBox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ .userInfoBox .infoBox .perseonNum .numBox .btnBox{
+  width: 32rpx;
+  height: 32rpx;
+}
+ .userInfoBox .infoBox .perseonNum .numBox .btnBox image{
+  width: 32rpx;
+  height: 32rpx;
+  vertical-align: top;
+}
+ .userInfoBox .infoBox .perseonNum .numBox .num{
+  font-size: 30rpx;
+  line-height: 42rpx;
+  color: #333;
+  margin: 0 16rpx;
+}
+ .userInfoBox .infoBox .addUserInfo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+ .userInfoBox .infoBox .addUserInfo image{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: top;
+}
+ .userInfoBox .infoBox .addUserInfo .addUserText{
+  font-size: 32rpx;
+  font-weight: bold;
+  line-height: 44rpx;
+  color: #09AFFF;
+  margin-left: 12rpx;
+}

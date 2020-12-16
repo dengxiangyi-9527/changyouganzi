@@ -1,0 +1,6 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "cjjs-index-component": "/component/custom-nav-component/custom-nav-component"
+  }
+}

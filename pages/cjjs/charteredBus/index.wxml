@@ -1,0 +1,4 @@
+<!--pages/cjjs/charteredBus/index.wxml-->
+<view class="imgBox">
+    <image src="https://static2.jd-gz.com/20200608172214.png"></image>
+</view>

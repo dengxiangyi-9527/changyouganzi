@@ -1,0 +1,93 @@
+
+<view class="wrap">
+		<view class="imgBox">
+			<view class="tabBox" catchtap="goorderList" data-id="1">
+				<view class="img">
+					<image src="https://static2.jd-gz.com/RideExpressIcon.png"></image>
+				</view>
+				<view class="text">司乘快客</view>
+			</view>
+			<view class="tabBox" catchtap="goorderList" data-id="2">
+				<view class="img">
+					<image src="https://static2.jd-gz.com/throughTrainIcon.png"></image>
+				</view>
+				<view class="text">景区直通车</view>
+			</view>
+			<view class="tabBox" catchtap="goorderList" data-id="3">
+				<view class="img">
+					<image src="https://static2.jd-gz.com/codeBusIocn.png"></image>
+				</view>
+				<view class="text">景区快客</view>
+			</view>
+			<view class="tabBox" catchtap="goorderList" data-id="6">
+				<view class="img">
+					<image src="https://static2.jd-gz.com/trainIcon.png"></image>
+				</view>
+				<view class="text">定制游</view>
+			</view>
+			<view class="tabBox" catchtap="goorderList" data-id="5">
+				<view class="img">
+					<image src="https://static2.jd-gz.com/flyIcon.png"></image>
+				</view>
+				<view class="text">周边游</view>
+			</view>
+			<view class="tabBox" catchtap="goorderList" data-id="4">
+				<view class="img">
+					<image src="https://static2.jd-gz.com/zucheIcon.png"></image>
+				</view>
+				<view class="text">自驾租车</view>
+			</view>
+		</view>
+		<view class="textBox">待出行订单</view>
+		<view class="orderList">
+			<view class="list_item" catchtap="toOrderDetail" wx:for="{{orderList}}" wx:key="*this" wx:for-item="itemName" data-id='{{itemName}}'>
+						<view class="item_title">
+							<view class="title_left">
+								<view class="title_img">
+									<image src="https://static2.jd-gz.com/smallcjjs.png" wx:if="{{itemName.type == 2}}"></image>
+									<image src="https://static2.jd-gz.com/scenicIcon.png" wx:if="{{itemName.type == 3}}"></image>
+								</view>
+								<view class="title_text" wx:if="{{itemName.type == 2}}">司乘快客</view>
+								<view class="title_text" wx:if="{{itemName.type == 3}}">景区快客</view>
+							</view>
+							<view class="title_right" wx:if="{{itemName.status === 10}}">退款中...</view>
+							<view class="title_right" style="color:#18AFFF" wx:if="{{itemName.status === 2 }}">待出行</view>
+							<view class="title_right" style="color:#FE4B3B" wx:if="{{itemName.status === 1}}">待支付...</view>
+							<view class="title_right" style="color:#25BF25" wx:if="{{itemName.status === 6 }}">改签成功</view>
+						</view>
+						<view class="item_main">
+							<view class="main_text">
+								<view class="text_title">
+									<view class="title_dian"></view>
+										<text>{{itemName.date}}</text>
+									<text style="color:#D3D3D3;margin-left:10rpx;margin-right:10rpx;font-size:36rpx">·</text>
+									<text wx:if="{{itemName.type == 2}}">{{itemName.member_number}}人</text>
+									<text wx:if="{{itemName.type == 3}}">{{itemName.num}}人</text>
+								</view>
+								<view class="start_location">
+									<view class="dian"></view>
+									<text wx:if="{{itemName.type == 2}}">{{itemName.start_name}}</text>
+									<text wx:if="{{itemName.type == 3}}">{{itemName.start_point}}</text>
+								</view>
+								<view class="shu"></view>
+								<view class="end_location">
+									<view class="dian"></view>
+									<text wx:if="{{itemName.type == 2}}">{{itemName.end_name}}</text>
+									<text wx:if="{{itemName.type == 3}}">{{itemName.end_point}}</text>
+								</view>
+							</view>
+							<view class="text_price" wx:if="{{itemName.type == 2}}">
+								{{itemName.price_pay/100}}元
+							</view>
+							<view class="text_price" wx:if="{{itemName.type == 3}}">
+								{{itemName.price/100}}元
+							</view>
+						</view>
+						<view class="btnBox">
+							<text class="go_pay" wx:if="{{itemName.status === 1 &&itemName.type==1}}">支付</text>
+							<text class="go_pay" wx:if="{{itemName.status === 1 &&itemName.type==2}}">扫码支付</text>
+						</view>
+					</view>
+		</view>
+</view>
+<tabbar activeIndex='2'></tabbar>

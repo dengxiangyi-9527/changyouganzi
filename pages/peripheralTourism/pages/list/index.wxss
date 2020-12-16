@@ -1,0 +1,102 @@
+/* pages/peripheralTourism//pages/list/index.wxss */
+page{
+  width: 750rpx;
+  background-color: #F2F3F7;
+}
+.wrap{
+  width: 750rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.listBox{
+  padding-bottom: 60rpx;
+  width: 100%;
+}
+.listItem{
+  padding: 24rpx;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #FFF;
+  display: flex;
+  border-radius: 30rpx;
+  margin-top: 24rpx;
+  align-items: center;
+}
+.imgBox{
+  width: 153rpx;
+  height: 200rpx;
+  border-radius: 31rpx;
+}
+.imgBox image{
+  width: 153rpx;
+  height: 200rpx;
+  vertical-align: top;
+  border-radius: 31rpx;
+}
+.mainBox{
+  margin-left: 24rpx;
+  flex: 1;
+}
+.title{
+  font-size: 32rpx;
+  color: #333;
+  line-height: 44rpx;
+  font-weight: bold;
+}
+.mainText{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #333;
+  margin-top: 10rpx;
+}
+.tabBox{
+  display: flex;
+  margin-top: 9rpx;
+}
+.tabItem{
+  padding: 0 12rpx;
+  box-sizing: border-box;
+  background-color: #EEF7F2;
+  color: #37C776;
+  font-size: 20rpx;
+  line-height: 30rpx;
+  margin: 0 8rpx;
+  border-radius: 15rpx;
+}
+.priceBox{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.personNum{
+  line-height: 36rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+.price{
+  font-size: 36rpx;
+  line-height: 50rpx;
+  color: #FF4B3B;
+}
+.mainTextTab{
+  display: inline-block;
+  padding: 0 12rpx;
+  box-sizing: border-box;
+  border: 1rpx solid #37C776;
+  color: #37C776;
+  font-size: 20rpx;
+  line-height: 30rpx;
+  border-radius: 15.5rpx;
+}
+.mainTextTab2{
+  display: inline-block;
+  padding: 0 12rpx;
+  box-sizing: border-box;
+  background-color: #FEF1DF;
+  border-radius: 15.5rpx;
+  color: #FF8B32;
+  font-size: 20rpx;
+  line-height: 30rpx;
+  margin-left: 10rpx;
+}

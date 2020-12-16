@@ -1,0 +1,256 @@
+/* pages/cjjs/newPay/index.wxss */
+.wrap{
+  width: 750rpx;
+  height: 100%;
+  background-color: #F2F3F7;
+  position: relative;
+}
+.wrap .headImg{
+  width: 750rpx;
+  height: 274rpx;
+}
+.wrap .headImg image{
+  width: 750rpx;
+  height: 274rpx;
+  vertical-align: top;
+}
+.wrap .main{
+  position: absolute;
+  top: 0;
+  width: 750rpx;
+  padding: 60rpx 20rpx;
+  box-sizing: border-box;
+  margin-top: 132rpx;
+}
+
+.wrap .main .countDonw{
+  display: flex;
+  font-size: 32rpx;
+  line-height: 44rpx;
+  align-items: center;
+}
+.wrap .main .countDonw image{
+  width: 36rpx;
+  height: 36rpx;
+}
+.wrap .main .countDonw .textcolorW{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  font-weight: bold;
+  color: #FFF;
+  margin-left: 4rpx;
+}
+.wrap .main .countDonw .textcolorY{
+  font-size: 36rpx;
+  line-height: 44rpx;
+  color: #FF8B32;
+  font-weight: bold;
+}
+.wrap .main .orderDetail{
+  margin-top: 60rpx;
+  border-radius: 24rpx;
+  background-color: #FFF;
+  padding: 40rpx 30rpx;
+}
+.wrap .main .orderDetail .detailTitle{
+  font-size: 36rpx;
+  line-height: 50rpx;
+  font-weight: bold;
+}
+.wrap .main .orderDetail .carInfoBox{
+  margin-top: 33rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 1rpx solid #EDEDED;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrap .main .orderDetail .carInfoBox .line{
+  width: 2rpx;
+  height: 50rpx;
+  background-color: #EDEDED;
+  margin:0 29rpx;
+}
+.wrap .main .orderDetail .carInfoBox .dateBox{
+  flex: 1;
+}
+.wrap .main .orderDetail .carInfoBox .dateBox .dateTitle{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #333;
+}
+.wrap .main .orderDetail .carInfoBox .dateBox .dateInfo{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  font-weight: bold;
+  margin-top: 8rpx;
+  color: #333;
+}
+.wrap .main .orderDetail .carInfoBox .timeBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.wrap .main .orderDetail .carInfoBox .timeBox .timeInfo{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  font-weight: bold;
+  color: #333;
+  margin-top: 16rpx;
+}
+.wrap .main .orderDetail .carInfoBox .timeBox image{
+  width: 32rpx;
+  height: 32rpx;
+  vertical-align: top;
+}
+.wrap .main .orderDetail .carInfoBox .cityBox .cityTitle{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #333;  
+}
+.wrap .main .orderDetail .carInfoBox .cityBox{
+  flex: 1;
+}
+.wrap .main .orderDetail .carInfoBox .cityBox .cityInfo{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  color: #333;
+  font-weight: bold;
+  display: -webkit-box;
+  -webkit-line-clamp:2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
+.wrap .main .orderDetail .userBox{
+  display: flex;
+  padding: 20rpx 0 30rpx 0;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrap .main .orderDetail .userBox .userInfo{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #333;
+}
+.wrap .main .orderDetail .userBox .allprice{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #333;
+}
+
+.wrap .main .payBox{
+  margin-top: 24rpx;
+  padding: 30rpx 30rpx 30rpx 48rpx;
+  box-sizing: border-box;
+  background-color: #FFF;
+  border-radius: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrap .main .payBox .weixin{
+  display: flex;
+  align-items: center;
+}
+.wrap .main .payBox .weixin image{
+  width: 48rpx;
+  height: 48rpx;
+  vertical-align: top;
+}
+.wrap .main .payBox .weixin .text{
+  font-size: 32rpx;
+  line-height: 44rpx;
+  color: #333;
+  font-weight: bold;
+  margin-left: 20rpx;
+}
+.wrap .main .payBox .checkBox{
+  display: flex;
+  align-items: center;
+}
+.wrap .main .payBox .checkBox image{
+  width: 36rpx;
+  height: 36rpx;
+  vertical-align: top;
+}
+.toPay{
+  width: 750rpx;
+  background-color: #FFF;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 999999;
+  padding-bottom: 68rpx;
+  padding: 14rpx 80rpx 68rpx 80rpx;
+  box-sizing: border-box;
+  box-shadow: 0 -2rpx 20rpx 0 rgba(91, 99, 108, 0.05);
+}
+.toPay .btn{
+  width: 100%;
+  padding: 22rpx 0rpx;
+  background-color: #09AFFF;
+  color: #FFF;
+  font-size: 32rpx;
+  line-height: 44rpx;
+  font-weight: 600;
+  border-radius: 50rpx;
+  text-align: center;
+}
+.carBox{
+  width: 100%;
+  background-color: #F6F7F9;
+  padding: 30rpx;
+  box-sizing: border-box;
+  border-radius: 24rpx;
+}
+.carBox_title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.carBox_headimg{
+  display: flex;
+  align-items: center;
+}
+.carBox_headimg image{
+  width: 84rpx;
+  height: 84rpx;
+  border-radius: 50%;
+}
+.carName{
+  font-size: 30rpx;
+  line-height: 42rpx;
+  color: #333;
+  font-weight: bold;
+  margin-left: 24rpx;
+}
+.carErro{
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #FF8B32;
+}
+.kefuBox{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8rpx;
+}
+.kefuBtn{
+  padding: 9rpx 24rpx;
+  box-sizing: border-box;
+  border: 2rpx solid #A9E1FF;
+  border-radius: 27rpx;
+  color: #18AFFF;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  display: flex;
+}
+.kefuBtn image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 8rpx;
+}

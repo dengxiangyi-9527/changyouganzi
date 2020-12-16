@@ -1,0 +1,27 @@
+<view class="trainList" wx:if="{{init}}">
+	<view class="single_list" bindtap="bindDetail" wx:for="{{trainList}}" wx:key="*this" data-item="{{item}}">
+		<view class="single_left">
+			<image src="{{item.image}}" class="single_img"></image>
+		</view>
+		<view class="single_right">
+			<view class="single_name">{{item.title}}</view>
+			<view class="single_content">
+				<view class="single_tag">三环内免费接送</view>
+				<view class="price">
+					<view class="allprice">
+						<view class="price_sym">¥</view>
+						<view style="line-height: 54rpx">{{item.price}}</view>
+					</view>
+					<view class="price_text">人均{{item.unit_price}}起</view>
+				</view>
+				<view class="detail_box">
+					<view class="detail_text">查看详情</view>
+					<image src="https://static2.jd-gz.com/train_right_icon.png" class="right_icon"></image>
+				</view>
+
+			</view>
+		</view>
+	</view>
+	<view class="warnText" wx:if="{{trainList.length<=0}}">暂无搜索车辆哦～</view>
+</view>
+<view wx:if="{{trainList.length == 0 && init}}" class="nullList">暂无车次~~~</view>

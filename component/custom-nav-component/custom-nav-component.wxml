@@ -1,0 +1,36 @@
+<!--component/custom-nav-component/custom-nav-component.wxml-->
+<custom-component >
+  <view class="flex commonHead {{myProperty.tabFiexd ? 'topTabHead' :''}}" style='color:{{myProperty.color?myProperty.color:"#000"}};background-color:{{myProperty.bg_color?myProperty.bg_color:"white"}};height:{{commonHeadHeight.titleHeight}}px;'>
+    <view class='commonHead-wrap flex'>
+      <!-- 1：返回上一级；2：home; 3:无返回；4:首页图标 5:返回自定义-->
+      <view class='commonHead_left'>
+        <view
+        wx:if="{{myProperty.flag==1}}"
+        class="{{myProperty.Iconcolor=='black' ? 'commonHead_left_black' : 'commonHead_left_white'}}" 
+        bindtap='commonHead_left_back'
+        ></view>
+        <view wx:if="{{myProperty.flag==2}}" 
+         class="{{myProperty.Iconcolor=='black' ? 'commonHead_left_black' : 'commonHead_left_white'}}"
+         bindtap='commonHead_left_home'
+        ></view>
+        <view wx:if="{{myProperty.flag==3}}" class='commonHead_left_none' ></view>
+        <view wx:if="{{myProperty.flag==4 && !myProperty.tabFiexd}}" class='commonHead_left_none'>{{myProperty.cityName}}</view>
+        <view wx:if="{{myProperty.flag==4 && myProperty.tabFiexd}}" class="topTab commonHead_left_none">
+            <image src="https://static2.jd-gz.com/topTab%402x%203.png" catchtap="ztc" class="indexIcon"></image>
+            <image src="https://static2.jd-gz.com/topTab%402x%202.png" catchtap="sckk" class="indexIcon"></image>
+            <image src="https://static2.jd-gz.com/topTab%402x%201.png" catchtap="cjjs" class="indexIcon"></image>
+            <image src="https://static2.jd-gz.com/topTab%402x%205.png" catchtap="zpy" class="indexIcon"></image> 
+            <image src="https://static2.jd-gz.com/topTab%402x%204.png" catchtap="lest" class="indexIcon"></image>
+        </view>
+        <view
+        wx:if="{{myProperty.flag==5}}"
+        class="{{myProperty.Iconcolor=='black' ? 'commonHead_left_black' : 'commonHead_left_white'}}" 
+        bindtap='commonHead_left_back'
+        ></view>
+      </view> 
+      <view class='commonHead_right flex' wx:if="{{myProperty.flag!==4}}">
+        <view class='commonHead_right_text line1' style='font-weight:{{myProperty.font_weight}};font-size:{{myProperty.font_size}}rpx;'>{{myProperty.name?myProperty.name:""}}</view>
+      </view>
+    </view>
+  </view>
+</custom-component>

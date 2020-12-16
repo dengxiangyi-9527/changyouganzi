@@ -1,0 +1,7 @@
+<!--component/order-not-find/order-not-find.wxml-->
+<view class="order-not-find">
+<view class="main">
+  <image src="https://static2.jd-gz.com/noneorder_pic%402x.png"></image>
+  <text>订单飞走喽～</text>
+</view>
+</view>

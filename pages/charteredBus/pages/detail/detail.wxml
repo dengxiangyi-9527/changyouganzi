@@ -1,0 +1,157 @@
+<view style="x">
+  <view class="detailHeader">
+    <image class="headerImg"></image>
+    <cjjs-index-component my-property='{{nav}}' class="nav"/>
+  </view>
+
+  <view class="detailMain">
+    <view class="mainTop">
+      <view class="topBox">
+        <view class="topTitle">成都出发-自由行 北京慕田域长城10小时纯玩包车一日游【市区景点可选】</view>
+        <view>
+          <view class="topImg">
+            <image></image>
+          </view>
+          <text class="topText">收藏</text>
+        </view>
+      </view>
+      <view class="detailPrice">
+        <text class="priceIcon">￥</text>
+        <text class="price">59980</text>
+        <text class="priceText">起</text>
+      </view>
+      <view class="topTab">
+        <view class="tabBox">上门接送</view>
+        <view class="tabBox">纯玩疾走急停</view>
+      </view>
+      <view class="topfooter">
+      <view class="topfootetBox">
+        <view class="topfootetBoxImg"></view>
+        <view class="topfootetBoxText">无购物</view>
+      </view>
+      <view class="topfootetBox">
+        <view class="topfootetBoxImg"></view>
+        <view class="topfootetBoxText">无购物</view>
+      </view>
+      <view class="topfootetBox">
+        <view class="topfootetBoxImg"></view>
+        <view class="topfootetBoxText">无购物</view>
+      </view>
+      <view class="topfootetBox">
+        <view class="topfootetBoxImg"></view>
+        <view class="topfootetBoxText">无购物</view>
+      </view>
+      </view>
+    </view>
+
+    <view class="mainCenter">
+      <scroll-view class="centerTop" scroll-x="true" enable-flex="true">
+        <view class="centerTopTab">
+          <view class="topTabbox">
+            <view class="smallTab">A套餐</view>
+            <view class="tabText">商务出行五星可升级</view>
+            <view class="tabPrice">￥ 2788</view>
+          </view>
+        </view>
+        <view class="centerTopTab">
+          <view class="topTabbox">
+            <view class="smallTab">A套餐</view>
+            <view class="tabText">商务出行五星可升级</view>
+            <view class="tabPrice">￥ 2788</view>
+          </view>
+        </view>
+        <view class="centerTopTab">
+          <view class="topTabbox">
+            <view class="smallTab">A套餐</view>
+            <view class="tabText">商务出行五星可升级</view>
+            <view class="tabPrice">￥ 2788</view>
+          </view>
+        </view>
+        
+      </scroll-view>
+      <view class="wrapBox">
+        <scroll-view class="centerTime" enable-flex="true" scroll-x="true">
+          <view class="timeBox">
+            <view class="smallBoxtime">清明</view>
+            <view class="weekBox">03/33周三</view>
+            <view class="priceBox">￥5980</view>
+          </view>
+          <view class="timeBox">
+            <view class="smallBoxtime">清明</view>
+            <view class="weekBox">03/33周三</view>
+            <view class="priceBox">￥5980</view>
+          </view>
+          <view class="timeBox">
+            <view class="smallBoxtime">清明</view>
+            <view class="weekBox">03/33周三</view>
+            <view class="priceBox">￥5980</view>
+          </view>
+          <view class="timeBox">
+            <view class="smallBoxtime">清明</view>
+            <view class="weekBox">03/33周三</view>
+            <view class="priceBox">￥5980</view>
+          </view>
+          <view class="timeBox">
+            <view class="smallBoxtime">清明</view>
+            <view class="weekBox">03/33周三</view>
+            <view class="priceBox">￥5980</view>
+          </view>
+          <view class="timeBox">
+            <view class="smallBoxtime">清明</view>
+            <view class="weekBox">03/33周三</view>
+            <view class="priceBox">￥5980</view>
+          </view>
+
+        </scroll-view>
+        <view class="changeDate">
+            <view class="Dateimg"></view>
+            <view class="DateText">更多日期</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="mainEstimate">
+      <view class="estimateTop">
+        <view class="estimateTitle">
+          <view class="estimateTitle_line"></view>
+          <view class="estimateTitle_text">用户评价</view>
+        </view>
+        <view class="estimateTabBox">
+          <view class="extimateGrade">
+            <view class="gradeNum">
+              5
+              <text style="font-size:24rpx">分</text>
+            </view>
+            <view class="grandeText">100%满意</view>
+          </view>
+          <view class="extimateTab">
+            <view class="tabTetxt">189人已出行 154条评价</view>
+            <view class="tabBox">
+              <view class="tab">行程安排合理</view>
+              <view class="tab">性价比高</view>
+            </view>
+          </view>
+
+          <view class="tabBoxIcon"></view>
+        </view>
+      </view>
+      <view class="userEstimate">
+        <view class="userImg"></view>
+        <view class="userText">
+          <view class="userPull">
+            <view class="userName">哒哒哒</view>
+            <view class="userTalkTime">2020年1月20号发表</view>
+          </view>
+          <view class="userTalk">
+            的撒谎的季后赛的哈苏和杜萨度噶苏的噶啥厚度萨湖第三个杜萨固定噶苏大噶苏丹国和杜萨高度洒过段施工段是高度算过段施工段时
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="detailFooter">
+    <view class="footerBtn">去购买</view>
+  </view>
+</view>  
+

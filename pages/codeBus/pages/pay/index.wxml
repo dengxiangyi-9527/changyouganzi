@@ -1,0 +1,64 @@
+<!--pages/cjjs/newPay/index.wxml-->
+<view class="wrap">
+  <cjjs-component my-property='{{nav}}'/>
+  <view class="headImg">
+      <image src="https://static2.jd-gz.com/paybackground.png"></image>
+  </view>
+  <view class="main">
+    <view class="countDonw">
+      <image src="https://static2.jd-gz.com/time.png"></image>
+      <view class="textcolorW">支付剩余</view>
+      <view class="textcolorY">{{Minutes}}</view>
+      <view class="textcolorW">分</view>
+      <view class="textcolorY">{{getSeconds}}</view>
+      <view class="textcolorW">秒</view>
+    </view>
+    <view class="orderDetail">
+      <view class="detailTitle">订单详情</view>
+      <view class="carInfoBox">
+        <view class="dateBox">
+          <view class="dateTitle">出发时间</view>
+          <view class="dateInfo">{{timer}}</view>
+        </view>
+        <view class="line"></view>
+        <view class="timeBox">
+            <image src="https://static2.jd-gz.com/timelist.png"></image>
+            <view class="timeInfo">{{start_time}}</view>
+        </view>
+        <view class="line"></view>
+        <view class="cityBox">
+            <view class="cityTitle">起始地点</view>
+            <view class="cityInfo">{{from }}-{{to }}</view>
+        </view>
+      </view>
+      <view class="userBox">
+        <view class="userInfo">
+            {{userName}}｜{{num}}人｜{{tel}}
+        </view>
+        <view class="allprice">合计：￥{{allPrice}}</view>
+      </view>
+      <view class="cardBox" wx:if="{{through_train.length>0}}" wx:for="{{through_train}}" wx:key="index">
+        <view class="imagBox">
+          <image src="{{item.image}}"></image>
+        </view>
+        <view class="textBox">
+          <view class="textTitle">海螺沟门票+观光车套票</view>
+          <view class="price"><text style="font-size:24rpx;line-height:36rpx;">￥</text>{{item.price/100}}</view>
+          <view class="num">x{{item.num}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="payBox">
+        <view class="weixin">
+          <image src="https://static2.jd-gz.com/wechat_icon@3x.png"></image>
+          <view class="text">微信支付</view>
+        </view>
+        <view class="checkBox">
+          <image src="https://static2.jd-gz.com/paycheck_s@3x.png"></image>
+        </view>
+    </view>
+  </view>
+</view>
+<view class="toPay">
+    <view class="btn" bindtap="confirmPay">立即支付¥{{allPrice}}</view>
+</view> 

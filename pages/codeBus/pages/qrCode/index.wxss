@@ -1,0 +1,65 @@
+/* pages/cjjs/erweicode/index.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #18AFFF;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+.Codebox{
+  width: 100%;
+  margin-top: 20rpx;
+  border-radius: 16rpx;
+}
+.Codebox .boxTitle{
+  width: 100%;
+  height: 104rpx;
+  background-color: #F5F6FA;
+  color:#15AFFF;
+  font-size: 36rpx;
+  line-height: 104rpx;
+  box-sizing: border-box;
+  padding-left: 30rpx;
+}
+.Codebox .boxMain{
+  width: 100%;
+  height: 681rpx;
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Codebox .boxMain .mainTitle{
+  width: 100%;
+  text-align: center;
+  color: #666;
+  font-size: 28rpx;
+  margin-top: 48rpx;
+}
+.Codebox .boxMain .centerBox{
+  width: 400rpx;
+  height: 400rpx;
+  margin-top: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-left: 40rpx; */
+}
+.Codebox .boxMain .centerBox .qr_codeImg{
+  vertical-align: top;
+  border: none;
+  width: 400rpx;
+  height: 400rpx;
+}
+.Codebox .boxMain .mainText{
+  color: #666;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  text-align: center;
+  margin-top: 27rpx;
+}
+canvas{
+  top: -5000rpx;
+  position: fixed;
+  left: 0;
+} 

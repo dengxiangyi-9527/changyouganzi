@@ -1,0 +1,49 @@
+<!--pages/editUserInfo/edit/index.wxml-->
+<view class="avatar_bg">
+	<view class="avatar" bindtap="takePhone">
+		<image src="{{avatarUrl}}"></image>
+		<view class="cover">
+			<image src="https://static2.jd-gz.com/takephoto.png"></image>
+		</view>
+		<view>点击更换头像</view>
+	</view>
+</view>
+
+<view class="info">
+	<van-cell-group>
+		<van-field value="{{ username3 }}" label="昵称" placeholder="{{nickName}}" input-align="right" right-icon="arrow" disabled="true" bindtap="editName" />
+		<van-field value="{{ username3 }}" label="简介" placeholder="{{user_introduction}}" input-align="right" right-icon="arrow" disabled="true" bindtap="editJj" />
+		<van-field value="{{ username3 }}" label="性别" placeholder="{{gender}}" input-align="right" right-icon="arrow" disabled="true" bindtap="editGender" />
+		<van-field value="{{ username3 }}" label="生日" placeholder="{{showBirthdayData}}" input-align="right" right-icon="arrow" disabled="true" bindtap="editBirthday" />
+		<van-field value="{{ username3 }}" label="地区" placeholder="{{province}}--{{city}}" input-align="right" right-icon="arrow" disabled="true" bindtap="editArea" />
+	</van-cell-group>
+</view>
+
+<!-- 更改性别的弹框 -->
+<van-popup show="{{ genderShow }}" position="bottom" custom-style="height: 30%;" bind:close="onGenderClose">
+	<view class="popup">
+		<view class="one" bindtap="clickManGender">
+			<view class="bg">
+				<image src="https://static2.jd-gz.com/{{manGender? '蓝_亮' : '男_灰'}}.png"></image>
+			</view>
+			<text>男</text>
+		</view>
+		<view class="one" bindtap="clickGirlGender">
+			<view class="bg">
+				<image src="https://static2.jd-gz.com/{{girlGender? '女_亮' : '女_灰'}}.png"></image>
+			</view>
+			<text>女</text>
+		</view>
+	</view>
+	<button class="btn" bindtap="onGenderClose">取消</button>
+</van-popup>
+
+<!-- 选择生日的弹框 -->
+<van-popup show="{{ birthdayShow }}" position="bottom" custom-style="height: 30%;" bind:close="onBirthdayClose">
+	<van-datetime-picker type="date" value="{{ currentDate }}" bind:input="onInput" min-date="{{ minDate }}" formatter="{{ formatter }}" visible-item-count='3' title='选择生日' bindtap="confirm" />
+</van-popup>
+
+<!-- 选择地区的弹框 -->
+<van-popup show="{{ areaShow }}" position="bottom" custom-style="height: 45%;" bind:close="onAreaClose">
+<van-area area-list="{{ areaList }}" columns-num="{{ 2 }}" title="选择地区" bind:confirm='areaConfirm'/>
+</van-popup>

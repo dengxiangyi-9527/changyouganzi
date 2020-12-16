@@ -1,0 +1,15 @@
+<!--pages/cjjs/erweicode/index.wxml-->
+<top-component my-property='{{nav}}' class="nav"/>
+<view class="Codebox">
+  <view class="boxTitle">电子二维码</view>
+  <view class="boxMain">
+    <view class="mainTitle">向司机出示此二维码，方便出行</view>
+    <view class="centerBox">
+			<canvas  canvas-id="zz" style="width:200px;height:200px" ></canvas>
+      <view class="qr_codeBox">
+        <image src="{{imgsrc}}" class="qr_codeImg"></image>
+      </view>
+		</view>
+    <view class="mainText" catchtap="baocunCode">保存电子码</view>
+  </view>
+</view>

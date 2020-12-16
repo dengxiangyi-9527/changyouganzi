@@ -1,0 +1,14 @@
+<!--pages/commonAddress/mapselect/index.wxml-->
+  <map
+      longitude="{{longitude}}" 
+      latitude="{{latitude}}" 
+      bindregionchange="regionchange"
+      id="map4select"
+   ></map>
+   <cover-view class="markBox" style="top:{{markersHeight+'%'}}" id="marks">
+    <cover-view class="markText" >{{markText}}</cover-view>
+    <cover-image class="markIcon" src="https://static2.jd-gz.com/20200521151648.png"></cover-image>
+   </cover-view>
+   <view class="btnBox" catchtap="chooseLoc">
+    <view class="btn">确认</view>
+   </view>

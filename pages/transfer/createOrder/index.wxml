@@ -1,0 +1,112 @@
+<view class="bg">
+	<image class="bg_img" src="https://static2.jd-gz.com/order_bg@3x.png"></image>
+	<view class="ticket_info">
+			<view class="start_time">
+				2020-03-11 14:30:00（用车时间）
+			</view>
+			<view class="line_detail">
+				<view class="left">接送路线：</view>
+				<view class="right">康定希誉酒店-康定机场T1</view>
+			</view>
+			<view class="line_detail">
+				<view class="left">已选车型：</view>
+				<view class="right">舒适7座｜6人（含儿童）+乘客6人（含儿童）4件24寸</view>
+			</view>
+			<view class="notice_box">
+				<image src="https://static2.jd-gz.com/notice.png" class="notice_icon"></image>
+				<text>北京时间2020-02-11 10:00前可免费取消</text>
+			</view>
+	</view>
+
+	<!-- 出行信息 -->
+	<view class="user_info">
+		<text class="tit">出行信息</text>
+		<view>
+			<van-cell-group>
+				<van-field value="{{ flightInfo }}" clearable label="航班信息" placeholder="请输入航班号" bind:blur="getUserName" />
+				<van-field value="{{ username }}" clearable label="用车人姓名" placeholder="请输入用车人姓名" bind:blur="getUserName" />
+				<van-field value="{{ phone }}" label="手机号码" placeholder="请输入用车人手机号" bind:blur="getUserTel" />
+				<van-field value="{{ username }}" label="备注" placeholder="如有其它需求，请留言在这里" border="{{false}}" bind:blur="getRemarks" />
+			</van-cell-group>
+		</view>
+	</view>
+
+	<!-- 出行人数 -->
+	<view class="travelers_num">
+		<text class="tit">出行人数</text>
+		<view>
+			<view class="item">
+				<text>成人</text>
+				<van-stepper value="{{adultNum}}" bind:change="adultChange" min="0" />
+			</view>
+			<view class="item">
+				<text>儿童</text>
+				<van-stepper value="{{kidNum}}" bind:change="kidChange" min="0" />
+			</view>
+		</view>
+	</view>
+
+	<!-- 出行提示 -->
+	<view class="prompt">
+		<text class="tit">出行提示</text>
+		<view class="content">
+			<view>1.为避免行李超限，未携带宠物笼等问题不能上车，请提前向客服人员确认；</view>
+			<view>2.如有其他紧急需求，请联系
+				<text>在线客服</text>
+			</view>
+		</view>
+	</view>
+
+	<!-- 阅读需知 -->
+	<view class="protocol">
+		<!-- <van-radio-group  bind:change="onChange">
+      <van-radio name="1" checked-color="#07c160" icon-size="24rpx">
+        <text class="read">已阅读并同意</text>
+        <text class="protocol_content" bindtap="toProtocol">《畅游甘孜约车协议》</text>
+      </van-radio>
+    </van-radio-group> -->
+		<van-checkbox value="{{ checked }}" bind:change="onChecked" checked-color="#07c160" icon-size="24rpx">
+			<text class="read" style="color:{{checked ? '#333' : ''}}">已阅读并同意</text>
+			<text class="protocol_content" bindtap="toProtocol">《畅游甘孜约车协议》</text>
+		</van-checkbox>
+	</view>
+</view>
+
+<!-- 费用明细弹出层内容 -->
+<cover-view class="mask" style="display:{{changeDisplay}}; height:{{height}}rpx" catchtap="closeMask">
+	<cover-view class="main_info">
+		<cover-view class="tit">订单价格说明</cover-view>
+		<cover-view class="kind_info" wx:if="{{adultNum}}">
+			<cover-view class="kind">成人</cover-view>
+			<cover-view class="kind">￥{{adultPrice}}x{{adultNum}}</cover-view>
+		</cover-view>
+		<cover-view class="kind_info" wx:if="{{kidNum}}">
+			<cover-view class="kind">儿童</cover-view>
+			<cover-view class="kind">￥{{kidPrice}}x{{kidNum}}</cover-view>
+		</cover-view>
+	</cover-view>
+</cover-view>
+
+<!-- 底部去付款 -->
+<view class="toPay">
+	<view class="price">
+		<view class="totalPrice">￥{{allPrice}}</view>
+		<view class='price_detail'>
+			<view class='help_item' wx:for='{{maskData}}' wx:key='*this'>
+				<view class='detail' wx:if="{{showIndex == index + 1}}">
+				</view>
+				<view class='title' data-index='{{index + 1}}' catchtap='showPriceDetail'>
+					<view class='title_1'>费用明细</view>
+					<view class='title_2'>
+						<image src="https://static2.jd-gz.com/{{showIndex == index + 1 ? 'up_icon@3x':'under_icon@3x'}}.png"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+
+	<view class="goPay" bindtap="toPay">
+		<button>去付款</button>
+	</view>
+</view>

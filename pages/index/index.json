@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "van-button": "../../miniprogram_npm/@vant/weapp/button",
+    "van-grid": "../../miniprogram_npm/@vant/weapp/grid/index",
+    "van-grid-item": "../../miniprogram_npm/@vant/weapp/grid-item/index",
+    "van-sticky": "../../miniprogram_npm/@vant/weapp/sticky/index",
+    "tabbar":"/component/tabbar/tabbar",
+    "van-icon": "../../miniprogram_npm/@vant/weapp/icon/index",
+    "index-component": "/component/custom-nav-component/custom-nav-component",
+    "van-popup": "../../miniprogram_npm/@vant/weapp/popup/index",
+    "van-picker": "../../miniprogram_npm/@vant/weapp/picker/index"
+  },
+  "navigationStyle": "custom"
+}

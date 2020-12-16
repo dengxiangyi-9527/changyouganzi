@@ -1,0 +1,37 @@
+<!--pages/invoice//pages/detail/index.wxml-->
+<view class="detail_wrap">
+    <view class="detail_title">发票详情</view>
+    <view class="list_wrap">
+      <view class="list_item">
+        <view class="list_box">
+          <view class="list_left">
+            <view style="color:#FF8B32">*</view>
+            <view class="list_title">发票抬头</view>
+          </view>
+          <input bindinput="inputName" placeholder="请输入抬头名称" placeholder-style="color:#999999;font-size:32rpx;line-height:45rpx;text-align:end;"></input>
+        </view>
+      </view>
+      <view class="list_item">
+        <view class="list_box">
+          <view class="list_left">
+            <view style="color:#FF8B32">*</view>
+            <view class="list_title">纳税人识别号</view>
+          </view>
+          <input bindinput="inputNum" placeholder="请输入税号" placeholder-style="color:#999999;font-size:32rpx;line-height:45rpx;text-align:end;"></input>
+        </view>
+      </view>
+      <view class="detail_title">接收方式</view>
+      <view class="list_item">
+        <view class="list_box">
+          <view class="list_left">
+            <view style="color:#FF8B32">*</view>
+            <view class="list_title">电子邮件</view>
+          </view>
+          <input bindinput="inputEmail" placeholder="请输入您的电子邮箱" placeholder-style="color:#999999;font-size:32rpx;line-height:45rpx;text-align:end;"></input>
+        </view>
+      </view>
+      <view class="btnBox">
+        <view class="btn" catchtap="sendMsg">发送</view>
+      </view>
+    </view>
+</view>

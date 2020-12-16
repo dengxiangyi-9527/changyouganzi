@@ -1,0 +1,36 @@
+<!--pages/cjjs/index/index.wxml-->
+<view class="main" style="height:100%">
+	<view class="header">
+		<image src="https://static2.jd-gz.com/cjbanner_pic%402x.png"></image>
+		<cjjs-index-component my-property='{{nav}}' class="nav" />
+	</view>
+
+	<view class="content">
+		<view class="city">
+			<image class="city_icon" src="https://static2.jd-gz.com/city_icon@3x.png"></image>
+			<view class="city_title">服务城市</view>
+			<view class="city_main">甘孜州</view>
+		</view>
+		<view class="city city_center">
+			<image class="city_img" src="https://static2.jd-gz.com/star_icon@3x.png"></image>
+			<view class="city_title titles">出发地</view>
+			<van-field value="{{ startCity }}" placeholder="请选择出发地" border="{{ false }}" catchtap="goSelectStartCity" placeholder-style="font-size:34rpx;color:#E3E5E8;line-height:48rpx" custom-style="fot-size:34rpx;color:#333333;line-height:48rpx;font-family:PingFangSC-,PingFang SC;font-weight:normal;border-bottom:1rpx solid #EDEDED; padding-bottom:0;padding-top:0;padding-left:40rpx;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" readonly="true"/>
+		</view>
+		<image src="https://static2.jd-gz.com/exchange_icon@3x.png" class="exchange" catchtap="exchangeCity"></image>
+    <view class="city city_center">
+			<image class="city_img" src="https://static2.jd-gz.com/finish_icon@3x.png"></image>
+			<view class="city_title titles">目的地</view>
+			<van-field value="{{ arriveCity }}" placeholder="请选择目的地" border="{{ false }}" catchtap="goSelectFinishCity" placeholder-style="font-size:34rpx;color:#E3E5E8;line-height:48rpx" custom-style="fot-size:34rpx;color:#333333;line-height:48rpx;font-family:PingFangSC-,PingFang SC;font-weight:normal;border-bottom:1rpx solid #EDEDED; padding-bottom:0;padding-top:0;padding-left:40rpx;overflow:hidden;text-overflow:ellipsis;white-space:nowrap"  readonly="true"/>
+		</view>
+    <view class="city city_center" style="margin-top:64rpx;">
+			<image class="city_img" src="https://static2.jd-gz.com/time_icon@3x.png"></image>
+			<view class="city_title" style="width:150rpx;margin-right:0">出发时间</view>
+			<van-field value="{{ currentDate }}" placeholder="请选择时间" border="{{ false }}" catchtap="showPopup" placeholder-style="font-size:34rpx;color:#E3E5E8;line-height:48rpx" custom-style="fot-size:34rpx;color:#333333;line-height:48rpx;font-family:PingFangSC-,PingFang SC;font-weight:normal;border-bottom:1rpx solid #EDEDED; padding-bottom:0;padding-top:0;padding-left:40rpx"readonly="true"/>
+		</view>
+		<van-popup show="{{ show }}" bind:close="onClose" position="bottom">
+			<van-picker show-toolbar columns="{{ dateList }}" bind:cancel="onCancel" bind:confirm="confirm" bind:change="onChnage" />
+		</van-popup>
+		<van-button round type="info" class="serach" bind:click="toSerach" color="#18AFFF">查询城际车辆</van-button>
+	</view>
+
+</view>

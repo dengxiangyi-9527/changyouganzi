@@ -1,0 +1,29 @@
+<!--pages/peripheralTourism//pages/list/index.wxml-->
+<view class="wrap">
+  <view class="listBox">
+    <view class="listItem" catchtap="goDetail" wx:for="{{dataList}}" wx:key="*this" data-item="{{item}}">
+      <view class="imgBox">
+        <image src="{{item.cover}}"></image>
+      </view>
+      <view class="mainBox">
+        <view class="title">{{item.title}}</view>
+        <view class="mainText">
+          {{item.desc}}
+          <view class="mainTextTab">三环内接送</view>
+          <view class="mainTextTab2">品质</view>
+        </view>
+        <view class="tabBox">
+          <view class="tabItem">商务精品酒店</view>
+          <view class="tabItem">10年+专业司机</view>
+          <view class="tabItem">7-11座中巴</view>
+        </view>
+        <view class="priceBox">
+          <view class="price">
+            <text style="font-size:24rpx">￥</text>{{item.price_child/100}}<text style="font-size:24rpx">/人</text>
+          </view>
+          <view class="personNum">{{item.num}}人报名</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
